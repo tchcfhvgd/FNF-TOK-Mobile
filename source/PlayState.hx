@@ -233,6 +233,7 @@ class PlayState extends MusicBeatState
 	var boat:FlxSprite;
 	var trees:FlxSprite;
 	var trees2:FlxSprite;
+	private var rubberband:FlxSprite;
 
 	var boatY:Int;
 	var mountainwallposition:Int;
@@ -248,6 +249,10 @@ class PlayState extends MusicBeatState
 	var objectlog:Bool = false;
 	var objectpath:Bool = true;
 	var objectposition:Int = 0;
+	var okband:Bool = true;
+	var wrapstart:Bool = false;
+	var onetimestretch:Bool = true;
+	var kepthealth:Float;
 
 
 
@@ -849,6 +854,36 @@ class PlayState extends MusicBeatState
 					trees2.antialiasing = true;
 					trees2.updateHitbox();
 					add(trees2);
+
+				case 'studio':
+					var sky:BGSprite = new BGSprite('chapters/chapter2/images/background/std/sky', -400, -550, 0.9, 0.9);
+					sky.antialiasing = true;
+					add(sky);
+
+					var stage:BGSprite = new BGSprite('chapters/chapter2/images/background/std/stage', -400, -550);
+					stage.antialiasing = true;
+					add(stage);
+
+					if (curSong == 'Elastic Entertainer')
+						{
+						/*rubberband = new FlxSprite(healthBarBG.x + 180, healthBarBG.y - 50);
+						rubberband.frames = Paths.getSparrowAtlas('chapters/chapter2/images/background/std/rubberband');
+						rubberband.animation.addByIndices('0.2', 'rubberband', [0], "", 36, false);
+						rubberband.animation.addByIndices('0.4', 'rubberband', [1], "", 36, false);
+						rubberband.animation.addByIndices('0.6', 'rubberband', [2], "", 36, false);
+						rubberband.animation.addByIndices('0.8', 'rubberband', [3], "", 36, false);
+						rubberband.animation.addByIndices('1.0', 'rubberband', [4], "", 36, false);
+						rubberband.animation.addByIndices('1.2', 'rubberband', [5], "", 36, false);
+						rubberband.animation.addByIndices('1.4', 'rubberband', [6], "", 36, false);
+						rubberband.animation.addByIndices('1.6', 'rubberband', [7], "", 36, false);
+						rubberband.animation.addByIndices('1.8', 'rubberband', [8], "", 36, false);
+						rubberband.animation.addByIndices('2', 'rubberband', [9], "", 36, false);
+						rubberband.flipY = false;
+						add(rubberband);
+				
+						rubberband.visible = false;
+						rubberband.cameras = [camHUD];*/
+						}
 		}
 
 		if(isPixelStage) {
@@ -2769,11 +2804,6 @@ class PlayState extends MusicBeatState
 		}
 		#end
 
-		setOnLuas('cameraX', camFollowPos.x);
-		setOnLuas('cameraY', camFollowPos.y);
-		setOnLuas('botPlay', cpuControlled);
-		callOnLuas('onUpdatePost', [elapsed]);
-
 		if (curStage == 'river')
 			{
 				if (mountainwallposition < 6017)
@@ -2974,7 +3004,131 @@ class PlayState extends MusicBeatState
 							}
 						}
 			}
+
+		if (curSong == 'Elastic Entertainer')
+			{
+				if (okband == false && wrapstart == true)
+				{
+						
+				if (kepthealth <= health)
+				{
+					health = kepthealth;
+					if (onetimestretch == true)
+					{
+						onetimestretch = false;
+						camHUD.shake(0.002, 1);
+						FlxG.sound.play(Paths.sound('chapters/chapter2/sounds/stretch'));
+					}
+				}
+	
+				if (kepthealth > health)
+				onetimestretch = true;
+			
+				if (wrapstart == true)
+				{
+				if (health <= 0.3)
+				rubberband.animation.play('0.2');
+				else if (health <= 0.5)
+				rubberband.animation.play('0.6');
+				else if (health >= 0.6)
+				rubberband.animation.play('0.8');
+				}
+				}
+			}
+
+		setOnLuas('cameraX', camFollowPos.x);
+		setOnLuas('cameraY', camFollowPos.y);
+		setOnLuas('botPlay', cpuControlled);
+		callOnLuas('onUpdatePost', [elapsed]);
 	}
+
+	function elasthicc()
+		{
+			wrapstart = false;
+			okband = false;
+
+			rubberband = new FlxSprite(healthBarBG.x + 180, healthBarBG.y - 50);
+			rubberband.frames = Paths.getSparrowAtlas('chapters/chapter2/images/background/std/rubberband');
+			rubberband.animation.addByIndices('0.2', 'rubberband', [0], "", 36, false);
+			rubberband.animation.addByIndices('0.4', 'rubberband', [1], "", 36, false);
+			rubberband.animation.addByIndices('0.6', 'rubberband', [2], "", 36, false);
+			rubberband.animation.addByIndices('0.8', 'rubberband', [3], "", 36, false);
+			rubberband.animation.addByIndices('1.0', 'rubberband', [4], "", 36, false);
+			rubberband.animation.addByIndices('1.2', 'rubberband', [5], "", 36, false);
+			rubberband.animation.addByIndices('1.4', 'rubberband', [6], "", 36, false);
+			rubberband.animation.addByIndices('1.6', 'rubberband', [7], "", 36, false);
+			rubberband.animation.addByIndices('1.8', 'rubberband', [8], "", 36, false);
+			rubberband.animation.addByIndices('2', 'rubberband', [9], "", 36, false);
+			rubberband.flipY = false;
+			add(rubberband);
+				
+			rubberband.visible = false;
+			rubberband.cameras = [camHUD];
+			
+	
+			rubberband.animation.addByPrefix('start', "start", 24, false);
+
+			trace("So this works");
+			
+			if (health <= 0.3)
+				rubberband.animation.addByIndices('rubberbandenter', 'rubberband', [0], "", 24, false);
+				else if (health <= 0.4)
+				rubberband.animation.addByIndices('rubberbandenter', 'rubberband', [0, 1], "", 24, false);
+				else if (health <= 0.48)
+				rubberband.animation.addByIndices('rubberbandenter', 'rubberband', [0, 1, 2], "", 24, false);
+				else if (health <= 0.64)
+				rubberband.animation.addByIndices('rubberbandenter', 'rubberband', [0, 1, 2, 3], "", 24, false);
+				else if (health <= 0.8)
+				rubberband.animation.addByIndices('rubberbandenter', 'rubberband', [0, 1, 2, 3, 4], "", 24, false);
+				else if (health <= 0.96)
+				rubberband.animation.addByIndices('rubberbandenter', 'rubberband', [0, 1, 2, 3, 4, 5], "", 24, false);
+				else if (health <= 1.12)
+				rubberband.animation.addByIndices('rubberbandenter', 'rubberband', [0, 1, 2, 3, 4, 5, 6], "", 24, false);
+				else if (health <= 1.28)
+				rubberband.animation.addByIndices('rubberbandenter', 'rubberband', [0, 1, 2, 3, 4, 5, 6, 7], "", 24, false);
+				else if (health <= 1.44)
+				rubberband.animation.addByIndices('rubberbandenter', 'rubberband', [0, 1, 2, 3, 4, 5, 6, 7, 8], "", 24, false);
+				else if (health <= 2)
+				rubberband.animation.addByIndices('rubberbandenter', 'rubberband', [0, 1, 2, 3, 4, 5, 6, 7, 8, 9], "", 24, false);
+	
+			rubberband.setGraphicSize(Std.int(rubberband.width * 0.8));
+			rubberband.x = healthBarBG.x + 450;
+			rubberband.y = healthBarBG.y - 160;
+			rubberband.visible = true;
+			rubberband.alpha = 1;
+	
+			if (FlxG.save.data.downscroll)
+			rubberband.flipY = true;
+	
+			rubberband.animation.play('start');
+			new FlxTimer().start(1.67, function(tmr:FlxTimer)
+				{
+					rubberband.x = healthBarBG.x + 180;
+					rubberband.y = healthBarBG.y - 50;
+					rubberband.setGraphicSize(Std.int(rubberband.width * 2));
+					FlxG.sound.play(Paths.sound('chapters/chapter2/sounds/twang'));
+					rubberband.flipY = false;
+					rubberband.animation.play('rubberbandenter');
+					wrapstart = true;
+				
+				if (health > 0.8)
+				{
+					health = 0.8;
+				}
+	
+				kepthealth = health;
+	
+			new FlxTimer().start(6, function(tmr:FlxTimer)
+				{
+					okband = true;
+					FlxTween.tween(rubberband, {alpha: 0}, 0.76, {ease: FlxEase.expoInOut, onComplete: function(twn:FlxTween)
+									{
+										rubberband.visible = false;
+										wrapstart = false;
+									}});
+				});
+				});
+		}
 
 	function openChartEditor()
 	{
@@ -4120,6 +4274,12 @@ class PlayState extends MusicBeatState
 			var animToPlay:String = singAnimations[Std.int(Math.abs(daNote.noteData))] + 'miss' + daAlt;
 			char.playAnim(animToPlay, true);
 		}
+
+		if (curSong == 'Elastic Entertainer')
+			{
+				if (okband == true)
+				elasthicc();
+			}
 
 		callOnLuas('noteMiss', [notes.members.indexOf(daNote), daNote.noteData, daNote.noteType, daNote.isSustainNote]);
 	}
