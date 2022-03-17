@@ -1,0 +1,13 @@
+Fully adding chapter 2
+Fully adding chapter 3
+Fully adding chapter 4
+Adding back modcharts
+Dialogue system
+Coin results
+Extra images
+Shop
+Title Screen
+Main Menu
+Story Menu
+Credits
+fix eddy river speed
