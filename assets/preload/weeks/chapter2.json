@@ -3,14 +3,18 @@
 	"difficulties": "",
 	"hideFreeplay": false,
 	"weekBackground": "stage",
-	"weekBefore": "tutorial",
 	"freeplayColor": [
 		146,
 		113,
 		253
 	],
-	"startUnlocked": true,
-	"hideStoryMode": false,
+	"weekBefore": "chapter1",
+	"startUnlocked": false,
+	"weekCharacters": [
+		"rubber",
+		"bf",
+		"gf"
+	],
 	"songs": [
 		[
 			"Autumn Mountain Battle",
@@ -40,11 +44,7 @@
 			]
 		]
 	],
-	"weekCharacters": [
-		"rubber",
-		"bf",
-		"gf"
-	],
-	"hiddenUntilUnlocked": false,
-	"weekName": "Chapter 2"
+	"hideStoryMode": false,
+	"weekName": "Chapter 2",
+	"hiddenUntilUnlocked": false
 }

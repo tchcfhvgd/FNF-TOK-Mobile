@@ -29,7 +29,7 @@ using StringTools;
 
 class OptionsState extends MusicBeatState
 {
-	var options:Array<String> = ['Note Colors', 'Controls', 'Adjust Delay and Combo', 'Graphics', 'Visuals and UI', 'Gameplay'];
+	var options:Array<String> = ['Note Colors', 'Controls', 'Adjust Delay and Combo', 'Graphics', 'Visuals and UI', 'Languages', 'Gameplay'];
 	private var grpOptions:FlxTypedGroup<Alphabet>;
 	private static var curSelected:Int = 0;
 	public static var menuBG:FlxSprite;
@@ -44,6 +44,8 @@ class OptionsState extends MusicBeatState
 				openSubState(new options.GraphicsSettingsSubState());
 			case 'Visuals and UI':
 				openSubState(new options.VisualsUISubState());
+			case 'Languages':
+				openSubState(new options.LanguageSubState());
 			case 'Gameplay':
 				openSubState(new options.GameplaySettingsSubState());
 			case 'Adjust Delay and Combo':
@@ -61,6 +63,7 @@ class OptionsState extends MusicBeatState
 
 		var bg:FlxSprite = new FlxSprite().loadGraphic(Paths.image('menuDesat'));
 		bg.color = 0xFFea71fd;
+		bg.setGraphicSize(Std.int(bg.width * 0.7));
 		bg.updateHitbox();
 
 		bg.screenCenter();

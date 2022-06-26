@@ -36,6 +36,7 @@ class FreeplayState extends MusicBeatState
 	var scoreBG:FlxSprite;
 	var scoreText:FlxText;
 	var diffText:FlxText;
+	var skinText:FlxText;
 	var lerpScore:Int = 0;
 	var lerpRating:Float = 0;
 	var intendedScore:Int = 0;
@@ -46,9 +47,17 @@ class FreeplayState extends MusicBeatState
 
 	private var iconArray:Array<HealthIcon> = [];
 
+	public static var bfType:Int = 0;
+	public static var canskincontinue = true;
+
 	var bg:FlxSprite;
 	var intendedColor:Int;
 	var colorTween:FlxTween;
+
+	//PFP
+	var warningBG:FlxSprite;
+	var warnText:FlxText;
+	var firstpress:Bool = false;
 
 	override function create()
 	{
@@ -88,6 +97,28 @@ class FreeplayState extends MusicBeatState
 				addSong(song[0], i, song[1], FlxColor.fromRGB(colors[0], colors[1], colors[2]));
 			}
 		}
+
+		if (FlxG.save.data.toadbbqunlocked == true)
+			addSong('Toads BBQ and Food Eatery', 1,'toad', FlxColor.fromRGB(255, 87, 66));
+
+		if (FlxG.save.data.autumnmountainunlocked == true)
+			addSong('Autumn Mountain', 2,'autumn', FlxColor.fromRGB(0, 117, 251));
+
+		if (FlxG.save.data.bluestreamerunlocked == true)
+			addSong('Blue Streamer Battle', 1,'autumn', FlxColor.fromRGB(0, 117, 251));
+
+		if (FlxG.save.data.shogunstudiosunlocked == true)
+			addSong('Shogun Studios', 1,'shyguy', FlxColor.fromRGB(255, 220, 40));
+
+		if (FlxG.save.data.maxpowerunlocked == true)
+			addSong('Max Power', 1,'dj', FlxColor.fromRGB(255, 220, 40));
+
+		if (FlxG.save.data.yape == true)
+			addSong('The Almighty Yape', 1,'Yape', FlxColor.fromRGB(255, 87, 66));
+
+		//if (FlxG.save.data.beatchapter4 == true)
+			addSong('Monotoad', 1,'monotoad', FlxColor.fromRGB(0, 0, 0));
+
 		WeekData.loadTheFirstEnabledMod();
 
 		/*		//KIND OF BROKEN NOW AND ALSO PRETTY USELESS//
@@ -101,10 +132,15 @@ class FreeplayState extends MusicBeatState
 			}
 		}*/
 
-		bg = new FlxSprite().loadGraphic(Paths.image('menuDesat'));
+		bg = new FlxSprite().loadGraphic(Paths.image('menuBGBlue'));
 		bg.antialiasing = ClientPrefs.globalAntialiasing;
 		add(bg);
 		bg.screenCenter();
+
+		var luigi:FlxSprite = new FlxSprite().loadGraphic(Paths.image('luigi'));
+		luigi.antialiasing = ClientPrefs.globalAntialiasing;
+		add(luigi);
+		luigi.screenCenter();
 
 		grpSongs = new FlxTypedGroup<Alphabet>();
 		add(grpSongs);
@@ -146,13 +182,21 @@ class FreeplayState extends MusicBeatState
 		scoreText = new FlxText(FlxG.width * 0.7, 5, 0, "", 32);
 		scoreText.setFormat(Paths.font("vcr.ttf"), 32, FlxColor.WHITE, RIGHT);
 
-		scoreBG = new FlxSprite(scoreText.x - 6, 0).makeGraphic(1, 66, 0xFF000000);
+		scoreBG = new FlxSprite(scoreText.x - 6, 0).makeGraphic(1, 150, 0xFF000000);
 		scoreBG.alpha = 0.6;
 		add(scoreBG);
 
 		diffText = new FlxText(scoreText.x, scoreText.y + 36, 0, "", 24);
 		diffText.font = scoreText.font;
 		add(diffText);
+
+		skinText = new FlxText(scoreText.x - 80, diffText.y + 46, 0, "", 32);
+		skinText.font = scoreText.font;
+		add(skinText);
+
+		var spaceText = new FlxText(skinText.x, skinText.y + 26, 0, "(Press Space!)", 24);
+		spaceText.font = scoreText.font;
+		add(spaceText);
 
 		add(scoreText);
 
@@ -168,6 +212,7 @@ class FreeplayState extends MusicBeatState
 		
 		changeSelection();
 		changeDiff();
+		changeBF();
 
 		var swag:Alphabet = new Alphabet(1, 0, "swag");
 
@@ -192,8 +237,25 @@ class FreeplayState extends MusicBeatState
 		textBG.alpha = 0.6;
 		add(textBG);
 
+		warningBG = new FlxSprite(0, 0).makeGraphic(FlxG.width - 100, FlxG.height - 100, 0xFF000000);
+		warningBG.screenCenter();
+		warningBG.alpha = 0;
+		add(warningBG);
+
+		warnText = new FlxText(0, 0, FlxG.width,
+			"WARNING!\n
+			'This song contains loud noises that may be sensitive to some players.\n\n
+			If you are sensitive to loud noises, please press ESCAPE.\n
+			If you would like to continue, please press ENTER.",
+			32);
+		warnText.setFormat("VCR OSD Mono", 32, FlxColor.WHITE, CENTER);
+		warnText.screenCenter();
+		warnText.alpha = 0;
+		add(warnText);
+
+
 		#if PRELOAD_ALL
-		var leText:String = "Press SPACE to listen to the Song / Press CTRL to open the Gameplay Changers Menu / Press RESET to Reset your Score and Accuracy.";
+		var leText:String = "Press L to listen to the Song / Press CTRL to open the Gameplay Changers Menu / Press RESET to Reset your Score and Accuracy.";
 		var size:Int = 16;
 		#else
 		var leText:String = "Press CTRL to open the Gameplay Changers Menu / Press RESET to Reset your Score and Accuracy.";
@@ -271,7 +333,7 @@ class FreeplayState extends MusicBeatState
 		var upP = controls.UI_UP_P;
 		var downP = controls.UI_DOWN_P;
 		var accepted = controls.ACCEPT;
-		var space = FlxG.keys.justPressed.SPACE;
+		var space = FlxG.keys.justPressed.L;
 		var ctrl = FlxG.keys.justPressed.CONTROL;
 
 		var shiftMult:Int = 1;
@@ -309,6 +371,9 @@ class FreeplayState extends MusicBeatState
 		else if (controls.UI_RIGHT_P)
 			changeDiff(1);
 		else if (upP || downP) changeDiff();
+		
+		if (FlxG.keys.justPressed.SPACE)
+			changeBF(1);
 
 		if (controls.BACK)
 		{
@@ -351,11 +416,38 @@ class FreeplayState extends MusicBeatState
 			}
 		}
 
-		else if (accepted)
+		else if (accepted && !FlxG.keys.justPressed.SPACE && canskincontinue && firstpress == false)
 		{
-			persistentUpdate = false;
 			var songLowercase:String = Paths.formatToSongPath(songs[curSelected].songName);
 			var poop:String = Highscore.formatSong(songLowercase, curDifficulty);
+			if (songLowercase == 'monotoad')
+				{
+					FlxTween.tween(warningBG, {alpha: 0.6}, 0.5);
+					FlxTween.tween(warnText, {alpha: 1}, 0.5);
+					firstpress = true;
+				}
+			else
+				{
+					persistentUpdate = false;
+				PlayState.SONG = Song.loadFromJson(poop, songLowercase);
+				PlayState.isStoryMode = false;
+				PlayState.storyDifficulty = curDifficulty;
+
+				trace('CURRENT WEEK: ' + WeekData.getWeekFileName());
+				if(colorTween != null) {
+					colorTween.cancel();
+				}
+		
+				if (FlxG.keys.pressed.SHIFT){
+					LoadingState.loadAndSwitchState(new ChartingState());
+				}else{
+				LoadingState.loadAndSwitchState(new PlayState());
+			}
+
+				FlxG.sound.music.volume = 0;
+				
+				destroyFreeplayVocals();
+				}
 			/*#if MODS_ALLOWED
 			if(!sys.FileSystem.exists(Paths.modsJson(songLowercase + '/' + poop)) && !sys.FileSystem.exists(Paths.json(songLowercase + '/' + poop))) {
 			#else
@@ -367,25 +459,33 @@ class FreeplayState extends MusicBeatState
 			}*/
 			trace(poop);
 
-			PlayState.SONG = Song.loadFromJson(poop, songLowercase);
-			PlayState.isStoryMode = false;
-			PlayState.storyDifficulty = curDifficulty;
+		}
+		else if (FlxG.keys.justPressed.ENTER && firstpress == true)
+			{
+				var songLowercase2:String = Paths.formatToSongPath(songs[curSelected].songName);
+				var poop2:String = Highscore.formatSong(songLowercase2, curDifficulty);
+				persistentUpdate = false;
+				PlayState.SONG = Song.loadFromJson(poop2, songLowercase2);
+				PlayState.isStoryMode = false;
+				PlayState.storyDifficulty = curDifficulty;
 
-			trace('CURRENT WEEK: ' + WeekData.getWeekFileName());
-			if(colorTween != null) {
-				colorTween.cancel();
-			}
-			
-			if (FlxG.keys.pressed.SHIFT){
-				LoadingState.loadAndSwitchState(new ChartingState());
-			}else{
+				trace('CURRENT WEEK: ' + WeekData.getWeekFileName());
+				if(colorTween != null) {
+					colorTween.cancel();
+				}
+		
+				if (FlxG.keys.pressed.SHIFT){
+					LoadingState.loadAndSwitchState(new ChartingState());
+				}else{
 				LoadingState.loadAndSwitchState(new PlayState());
 			}
 
-			FlxG.sound.music.volume = 0;
-					
-			destroyFreeplayVocals();
-		}
+				FlxG.sound.music.volume = 0;
+				
+				destroyFreeplayVocals();
+			}
+		else if (FlxG.keys.justPressed.ESCAPE && firstpress == true)
+			MusicBeatState.switchState(new FreeplayState());
 		else if(controls.RESET)
 		{
 			persistentUpdate = false;
@@ -423,6 +523,67 @@ class FreeplayState extends MusicBeatState
 		diffText.text = '< ' + CoolUtil.difficultyString() + ' >';
 		positionHighscore();
 	}
+
+	function changeBF(change:Int = 0):Void
+		{
+			bfType += change;
+
+			if (bfType >= 5)
+				bfType = 0;
+			if (bfType < 0)
+				bfType = 4;
+	
+				switch (bfType)
+			{
+				case 0:
+				skinText.text = "SKIN: Standard";
+				canskincontinue = true;
+				case 1:
+					if (FlxG.save.data.poutfitunlocked)
+						{
+							skinText.text = "SKIN: Plumber";
+							canskincontinue = true;
+						}
+					else
+						{
+							skinText.text = "SKIN: ???";
+							canskincontinue = false;
+						}
+				case 2:
+					if (FlxG.save.data.soutfitunlocked)
+						{
+							skinText.text = "SKIN: Shogun";
+							canskincontinue = true;
+						}
+					else
+						{
+							skinText.text = "SKIN: ???";
+							canskincontinue = false;
+						}	
+				case 3:
+					if (FlxG.save.data.goutfitunlocked)
+						{
+							skinText.text = "SKIN: Groovy";
+							canskincontinue = true;
+						}
+					else
+						{
+							skinText.text = "SKIN: ???";
+							canskincontinue = false;
+						}
+				case 4:
+					if (FlxG.save.data.poutfit2unlocked)
+						{
+							skinText.text = "SKIN: Mafia";
+							canskincontinue = true;
+						}
+					else
+						{
+							skinText.text = "SKIN: ???";
+							canskincontinue = false;
+						}
+			}
+		}
 
 	function changeSelection(change:Int = 0, playSound:Bool = true)
 	{

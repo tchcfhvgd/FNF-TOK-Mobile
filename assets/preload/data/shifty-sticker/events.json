@@ -1,0 +1,29 @@
+{
+	"song": {
+		"speed": 3,
+		"stage": "stage",
+		"player1": "bfnew",
+		"player2": "Tape-desp",
+		"player3": null,
+		"events": [
+			[
+				57375,
+				[
+					[
+						"Change Character",
+						"1",
+						"Tape"
+					]
+				]
+			]
+		],
+		"notes": [],
+		"splashSkin": null,
+		"validScore": false,
+		"gfVersion": "gf",
+		"bpm": 160,
+		"arrowSkin": null,
+		"needsVoices": true,
+		"song": "Shifty Sticker"
+	}
+}

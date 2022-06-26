@@ -3,8 +3,11 @@ if isStoryMode then
 makeLuaSprite('directions', 'chapters/chapter2/images/background/riverway/directions', 3200, 460)
 setObjectCamera('directions', 'hud')
 addLuaSprite('directions', true)
-doTweenX('movedirections', 'directions', 200, 1, quadInOut)
 end
+end
+
+function onStartCountdown()
+doTweenX('movedirections', 'directions', 200, 1, quadInOut)
 end
 
 function onSongStart()

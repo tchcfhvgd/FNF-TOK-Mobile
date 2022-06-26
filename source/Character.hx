@@ -92,10 +92,57 @@ class Character extends FlxSprite
 		this.isPlayer = isPlayer;
 		antialiasing = ClientPrefs.globalAntialiasing;
 		var library:String = null;
+		
 		switch (curCharacter)
 		{
-			//case 'your character name in case you want to hardcode them instead':
+			case 'bf':
+				switch (FreeplayState.bfType)
+				{
+					case 0:
+						trace(Paths.formatToSongPath(PlayState.SONG.song));
+						if (Paths.formatToSongPath(PlayState.SONG.song) != 'the-great-sea')
+						curCharacter = 'bf';
+						else
+						curCharacter = 'bf-flipped';	
+					case 1:
+						if (Paths.formatToSongPath(PlayState.SONG.song) != 'the-great-sea')
+						curCharacter = 'bf-mario';
+						else
+						curCharacter = 'bf-mario-flipped';
+					case 2:
+						if (Paths.formatToSongPath(PlayState.SONG.song) != 'the-great-sea')
+						curCharacter = 'bf-shogun';
+						else
+						curCharacter = 'bf-shogun-flipped';
+					case 3:
+						if (Paths.formatToSongPath(PlayState.SONG.song) != 'the-great-sea')
+						curCharacter = 'bf-disco';
+						else
+						curCharacter = 'bf-disco-flipped';
+					case 4:
+						if (Paths.formatToSongPath(PlayState.SONG.song) != 'the-great-sea')
+						curCharacter = 'bf-mafia';
+						else
+						curCharacter = 'bf-mafia-flipped';
+				}
 
+			case 'bf-hole':
+				switch (FreeplayState.bfType)
+				{
+					case 0:
+						curCharacter = 'bf-hole';
+					case 1:
+						curCharacter = 'bf-hole-mario';
+					case 2:
+						curCharacter = 'bf-hole-shogun';
+					case 3:
+						curCharacter = 'bf-hole-disco';
+					case 4:
+						curCharacter = 'bf-hole-mafia';
+				}
+		}
+		switch (curCharacter)
+		{
 			default:
 				var characterPath:String = 'characters/' + curCharacter + '.json';
 

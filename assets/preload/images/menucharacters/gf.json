@@ -1,11 +1,11 @@
 {
-	
-	"image": "Menu_GF",
+	"confirm_anim": "M Dad Idle",
+	"idle_anim": "GF Dancing Beat",
 	"position": [
-		0,
-		-25
+		400,
+		200
 	],
-	"scale": 1,
-	"idle_anim": "M GF Idle",
-	"confirm_anim": "M GF Idle"
+	"scale": 0.45,
+	"image": "gf_origami",
+	"flipX": false
 }

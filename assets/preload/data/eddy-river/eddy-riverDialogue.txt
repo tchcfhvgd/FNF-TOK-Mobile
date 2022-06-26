@@ -1,0 +1,26 @@
+:music:2-1:
+:music:fadeIn:
+:bg:eddy1:
+:narrator:default:Not too far away from where they defeated the folded enemies, a toad called out to Boyfriend.
+:gondol:default:Hey you, kid!
+:bf:default:Bop?
+:gondol:default:Yeah you! That was amazing! You really showed those folded dorks who's boss.
+:fade:eddy1:
+:bg:eddy2:
+:bf:default:Bap beep skdep boop.
+:gondol:default:Oh, you’re looking for Mario? I  just carried him down to the Scorching Sandpaper Desert. 
+:bf:default:beep bo?
+:gondol:default:Sure thing mate! Hop on in and I'll give you and your folded friend a ride.
+:gondol:default:If you trust this one that is...
+:music:2-river:
+:music:fadeIn:
+:fade:eddy2:
+:bg:eddy3:
+:narrator:default:The toad hummed to himself happily on the way down the river.
+:narrator:default:Finally, he broke the silence.
+:gondol:default: Hey, kid.
+:bf:default:?
+:gondol:default:Wanna do another song? My vocal cords been raring to go ever since I carried Mario down here.
+:bf:default:Boop beep!
+:gondol:default:Excellent! Singing in the rapids is gonna be interesting! 
+:gondol:default:Mind the logs and stones! Crashing into them could be fatal.

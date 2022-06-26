@@ -49,12 +49,15 @@ class GameOverSubstate extends MusicBeatSubstate
 
 		Conductor.songPosition = 0;
 
-		boyfriend = new Boyfriend(x, y, characterName);
+		boyfriend = new Boyfriend(x, y, 'bfdeath');
 		boyfriend.x += boyfriend.positionArray[0];
 		boyfriend.y += boyfriend.positionArray[1];
 		add(boyfriend);
 
 		camFollow = new FlxPoint(boyfriend.getGraphicMidpoint().x, boyfriend.getGraphicMidpoint().y);
+
+		if (PlayState.curStage == 'ship')
+			boyfriend.flipX = true;
 
 		FlxG.sound.play(Paths.sound(deathSoundName));
 		Conductor.changeBPM(100);
@@ -137,7 +140,11 @@ class GameOverSubstate extends MusicBeatSubstate
 
 	function coolStartDeath(?volume:Float = 1):Void
 	{
-		FlxG.sound.playMusic(Paths.music(loopSoundName), volume);
+		FlxG.sound.playMusic(Paths.music('Foldedpart1'));
+			new FlxTimer().start(13, function(tmr:FlxTimer)
+						{
+							FlxG.sound.playMusic(Paths.music('Foldedloop'));
+						});
 	}
 
 	function endBullshit():Void
@@ -147,7 +154,7 @@ class GameOverSubstate extends MusicBeatSubstate
 			isEnding = true;
 			boyfriend.playAnim('deathConfirm', true);
 			FlxG.sound.music.stop();
-			FlxG.sound.play(Paths.music(endSoundName));
+			FlxG.sound.play(Paths.music('Foldedconfirm'));
 			new FlxTimer().start(0.7, function(tmr:FlxTimer)
 			{
 				FlxG.camera.fade(FlxColor.BLACK, 2, false, function()

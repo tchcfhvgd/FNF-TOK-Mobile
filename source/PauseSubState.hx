@@ -251,6 +251,9 @@ class PauseSubState extends MusicBeatSubstate
 				case "Exit to menu":
 					PlayState.deathCounter = 0;
 					PlayState.seenCutscene = false;
+					PlayState.ratingPercent = 0.00;
+            		PlayState.songMisses = 0;
+
 					if(PlayState.isStoryMode) {
 						MusicBeatState.switchState(new StoryMenuState());
 					} else {
@@ -268,6 +271,7 @@ class PauseSubState extends MusicBeatSubstate
 		PlayState.instance.paused = true; // For lua
 		FlxG.sound.music.volume = 0;
 		PlayState.instance.vocals.volume = 0;
+		PlayState.songMisses = 0;
 
 		if(noTrans)
 		{

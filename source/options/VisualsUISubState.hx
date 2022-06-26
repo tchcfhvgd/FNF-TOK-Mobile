@@ -63,6 +63,13 @@ class VisualsUISubState extends BaseOptionsMenu
 			true);
 		addOption(option);
 
+		var option:Option = new Option('Coin Effects',
+			"Uncheck this if you have a lower end PC to save on graphics!",
+			'coineffects',
+			'bool',
+			true);
+		addOption(option);
+
 		var option:Option = new Option('Camera Zooms',
 			"If unchecked, the camera won't zoom in on a beat hit.",
 			'camZooms',

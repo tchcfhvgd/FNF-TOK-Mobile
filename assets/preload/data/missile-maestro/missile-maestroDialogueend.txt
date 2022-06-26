@@ -1,0 +1,13 @@
+:bg:missile4:
+:music:1-1:
+:music:fadeIn:
+:colors:default:I CAN'T BELIEVE THIS!
+:colors:default:ME, JEAN PIERRE COLORED PENCILS THE 12TH, DEFEATED BY TWO MIDGETS IN A ROW!
+:colors:default:YOU’LL PAY FOR-....
+:bg:white:
+:fade:missile4:
+:narrator:default:The colorful spectre vanished out of existence with a bright glow..
+:bg:missile5:
+:narrator:default:Boyfriend sits down on the empty cableway as he ponders… what is even happening at this point? 
+:narrator:default:It's like his world is crumbling before his eyes, he feels alone and isolated… 
+:narrator:default:For their sake, let's hope Mario isn't too far ahead.

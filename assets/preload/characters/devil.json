@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				152,
+				36
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "Sing Left"
+		},
+		{
+			"offsets": [
+				-85,
+				-204
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "Sing Down"
+		},
+		{
+			"offsets": [
+				-84,
+				-175
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "Sing Right"
+		},
+		{
+			"offsets": [
+				-85,
+				-32
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "Sing Up"
+		},
+		{
+			"offsets": [
+				-90,
+				-100
+			],
+			"loop": true,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "Idle"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/devil3d",
+	"position": [
+		-750,
+		-60
+	],
+	"healthicon": "holepunch",
+	"flip_x": false,
+	"healthbar_colors": [
+		255,
+		189,
+		0
+	],
+	"camera_position": [
+		-150,
+		70
+	],
+	"sing_duration": 6.1,
+	"scale": 1.3
+}
