@@ -2,122 +2,58 @@
 	"animations": [
 		{
 			"offsets": [
-				0,
-				0
+				524,
+				-69
 			],
-			"loop": true,
-			"fps": 24,
-			"anim": "idle-loop",
-			"indices": [
-				10,
-				11,
-				12,
-				12
-			],
-			"name": "Dad idle dance"
-		},
-		{
-			"offsets": [
-				-9,
-				10
-			],
-			"loop": true,
-			"fps": 24,
-			"anim": "singLEFT-loop",
-			"indices": [
-				12,
-				13,
-				14,
-				15
-			],
-			"name": "Dad Sing Note LEFT"
-		},
-		{
-			"offsets": [
-				0,
-				27
-			],
-			"loop": true,
-			"fps": 24,
-			"anim": "singRIGHT-loop",
-			"indices": [
-				15,
-				16,
-				17,
-				18
-			],
-			"name": "Dad Sing Note RIGHT"
-		},
-		{
-			"offsets": [
-				-6,
-				50
-			],
-			"loop": true,
-			"fps": 24,
-			"anim": "singUP-loop",
-			"indices": [
-				56,
-				57,
-				58,
-				59
-			],
-			"name": "Dad Sing Note UP"
-		},
-		{
 			"loop": false,
-			"offsets": [
-				235,
-				-40
-			],
+			"fps": 24,
 			"anim": "singLEFT",
-			"fps": 24,
-			"name": "Sing Left",
-			"indices": []
+			"indices": [],
+			"name": "Sing Left"
 		},
 		{
-			"loop": false,
 			"offsets": [
-				244,
-				-42
+				324,
+				-344
 			],
+			"loop": false,
+			"fps": 24,
 			"anim": "singDOWN",
-			"fps": 24,
-			"name": "Sing Down",
-			"indices": []
+			"indices": [],
+			"name": "Sing Down"
 		},
 		{
-			"loop": false,
 			"offsets": [
-				285,
-				-39
+				546,
+				95
 			],
+			"loop": false,
+			"fps": 24,
 			"anim": "singUP",
-			"fps": 24,
-			"name": "Sing Up",
-			"indices": []
+			"indices": [],
+			"name": "Sing Up"
 		},
 		{
-			"loop": false,
 			"offsets": [
-				267,
-				-40
+				229,
+				-108
 			],
-			"anim": "singRIGHT",
+			"loop": false,
 			"fps": 24,
-			"name": "Sing Right",
-			"indices": []
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "Sing Right"
 		},
 		{
+			"loop": true,
 			"offsets": [
 				280,
 				-40
 			],
-			"indices": [],
-			"fps": 24,
 			"anim": "idle",
-			"loop": true,
-			"name": "Idle"
+			"fps": 24,
+			"name": "Idle",
+			"indices": []
 		}
 	],
 	"no_antialiasing": false,

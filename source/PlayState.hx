@@ -352,6 +352,8 @@ class PlayState extends MusicBeatState
 
 	var startdrawing:Bool = false;
 
+	var overlay:FlxSprite;
+
 
 	override public function create()
 	{
@@ -1595,6 +1597,10 @@ class PlayState extends MusicBeatState
 			botplayTxt.y = timeBarBG.y - 78;
 		}
 
+		overlay = new FlxSprite().loadGraphic(Paths.image('overlay'));
+		overlay.antialiasing = ClientPrefs.globalAntialiasing;
+		overlay.screenCenter();
+
 		strumLineNotes.cameras = [camHUD];
 		grpNoteSplashes.cameras = [camHUD];
 		notes.cameras = [camHUD];
@@ -1610,6 +1616,7 @@ class PlayState extends MusicBeatState
 		timeTxt.cameras = [camHUD];
 		doof.cameras = [camHUD];
 		doof2.cameras = [camHUD];
+		overlay.cameras = [camHUD];
 
 		// if (SONG.song == 'South')
 		// FlxG.camera.alpha = 0.7;
@@ -1708,6 +1715,7 @@ class PlayState extends MusicBeatState
 					schoolIntro(doof);
 
 				default:
+					add(overlay);
 					startCountdown();
 			}
 			seenCutscene = true;
@@ -1717,6 +1725,7 @@ class PlayState extends MusicBeatState
 			switch (daSong)
 			{
 				case 'monotoad':
+					add(overlay);
 					boyfriend.visible = false;
 					gf.visible = false;
 					dad.visible = false;
@@ -1728,6 +1737,7 @@ class PlayState extends MusicBeatState
 						});
 				
 				default:
+					add(overlay);
 					startCountdown();
 
 			}
@@ -2023,7 +2033,9 @@ class PlayState extends MusicBeatState
 			if (dialogueBox != null)
 				add(dialogueBox);
 				else
-				startCountdown();	
+				startCountdown();
+			
+			add(overlay);	
 		});
 
 		new FlxTimer().start(2, function(tmr:FlxTimer)
@@ -5642,73 +5654,73 @@ class PlayState extends MusicBeatState
 			var currentx:Int = Std.int(dad.x);
 			var currenty:Int = Std.int(dad.y);
 
-			new FlxTimer().start(FlxG.random.float(1, 3), function(tmr:FlxTimer)
+			new FlxTimer().start(FlxG.random.float(2, 4), function(tmr:FlxTimer)
 				{
-					var boo:BGSprite = new BGSprite('chapters/chapter1/images/background/tele/ghosts', dad.x - 1000, FlxG.height - FlxG.random.int(100, 200));
+					var boo:BGSprite = new BGSprite('chapters/chapter1/images/background/tele/ghosts', dad.x - 1500, FlxG.height - FlxG.random.int(100, 200), 1, 1, ['boo'], true);
 					boo.cameras = [camHUD];
 					add(boo);
 					FlxTween.tween(boo, { x: 3000 }, FlxG.random.int(7, 10));
 				});
 
-			new FlxTimer().start(FlxG.random.float(1, 3), function(tmr:FlxTimer)
+			new FlxTimer().start(FlxG.random.float(2, 4), function(tmr:FlxTimer)
 				{
-					var boo2:BGSprite = new BGSprite('chapters/chapter1/images/background/tele/ghosts', dad.x - 1000, FlxG.height - FlxG.random.int(100, 200));
+					var boo2:BGSprite = new BGSprite('chapters/chapter1/images/background/tele/pencils', dad.x - 1500, FlxG.height - FlxG.random.int(100, 200), 1, 1, ['pencils'], true);
 					boo2.cameras = [camHUD];
 					add(boo2);
 					FlxTween.tween(boo2, { x: 3000 }, FlxG.random.int(7, 10));
 				});
 
-			new FlxTimer().start(FlxG.random.float(1, 3), function(tmr:FlxTimer)
+			new FlxTimer().start(FlxG.random.float(2, 4), function(tmr:FlxTimer)
 				{
-					var boo3:BGSprite = new BGSprite('chapters/chapter1/images/background/tele/ghosts', dad.x - 1000, FlxG.height - FlxG.random.int(300, 400));
+					var boo3:BGSprite = new BGSprite('chapters/chapter1/images/background/tele/ghosts', dad.x - 1500, FlxG.height - FlxG.random.int(300, 400), 1, 1, ['boo'], true);
 					boo3.cameras = [camHUD];
 					add(boo3);
 					FlxTween.tween(boo3, { x: 3000 }, FlxG.random.int(7, 10));
 				});
 
-			new FlxTimer().start(FlxG.random.float(1, 3), function(tmr:FlxTimer)
+			new FlxTimer().start(FlxG.random.float(2, 4), function(tmr:FlxTimer)
 				{
-					var boo9:BGSprite = new BGSprite('chapters/chapter1/images/background/tele/ghosts', dad.x - 1000, FlxG.height - FlxG.random.int(600, 700));
+					var boo9:BGSprite = new BGSprite('chapters/chapter1/images/background/tele/pencils', dad.x - 1500, FlxG.height - FlxG.random.int(600, 700), 1, 1, ['pencils'], true);
 					boo9.cameras = [camHUD];
 					add(boo9);
 					FlxTween.tween(boo9, { x: 3000 }, FlxG.random.int(7, 10));
 				});
 
-			new FlxTimer().start(FlxG.random.float(1, 3), function(tmr:FlxTimer)
+			new FlxTimer().start(FlxG.random.float(2, 4), function(tmr:FlxTimer)
 				{
-					var boo4:BGSprite = new BGSprite('chapters/chapter1/images/background/tele/ghosts', dad.x - 1000, FlxG.height - FlxG.random.int(300, 400));
+					var boo4:BGSprite = new BGSprite('chapters/chapter1/images/background/tele/ghosts', dad.x - 1500, FlxG.height - FlxG.random.int(300, 400), 1, 1, ['boo'], true);
 					boo4.cameras = [camHUD];
 					add(boo4);
 					FlxTween.tween(boo4, { x: 3000 }, FlxG.random.int(7, 10));
 				});
 
-			new FlxTimer().start(FlxG.random.float(3, 4.5), function(tmr:FlxTimer)
+			new FlxTimer().start(FlxG.random.float(4, 5.5), function(tmr:FlxTimer)
 				{
-					var boo5:BGSprite = new BGSprite('chapters/chapter1/images/background/tele/ghosts', dad.x - 1000, FlxG.height - FlxG.random.int(500, 600));
+					var boo5:BGSprite = new BGSprite('chapters/chapter1/images/background/tele/pencils', dad.x - 1500, FlxG.height - FlxG.random.int(500, 600), 1, 1, ['pencils'], true);
 					boo5.cameras = [camHUD];
 					add(boo5);
 					FlxTween.tween(boo5, { x: 3000 }, FlxG.random.int(7, 10));
 				});
 
-			new FlxTimer().start(FlxG.random.float(3, 4.5), function(tmr:FlxTimer)
+			new FlxTimer().start(FlxG.random.float(4, 5.5), function(tmr:FlxTimer)
 				{
-					var boo6:BGSprite = new BGSprite('chapters/chapter1/images/background/tele/ghosts', dad.x - 1000, FlxG.height - FlxG.random.int(500, 600));
+					var boo6:BGSprite = new BGSprite('chapters/chapter1/images/background/tele/ghosts', dad.x - 1500, FlxG.height - FlxG.random.int(500, 600), 1, 1, ['boo'], true);
 					boo6.cameras = [camHUD];
 					add(boo6);
 					FlxTween.tween(boo6, { x: 3000 }, FlxG.random.int(7, 10));
 				});
 
-			new FlxTimer().start(FlxG.random.float(3, 4.5), function(tmr:FlxTimer)
+			new FlxTimer().start(FlxG.random.float(4, 5.5), function(tmr:FlxTimer)
 				{
-					var boo7:BGSprite = new BGSprite('chapters/chapter1/images/background/tele/ghosts', dad.x - 1000, FlxG.height - FlxG.random.int(600, 700));
+					var boo7:BGSprite = new BGSprite('chapters/chapter1/images/background/tele/pencils', dad.x - 1500, FlxG.height - FlxG.random.int(600, 700), 1, 1, ['pencils'], true);
 					boo7.cameras = [camHUD];
 					add(boo7);
 					FlxTween.tween(boo7, { x: 3000 }, FlxG.random.int(7, 10));
 				});
 
-			new FlxTimer().start(FlxG.random.float(3, 4.5), function(tmr:FlxTimer)
+			new FlxTimer().start(FlxG.random.float(4, 5.5), function(tmr:FlxTimer)
 				{
-					var boo8:BGSprite = new BGSprite('chapters/chapter1/images/background/tele/ghosts', dad.x - 1000, FlxG.height - FlxG.random.int(600, 700));
+					var boo8:BGSprite = new BGSprite('chapters/chapter1/images/background/tele/ghosts', dad.x - 1500, FlxG.height - FlxG.random.int(600, 700));
 					boo8.cameras = [camHUD];
 					add(boo8);
 					FlxTween.tween(boo8, { x: 3000 }, FlxG.random.int(7, 10));
@@ -5717,22 +5729,14 @@ class PlayState extends MusicBeatState
 			FlxTween.tween(dad, { x: 1000, y: -500}, 1.5, {ease: FlxEase.backIn,
 				onComplete: function(twn:FlxTween)
 					{
-						dad.x = -2000;
-						dad.y = -3000;
-
-						FlxTween.tween(dad, { x: FlxG.random.int(currentx + 2000, currentx + 3000), y: FlxG.random.int(currenty + 2000, currenty + 2500)}, 2.5, {ease: FlxEase.backIn,
-							onComplete: function(twn:FlxTween)
-								{
-									dad.x = currentx;
-									dad.y = -1000;
-									FlxTween.tween(dad, { y: currenty }, 1.5);
-								}
-							});
+						dad.x = currentx;
+						dad.y = -1000;
+						FlxTween.tween(dad, { y: currenty }, 1.5);
 					}
 				}); 
 
 
-				new FlxTimer().start(5.5, function(tmr:FlxTimer)
+				new FlxTimer().start(3, function(tmr:FlxTimer)
 					{
 						startdrawing = false;
 					});
