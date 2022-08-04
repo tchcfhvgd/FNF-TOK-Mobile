@@ -778,40 +778,22 @@ class PlayState extends MusicBeatState
 				}
 
 			case 'picnicstage':
-					var sky:BGSprite = new BGSprite('chapters/chapter1/images/background/pr/picnicroadsky', -390, -100, 0.9, 0.9);
+					var sky:BGSprite = new BGSprite('chapters/chapter1/images/background/pr/Background', -390, -650, 0.9, 0.9);
 					sky.antialiasing = true;
 					add(sky);	
 
-					var road:BGSprite = new BGSprite('chapters/chapter1/images/background/pr/picnicroadbg',-400, -150);
+					var road:BGSprite = new BGSprite('chapters/chapter1/images/background/pr/Ground',-400, -650);
 					road.antialiasing = true;
 					add(road);
 
-					var topflowers:BGSprite = new BGSprite('chapters/chapter1/images/background/pr/topflowers', -400, -150);
-					topflowers.antialiasing = true;
-					add(topflowers);
-
-					flowers = new BGSprite('chapters/chapter1/images/background/pr/flowers', -400, -150, 1, 1, ['flowerbop'], false);
-					flowers.antialiasing = true;
-					flowers.updateHitbox();
-					add(flowers);
-
 				case 'altpicnicstage':
-						var sky:BGSprite = new BGSprite('chapters/chapter1/images/background/pr/picnicroadsky', -390, -100, 0.9, 0.9);
+						var sky:BGSprite = new BGSprite('chapters/chapter1/images/background/red/Background', -390, -650, 0.9, 0.9);
 						sky.antialiasing = true;
 						add(sky);	
 	
-						var road:BGSprite = new BGSprite('chapters/chapter1/images/background/pr/picnicroadbg',-400, -150);
+						var road:BGSprite = new BGSprite('chapters/chapter1/images/background/red/Ground',-400, -650);
 						road.antialiasing = true;
 						add(road);
-	
-						var topflowers:BGSprite = new BGSprite('chapters/chapter1/images/background/pr/topflowers', -400, -150);
-						topflowers.antialiasing = true;
-						add(topflowers);
-	
-						flowers = new BGSprite('chapters/chapter1/images/background/pr/flowers', -400, -150, 1, 1, ['flowerbop'], false);
-						flowers.antialiasing = true;
-						flowers.updateHitbox();
-						add(flowers);
 
 				case 'teleferic':
 					var sky:BGSprite = new BGSprite('chapters/chapter1/images/background/tele/sky', -400, -550, 0.9, 0.9);
@@ -1711,7 +1693,7 @@ class PlayState extends MusicBeatState
 						});
 					});
 
-				case 'picnic-road' | 'red-streamer-battle' | 'missile-maestro' | 'autumn-mountain-battle' | 'eddy-river' | 'elastic-entertainer' | 'yellow-streamer-battle' | 'thrills-at-night' | 'disco-devil':
+				case 'picnic-road' | 'red-streamer-battle' | 'missile-maestro' | 'autumn-mountain-battle' | 'eddy-river' | 'elastic-entertainer' | 'yellow-streamer-battle' | 'thrills-at-night' | 'disco-devil' | 'the-great-sea':
 					schoolIntro(doof);
 
 				default:
@@ -1995,7 +1977,7 @@ class PlayState extends MusicBeatState
 
 		var daSong:String = Paths.formatToSongPath(curSong);
 
-		if (daSong == 'picnic-road' || daSong == 'autumn-mountain-battle' || daSong == 'yellow-streamer-battle')
+		if (daSong == 'picnic-road' || daSong == 'autumn-mountain-battle' || daSong == 'yellow-streamer-battle' || daSong == 'the-great-sea')
 			{
 				var chapterload:FlxSprite = new FlxSprite();
 				chapterload.cameras = [camHUD];
@@ -2727,7 +2709,7 @@ class PlayState extends MusicBeatState
 			endSong();
 		}
 
-		if (dad.curCharacter == 'colors' && startdrawing == false)
+		if (dad.curCharacter == 'colors' && startdrawing == false && !endingSong)
 			{
 				moveCameraSection(Std.int(curStep / 16));
 			}
@@ -5667,7 +5649,7 @@ class PlayState extends MusicBeatState
 					var boo2:BGSprite = new BGSprite('chapters/chapter1/images/background/tele/pencils', dad.x - 1500, FlxG.height - FlxG.random.int(100, 200), 1, 1, ['pencils'], true);
 					boo2.cameras = [camHUD];
 					add(boo2);
-					FlxTween.tween(boo2, { x: 3000 }, FlxG.random.int(7, 10));
+					FlxTween.tween(boo2, { x: 3000 }, FlxG.random.int(4, 5));
 				});
 
 			new FlxTimer().start(FlxG.random.float(2, 4), function(tmr:FlxTimer)
@@ -5683,7 +5665,7 @@ class PlayState extends MusicBeatState
 					var boo9:BGSprite = new BGSprite('chapters/chapter1/images/background/tele/pencils', dad.x - 1500, FlxG.height - FlxG.random.int(600, 700), 1, 1, ['pencils'], true);
 					boo9.cameras = [camHUD];
 					add(boo9);
-					FlxTween.tween(boo9, { x: 3000 }, FlxG.random.int(7, 10));
+					FlxTween.tween(boo9, { x: 3000 }, FlxG.random.int(4, 5));
 				});
 
 			new FlxTimer().start(FlxG.random.float(2, 4), function(tmr:FlxTimer)
@@ -5699,7 +5681,7 @@ class PlayState extends MusicBeatState
 					var boo5:BGSprite = new BGSprite('chapters/chapter1/images/background/tele/pencils', dad.x - 1500, FlxG.height - FlxG.random.int(500, 600), 1, 1, ['pencils'], true);
 					boo5.cameras = [camHUD];
 					add(boo5);
-					FlxTween.tween(boo5, { x: 3000 }, FlxG.random.int(7, 10));
+					FlxTween.tween(boo5, { x: 3000 }, FlxG.random.int(4, 5));
 				});
 
 			new FlxTimer().start(FlxG.random.float(4, 5.5), function(tmr:FlxTimer)
@@ -5715,7 +5697,7 @@ class PlayState extends MusicBeatState
 					var boo7:BGSprite = new BGSprite('chapters/chapter1/images/background/tele/pencils', dad.x - 1500, FlxG.height - FlxG.random.int(600, 700), 1, 1, ['pencils'], true);
 					boo7.cameras = [camHUD];
 					add(boo7);
-					FlxTween.tween(boo7, { x: 3000 }, FlxG.random.int(7, 10));
+					FlxTween.tween(boo7, { x: 3000 }, FlxG.random.int(4, 6));
 				});
 
 			new FlxTimer().start(FlxG.random.float(4, 5.5), function(tmr:FlxTimer)
@@ -5963,12 +5945,6 @@ class PlayState extends MusicBeatState
 
 		switch (curStage)
 		{
-			case 'picnicstage':
-				flowers.dance(true);
-
-			case 'altpicnicstage':
-				flowers.dance(true);
-
 			case 'teleferic':
 				if (balloonsnotdone == false)
 					balloonStart();

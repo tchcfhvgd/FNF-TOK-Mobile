@@ -74,6 +74,18 @@ class DialogueBox extends FlxSpriteGroup
 	var jojo102:FlxSprite;
 	var jojo10:FlxSprite;
 
+	var boat13:FlxSprite;
+	var sea13:FlxSprite;
+	var sky13:FlxSprite;
+	var circle_island13:FlxSprite;
+	var clover_island13:FlxSprite;
+	var heart_island13:FlxSprite;
+	var pica_island13:FlxSprite;
+	var rocks_113:FlxSprite;
+	var rocks_213:FlxSprite;
+	var skull_island13:FlxSprite;
+	var cloudsback13:FlxSprite;
+
 	var bf16happy:FlxSprite;
 	var bf16scared:FlxSprite;
 	var smoke16:FlxSprite;
@@ -284,7 +296,70 @@ class DialogueBox extends FlxSpriteGroup
 		jojo16.angle = 15;
 		add(jojo16);	
 		jojo16.visible = false;
+
+		case 'vellumental-battle' | 'the-great-sea':
+		
+		sky13 = new FlxSprite(-50, 0).loadGraphic(Paths.image('cutscenes/cutscene13parts/sky_13'));
+		add(sky13);
+		sky13.visible = false;
+
+		cloudsback13 = new FlxSprite(-7500, -300).loadGraphic(Paths.image('cutscenes/cutscene13parts/clouds/allclouds'));
+		add(cloudsback13);
+		cloudsback13.visible = false;
+
+		circle_island13 = new FlxSprite(-800, 190).loadGraphic(Paths.image('cutscenes/cutscene13parts/islands/circle_island'));
+		add(circle_island13);
+		circle_island13.setGraphicSize(Std.int(circle_island13.width * 0.7));
+		circle_island13.visible = false;
+
+		clover_island13 = new FlxSprite(-800, 165).loadGraphic(Paths.image('cutscenes/cutscene13parts/islands/clover_island'));
+		add(clover_island13);
+		clover_island13.setGraphicSize(Std.int(clover_island13.width * 0.7));
+		clover_island13.visible = false;
+
+		heart_island13 = new FlxSprite(-800, 60).loadGraphic(Paths.image('cutscenes/cutscene13parts/islands/heart_island'));
+		add(heart_island13);
+		heart_island13.setGraphicSize(Std.int(heart_island13.width * 0.7));	
+		heart_island13.visible = false;
+
+		pica_island13 = new FlxSprite(-800, 190).loadGraphic(Paths.image('cutscenes/cutscene13parts/islands/pica_island'));
+		add(pica_island13);
+		pica_island13.setGraphicSize(Std.int(pica_island13.width * 0.7));	
+		pica_island13.visible = false;
+
+		rocks_113 = new FlxSprite(-800, 245).loadGraphic(Paths.image('cutscenes/cutscene13parts/islands/rocks_1'));
+		add(rocks_113);
+		rocks_113.setGraphicSize(Std.int(rocks_113.width * 0.7));	
+		rocks_113.visible = false;
+
+		rocks_213 = new FlxSprite(-800, 289).loadGraphic(Paths.image('cutscenes/cutscene13parts/islands/rocks_2'));
+		rocks_213.setGraphicSize(Std.int(rocks_213.width * 0.7));	
+		add(rocks_213);
+		rocks_213.visible = false;
+
+		skull_island13 = new FlxSprite(-800, 10).loadGraphic(Paths.image('cutscenes/cutscene13parts/islands/skull_island'));
+		skull_island13.setGraphicSize(Std.int(skull_island13.width * 0.7));	
+		add(skull_island13);
+		skull_island13.visible = false;
+
+		boat13 = new FlxSprite(-200, -190);
+		boat13.frames = Paths.getSparrowAtlas('cutscenes/cutscene13parts/boat');
+		boat13.animation.addByPrefix('steam', 'boat idle', 12, true);	
+		boat13.setGraphicSize(Std.int(boat13.width * 0.8));
+		add(boat13);
+		boat13.animation.play('steam');
+		boat13.visible = false;
+
+		sea13 = new FlxSprite(-2150, -190); //-400, 
+		sea13.frames = Paths.getSparrowAtlas('cutscenes/cutscene13parts/sea');
+		sea13.animation.addByPrefix('waves', 'sea idle', 12, true);
+		sea13.setGraphicSize(Std.int(sea13.width * 0.8));	
+		add(sea13);
+		sea13.animation.play('waves');
+		sea13.visible = false;
+
 		}
+	
 
 
 		
@@ -349,6 +424,90 @@ class DialogueBox extends FlxSpriteGroup
 
 	override function update(elapsed:Float)
 	{
+		if (boat13.visible)
+			{
+				if (circle_island13.x == -800)
+					{
+						circle_island13.x = 1200;
+						new FlxTimer().start(FlxG.random.float(1, 2), function(tmr:FlxTimer)
+							{
+								FlxTween.tween(circle_island13, { x: -800 }, FlxG.random.int(4, 5));
+							});
+
+					}
+
+				if (pica_island13.x == -800)
+					{
+						pica_island13.x = 1200;
+						new FlxTimer().start(FlxG.random.float(3, 4), function(tmr:FlxTimer)
+							{
+								FlxTween.tween(pica_island13, { x: -800 }, FlxG.random.int(4, 5));
+							});
+
+					}
+
+				if (rocks_113.x == -800)
+					{
+						rocks_113.x = 1200;
+						new FlxTimer().start(FlxG.random.float(5, 6), function(tmr:FlxTimer)
+							{
+								FlxTween.tween(rocks_113, { x: -800 }, FlxG.random.int(4, 5));
+							});
+
+					}
+
+				if (skull_island13.x == -800)
+					{
+						skull_island13.x = 1200;
+						new FlxTimer().start(FlxG.random.float(7, 8), function(tmr:FlxTimer)
+							{
+								FlxTween.tween(skull_island13, { x: -800 }, FlxG.random.int(4, 5));
+							});
+
+					}
+
+				if (rocks_213.x == -800)
+					{
+						rocks_213.x = 1200;
+						new FlxTimer().start(FlxG.random.float(9, 10), function(tmr:FlxTimer)
+							{
+								FlxTween.tween(rocks_213, { x: -800 }, FlxG.random.int(4, 5));
+							});
+
+					}
+
+				if (clover_island13.x == -800)
+					{
+						clover_island13.x = 1200;
+						new FlxTimer().start(FlxG.random.float(11, 12), function(tmr:FlxTimer)
+							{
+								FlxTween.tween(clover_island13, { x: -800 }, FlxG.random.int(4, 5));
+							});
+					}
+
+				if (heart_island13.x == -800)
+					{
+						heart_island13.x = 1200;
+						new FlxTimer().start(FlxG.random.float(13, 14), function(tmr:FlxTimer)
+							{
+								FlxTween.tween(heart_island13, { x: -800 }, FlxG.random.int(4, 5));
+							});
+					}
+
+				if (cloudsback13.x == -7500)
+					{
+						cloudsback13.x = 500;
+						FlxTween.tween(cloudsback13, { x: -7500 }, FlxG.random.int(10, 15));
+					}
+
+				if (sea13.x == -2150)
+					{
+						sea13.x = -400;
+						FlxTween.tween(sea13, { x: -2150 }, 5);
+					}
+			}
+
+
 		if (pencilrepeat == true)
 			{
 				pencilrepeat = false;
@@ -877,6 +1036,25 @@ class DialogueBox extends FlxSpriteGroup
 					FlxTween.tween(gf10, { y: 470}, 0.5); 
 			}); 
 				}
+
+			case "cutscenethirteen":
+				animatedCutscene = true;
+				skipDialogue = true;
+				if (!sky13.visible)
+					{
+						boat13.visible = true;
+						sea13.visible = true;
+						sky13.visible = true;
+						circle_island13.visible = true;
+						clover_island13.visible = true;
+						heart_island13.visible = true;
+						pica_island13.visible = true;
+						rocks_113.visible = true;
+						rocks_213.visible = true;
+						skull_island13.visible = true;
+						cloudsback13.visible = true;
+					}
+				
 
 			case "cutscenesixteen":
 				holdtime = 2;
