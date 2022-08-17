@@ -1016,9 +1016,6 @@ class PlayState extends MusicBeatState
 					shipboppers = new BGSprite('chapters/chapter4/port/shipboppers', -400, -150, 1, 1, ['shipboppers'], false);
 					shipboppers.antialiasing = true;
 					add(shipboppers);
-		
-					var foreground:BGSprite = new BGSprite('chapters/chapter4/port/fore', -400, -150, 0.9, 0.9);
-					add(foreground);
 
 				case 'seatower':
 					var sky:BGSprite = new BGSprite('chapters/chapter4/seatower/sky', -520, -150);
@@ -1181,6 +1178,25 @@ class PlayState extends MusicBeatState
 		
 		if(curStage == 'spooky') {
 			add(halloweenWhite);
+		}
+
+		if (curStage == 'disco' || curStage == 'discodevilalt')
+		{
+			/*var discoLight2:BGSprite = new BGSprite('chapters/chapter3/images/background/disco/discoLight2', 0, -50);
+			discoLight2.antialiasing = true;
+			discoLight2.blend = OVERLAY;
+			add(discoLight2);
+
+			var discoLight3:BGSprite = new BGSprite('chapters/chapter3/images/background/disco/discoLight2', 0, -50);
+			discoLight3.antialiasing = true;
+			discoLight3.blend = ADD;
+			add(discoLight3);*/
+		}
+
+		if (curStage == 'ship')
+		{
+			var foreground:BGSprite = new BGSprite('chapters/chapter4/port/fore', -400, -150, 1.1, 1.1);
+			add(foreground);
 		}
 
 		#if LUA_ALLOWED
@@ -4431,7 +4447,6 @@ class PlayState extends MusicBeatState
 					case 'mountain':
 					FlxG.sound.play(Paths.sound('autumnvictory'), 1, false);
 				
-	
 					case 'disco':
 						FlxG.sound.play(Paths.sound('yellowvictory'), 1, false);
 
@@ -4442,6 +4457,9 @@ class PlayState extends MusicBeatState
 					FlxG.sound.play(Paths.sound('yellowvictory'), 1, false);	
 	
 					case 'yapestage':
+					FlxG.sound.play(Paths.sound('shadyvictory'), 1, false);	
+
+					case 'icecavern':
 					FlxG.sound.play(Paths.sound('shadyvictory'), 1, false);	
 	
 					case 'seatower':
@@ -4666,6 +4684,30 @@ class PlayState extends MusicBeatState
 				coin8.x = 0;
 	
 				coinlevel = -150;
+
+				case 'icecavern':
+				coin.x = 0;
+				coin2.x = 100;
+				coin3.x = 200;
+				coin4.x = 300;
+				coin5.x = 400;
+				coin6.x = 500;
+				coin7.x = 600;
+				coin8.x = 700;
+	
+				coinlevel = -650;
+
+				case 'seatower':
+				coin.x = 1000;
+				coin2.x = 1100;
+				coin3.x = 1200;
+				coin4.x = 1300;
+				coin5.x = 1400;
+				coin6.x = 1500;
+				coin7.x = 1600;
+				coin8.x = 1700;
+
+				coinlevel = 300;
 		}
 
 				coin.y = coinstart;

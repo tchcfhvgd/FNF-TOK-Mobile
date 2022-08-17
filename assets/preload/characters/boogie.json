@@ -13,8 +13,8 @@
 		},
 		{
 			"offsets": [
-				135,
-				15
+				35,
+				-15
 			],
 			"loop": false,
 			"fps": 24,
@@ -24,8 +24,8 @@
 		},
 		{
 			"offsets": [
-				9,
-				-101
+				39,
+				-13
 			],
 			"loop": false,
 			"fps": 24,
@@ -35,8 +35,8 @@
 		},
 		{
 			"offsets": [
-				78,
-				-64
+				38,
+				-24
 			],
 			"loop": false,
 			"fps": 24,
@@ -46,14 +46,14 @@
 		},
 		{
 			"offsets": [
-				24,
-				17
+				44,
+				-16
 			],
 			"indices": [],
 			"fps": 24,
 			"anim": "singUP",
 			"loop": false,
-			"name": "SIng Up"
+			"name": "Sing Up"
 		}
 	],
 	"no_antialiasing": false,
@@ -74,5 +74,5 @@
 		70
 	],
 	"sing_duration": 6.1,
-	"scale": 0.5
+	"scale": 1
 }

@@ -8,14 +8,14 @@
 :bg:yellow2:
 :music:3-1:
 :music:fadeIn:
-:narrator:default:They approach the entrance of Monty Mole Cave, leading to Scorching Sandpaper Desert...
-:narrator:default:A small feeling that a friend is no longer with us suddenly hits Boyfriend, as he looks at the massive crater.
-:narrator:default:...Yet, they proceed onwards.
+:narrator:default:At the entrance to Scorching Sandpaper Desert, Boyfriend trips on some rubble.
+:narrator:default:He gets up quickly and glances at the crater in the ground, wondering what may have happened...
+:narrator:default:He firmly grabs Girlfriend's arm, and the two march onward without a further thought.
 :music:3-2:
 :music:fadeIn:
 :fade:yellow2:
 :bg:yellow3:
-:narrator:default:They nab a Boot Car and drive towards the Yellow Streamer.
+:narrator:default:They nab a boot car and traverse the desert. Boyfriend spots what seems to be a yellow ribbon in the sky.
 :narrator:default:It was still intact, attached to some ancient temple.
 :fade:yellow3:
 :bg:yellow4:

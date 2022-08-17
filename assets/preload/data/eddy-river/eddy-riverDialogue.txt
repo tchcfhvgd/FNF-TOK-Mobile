@@ -1,7 +1,6 @@
 :music:2-1:
 :music:fadeIn:
 :bg:eddy1:
-:narrator:default:Not too far away from where they defeated the folded enemies, a toad called out to Boyfriend.
 :gondol:default:Hey you, kid!
 :bf:default:Bop?
 :gondol:default:Yeah you! That was amazing! You really showed those folded dorks who's boss.

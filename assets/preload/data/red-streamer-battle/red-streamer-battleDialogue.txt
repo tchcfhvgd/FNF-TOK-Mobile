@@ -2,7 +2,8 @@
 :music:1-2:
 :music:fadeIn:
 :toad:default:Aww shucks… good one pal.
-:narrator:default:Boyfriend asks if the toad knows anything about what is going on.
+:bf:default:Beep!
+:narrator:default:Boyfriend asks the toad if he knows anything about what is going on.
 :toad:default:Oh uhh something about a crazy maniac folding people into mindless zombies and turning toads into small origami figures. 
 :toad:default:I was a frog. Could you believe that? Haha!
 :bf:default:Beep?

@@ -1,66 +1,66 @@
 {
 	"animations": [
 		{
+			"loop": false,
+			"offsets": [
+				-80,
+				-86
+			],
+			"anim": "singDOWN",
+			"fps": 11,
+			"name": "Sing Down",
+			"indices": []
+		},
+		{
+			"loop": false,
 			"offsets": [
 				-2,
 				0
 			],
-			"loop": false,
-			"fps": 11,
 			"anim": "idle",
-			"indices": [],
-			"name": "SING idle"
+			"fps": 24,
+			"name": "Idle",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				0,
 				0
 			],
-			"loop": false,
-			"fps": 11,
 			"anim": "singLEFT",
-			"indices": [],
-			"name": "SING left"
+			"fps": 24,
+			"name": "Sing Left",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				0,
 				0
 			],
-			"loop": false,
-			"fps": 11,
-			"anim": "singDOWN",
-			"indices": [],
-			"name": "SING down"
-		},
-		{
-			"offsets": [
-				0,
-				0
-			],
-			"loop": false,
-			"fps": 11,
 			"anim": "singUP",
-			"indices": [],
-			"name": "SING up"
+			"fps": 24,
+			"name": "Sing Up",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				0,
 				0
 			],
-			"loop": false,
-			"fps": 11,
 			"anim": "singRIGHT",
-			"indices": [],
-			"name": "SING right"
+			"fps": 24,
+			"name": "Sing Right",
+			"indices": []
 		}
 	],
 	"no_antialiasing": false,
-	"image": "characters/Tape 2",
+	"image": "characters/Tape2",
 	"position": [
-		-760,
-		-680
+		-90,
+		-190
 	],
 	"healthicon": "Tape",
 	"flip_x": false,
@@ -70,9 +70,9 @@
 		164
 	],
 	"camera_position": [
-		510,
-		680
+		40,
+		340
 	],
 	"sing_duration": 6.1,
-	"scale": 0.5
+	"scale": 1
 }

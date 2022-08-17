@@ -158,7 +158,7 @@ class StoryMenuState extends MusicBeatState
 			characterbox.visible = false;
 			add(characterbox);
 
-		characterarrows= new FlxSprite(586, 348).loadGraphic(Paths.image('characterselectarrows'));
+		characterarrows= new FlxSprite(588, 348).loadGraphic(Paths.image('characterselectarrows'));
 		characterarrows.updateHitbox();
 		characterarrows.antialiasing = true;
 		characterarrows.active = false;

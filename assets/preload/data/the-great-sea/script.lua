@@ -1,4 +1,4 @@
-function onCreatePost()
+function onCountdownStarted()
 		noteTweenX('bf', 4, defaultOpponentStrumX0, 0.01, linear)
 		noteTweenX('bf1', 5, defaultOpponentStrumX0+110, 0.01, linear)
 		noteTweenX('bf2', 6, defaultOpponentStrumX0+110+110, 0.01, linear)

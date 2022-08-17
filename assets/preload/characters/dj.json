@@ -1,66 +1,66 @@
 {
 	"animations": [
 		{
-			"loop": false,
 			"offsets": [
 				0,
 				2
 			],
-			"anim": "idle",
-			"fps": 24,
-			"name": "Idle",
-			"indices": []
-		},
-		{
-			"loop": false,
-			"offsets": [
-				0,
-				2
-			],
+			"indices": [],
+			"fps": 12,
 			"anim": "singLEFT",
-			"fps": 24,
-			"name": "Sing Left",
-			"indices": []
+			"loop": false,
+			"name": "Sing Left"
 		},
 		{
-			"loop": false,
 			"offsets": [
-				0,
+				-3,
 				2
 			],
+			"indices": [],
+			"fps": 12,
+			"anim": "idle",
+			"loop": false,
+			"name": "Idle"
+		},
+		{
+			"offsets": [
+				-1,
+				2
+			],
+			"indices": [],
+			"fps": 12,
 			"anim": "singDOWN",
-			"fps": 24,
-			"name": "Sing Down",
-			"indices": []
+			"loop": false,
+			"name": "Sing Down"
 		},
 		{
-			"loop": false,
 			"offsets": [
-				0,
+				-1,
 				2
 			],
+			"indices": [],
+			"fps": 12,
 			"anim": "singUP",
-			"fps": 24,
-			"name": "Sing Up",
-			"indices": []
+			"loop": false,
+			"name": "Sing Up"
 		},
 		{
-			"loop": false,
 			"offsets": [
-				0,
+				-1,
 				2
 			],
+			"indices": [],
+			"fps": 12,
 			"anim": "singRIGHT",
-			"fps": 24,
-			"name": "Sing Right",
-			"indices": []
+			"loop": false,
+			"name": "Sing Right"
 		}
 	],
 	"no_antialiasing": false,
 	"image": "characters/dj",
 	"position": [
-		-1100,
-		-470
+		-420,
+		-240
 	],
 	"healthicon": "dj",
 	"flip_x": false,
@@ -70,9 +70,9 @@
 		246
 	],
 	"camera_position": [
-		460,
-		450
+		30,
+		160
 	],
 	"sing_duration": 6.1,
-	"scale": 0.5
+	"scale": 1
 }

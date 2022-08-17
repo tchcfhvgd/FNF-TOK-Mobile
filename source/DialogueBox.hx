@@ -95,6 +95,19 @@ class DialogueBox extends FlxSpriteGroup
 	var microphone16:FlxSprite;
 	var shocked16:FlxSprite;
 
+	var bg31pt1:FlxSprite;
+	var fg31pt1:FlxSprite;
+	var risingtape31:FlxSprite;
+
+	var bg31pt2:FlxSprite;
+	var lines31:FlxSprite;
+	var risingtape31pt2:FlxSprite;
+	var jojo311:FlxSprite;
+	var jojo312:FlxSprite;
+	var jojo313:FlxSprite;
+	var jojo314:FlxSprite;
+
+
 	var blackShit:FlxSprite;
 
 	public function new(talkingRight:Bool = true, ?dialogueList:Array<String>)
@@ -297,7 +310,54 @@ class DialogueBox extends FlxSpriteGroup
 		add(jojo16);	
 		jojo16.visible = false;
 
-		case 'vellumental-battle' | 'the-great-sea':
+		case 'shifty-sticker':
+
+		bg31pt1 = new FlxSprite(0, 0).loadGraphic(Paths.image('cutscenes/cutscene31parts/31_part1/bg_31_1'));
+		add(bg31pt1);
+		bg31pt1.visible = false;
+
+		risingtape31 = new FlxSprite(0, 400).loadGraphic(Paths.image('cutscenes/cutscene31parts/31_part1/tape_31_1'));
+		add(risingtape31);
+		risingtape31.visible = false;
+
+		fg31pt1 = new FlxSprite(0, 0).loadGraphic(Paths.image('cutscenes/cutscene31parts/31_part1/bg_31_1_2'));
+		add(fg31pt1);
+		fg31pt1.visible = false;
+
+		bg31pt2 = new FlxSprite(0, 0).loadGraphic(Paths.image('cutscenes/cutscene31parts/31_part2/bg_31_2'));
+		add(bg31pt2);
+		bg31pt2.visible = false;
+
+		risingtape31pt2 = new FlxSprite(0, 1000).loadGraphic(Paths.image('cutscenes/cutscene31parts/31_part2/tape_31_2'));
+		risingtape31pt2.setGraphicSize(Std.int(risingtape31pt2.width / 1.5));
+		add(risingtape31pt2);
+		risingtape31pt2.visible = false;
+
+		jojo311 = new FlxSprite(-25, 370).loadGraphic(Paths.image('cutscenes/cutscene31parts/31_part2/jojo_31_1'));
+		jojo311.setGraphicSize(Std.int(jojo311.width / 1.5));
+		add(jojo311);
+		jojo311.visible = false;
+
+		jojo312 = new FlxSprite(100, 420).loadGraphic(Paths.image('cutscenes/cutscene31parts/31_part2/jojo_31_2'));
+		jojo312.setGraphicSize(Std.int(jojo312.width / 1.5));
+		add(jojo312);
+		jojo312.visible = false;
+
+		jojo313 = new FlxSprite(1000, 40).loadGraphic(Paths.image('cutscenes/cutscene31parts/31_part2/jojo_31_3'));
+		jojo313.setGraphicSize(Std.int(jojo313.width / 1.5));
+		add(jojo313);
+		jojo313.visible = false;
+
+		jojo314 = new FlxSprite(990, 0).loadGraphic(Paths.image('cutscenes/cutscene31parts/31_part2/jojo_31_4'));
+		jojo314.setGraphicSize(Std.int(jojo314.width / 1.5));
+		add(jojo314);
+		jojo314.visible = false;
+
+		lines31 = new FlxSprite(0, 0).loadGraphic(Paths.image('cutscenes/cutscene31parts/31_part2/bg_LINES_31'));
+		add(lines31);
+		lines31.visible = false;
+
+		case 'vellumental-battle':
 		
 		sky13 = new FlxSprite(-50, 0).loadGraphic(Paths.image('cutscenes/cutscene13parts/sky_13'));
 		add(sky13);
@@ -421,10 +481,11 @@ class DialogueBox extends FlxSpriteGroup
 	var onetime:Bool = true;
 	var shake:Bool = false;
 	var okflippinstopdashake:Bool = false;
+	var c13:Bool = false;
 
 	override function update(elapsed:Float)
 	{
-		if (boat13.visible)
+		if (c13)
 			{
 				if (circle_island13.x == -800)
 					{
@@ -563,6 +624,20 @@ class DialogueBox extends FlxSpriteGroup
 					{
 						jojoanimate = true;
 					});
+
+				case 'shifty-sticker':
+				jojo311.x = FlxG.random.int(-24, -26);
+				jojo311.y = FlxG.random.int(369, 371);
+				jojo312.x = FlxG.random.int(99, 101);
+				jojo312.y = FlxG.random.int(419, 421);
+				jojo313.x = FlxG.random.int(999, 1001);
+				jojo313.y = FlxG.random.int(39, 41);
+				jojo314.x = FlxG.random.int(989, 991);
+				jojo314.y = FlxG.random.int(-1, 1);
+				new FlxTimer().start(0.05, function(tmr:FlxTimer)
+					{
+						jojoanimate = true;
+					});
 		
 				}
 			}
@@ -599,14 +674,19 @@ class DialogueBox extends FlxSpriteGroup
 		if (shake == true)
 		{
 			shake = false;
-			bg16.x = FlxG.random.int(-326, -314);
-			bg16.y = FlxG.random.int(-173, -186);
-			bf16happy.x = FlxG.random.int(-76, -64);
-			bf16happy.y = FlxG.random.int(-4, -16);
-			bf16scared.x = FlxG.random.int(-76, -64);
-			bf16scared.y = FlxG.random.int(56, 44);
-			holepuncher.x = FlxG.random.int(74, 85);
-			holepuncher.y = FlxG.random.int(-94, -106);
+
+			switch (Paths.formatToSongPath(PlayState.SONG.song))
+				{
+					case 'disco-devil':
+					bg16.x = FlxG.random.int(-326, -314);
+					bg16.y = FlxG.random.int(-173, -186);
+					bf16happy.x = FlxG.random.int(-76, -64);
+					bf16happy.y = FlxG.random.int(-4, -16);
+					bf16scared.x = FlxG.random.int(-76, -64);
+					bf16scared.y = FlxG.random.int(56, 44);
+					holepuncher.x = FlxG.random.int(74, 85);
+					holepuncher.y = FlxG.random.int(-94, -106);
+				}
 
 		new FlxTimer().start(0.005, function(tmr:FlxTimer)
 			{
@@ -771,6 +851,11 @@ class DialogueBox extends FlxSpriteGroup
 							tbctxt = new FlxText(0, 0, FlxG.width,
 							"To be continued in chapter 4...",
 							64);
+							case 'shifty-sticker':
+							FlxG.save.data.beatchapter4 = true;
+							tbctxt = new FlxText(0, 0, FlxG.width,
+							"To be continued in the final update...",
+							64);
 
 
 						}
@@ -782,10 +867,41 @@ class DialogueBox extends FlxSpriteGroup
 					tbctxt.screenCenter();
 					tbctxt.alpha = 0;
 					add(tbctxt);
+					
 					FlxTween.tween(tbctxt, {alpha: 1}, 10, {ease: FlxEase.circOut});
+
+					if (Paths.formatToSongPath(PlayState.SONG.song) == 'shifty-sticker')
+					{
+						var sorrylol:FlxText;
+						sorrylol = new FlxText(0, 0, FlxG.width,
+							"We promise it won't take as long...",
+							64);
+						sorrylol.setFormat(Paths.font("mario.ttf"), 32, CENTER);
+						sorrylol.borderColor = FlxColor.BLACK;
+						sorrylol.borderSize = 3;
+						sorrylol.borderStyle = FlxTextBorderStyle.OUTLINE;
+						sorrylol.screenCenter();
+						sorrylol.y += 200;
+						sorrylol.x += 200;
+						sorrylol.alpha = 0;
+						add(sorrylol);
+
+						new FlxTimer().start(4, function(tmr:FlxTimer)
+						{
+							FlxTween.tween(sorrylol, {alpha: 1}, 10, {ease: FlxEase.circOut});
+						});
+
+						new FlxTimer().start(6, function(tmr:FlxTimer)
+						{
+							FlxTween.tween(sorrylol, {alpha: 0}, 4, {ease: FlxEase.circOut});
+						});
+					}
 
 					new FlxTimer().start(10, function(tmr:FlxTimer)
 					{
+						if (Paths.formatToSongPath(PlayState.SONG.song) == 'shifty-sticker')
+
+						
 						FlxTween.tween(tbctxt, {alpha: 0}, 4, {
 				onComplete: function(twn:FlxTween)
 				{
@@ -966,7 +1082,6 @@ class DialogueBox extends FlxSpriteGroup
 					remove(white);
 				}
 				});
-					FlxG.camera.shake();
 					black6.visible = true;
 					bf6.visible = true;
 					enemies6.visible = true;
@@ -1053,6 +1168,51 @@ class DialogueBox extends FlxSpriteGroup
 						rocks_213.visible = true;
 						skull_island13.visible = true;
 						cloudsback13.visible = true;
+						c13 = true;
+					}
+
+			case "cutscenethirtyone":
+				holdtime = 3;
+				animatedCutscene = true;
+				skipDialogue = true;
+				canpress = false;
+
+				if (!bg31pt1.visible)
+					{
+						bg31pt1.visible = true;
+						risingtape31.visible = true;
+						fg31pt1.visible = true;
+
+						FlxTween.tween(risingtape31, {y: 150}, 1.8, {
+						onComplete: function(twn:FlxTween)
+					{
+						var white:FlxSprite = new FlxSprite(0, 0).makeGraphic(FlxG.width * 3, FlxG.height * 3, FlxColor.WHITE);
+					white.scrollFactor.set();
+					add(white);	
+
+					bg31pt1.visible = false;
+					risingtape31.visible = false;
+					fg31pt1.visible = false;
+					bg31pt2.visible = true;
+					lines31.visible = true;
+					jojo311.visible = true;
+					jojo312.visible = true;
+					jojo313.visible = true;
+					jojo314.visible = true;
+					risingtape31pt2.visible = true;
+
+					FlxTween.tween(white, {alpha: 0}, 0.5, {
+					onComplete: function(twn:FlxTween)
+					{
+						FlxTween.tween(risingtape31pt2, {y: -180}, 0.7);
+						jojoanimate = true;
+					}
+					});
+
+
+					}
+						});
+
 					}
 				
 
@@ -1132,9 +1292,30 @@ class DialogueBox extends FlxSpriteGroup
 				add(icons);
 				changeSound('toadtext',0.6);
 
+			case "nerdtoad":
+				remove(icons);
+				icons = new HealthIcon('nerdemoji', false);
+				changeposition();
+				add(icons);
+				changeSound('toadtext',0.6);
+
+			case "tode":
+				remove(icons);
+				icons = new HealthIcon('tode', false);
+				changeposition();
+				add(icons);
+				changeSound('toadtext',0.6);
+
+			case "luigi":
+				remove(icons);
+				icons = new HealthIcon('luigi', false);
+				changeposition();
+				add(icons);
+				changeSound('luigisup',0.6);
+
 			case "captain":
 				remove(icons);
-				icons = new HealthIcon('captain', false);
+				icons = new HealthIcon('Captain', false);
 				changeposition();
 				add(icons);
 				changeSound('toadtext',0.6);
@@ -1145,6 +1326,36 @@ class DialogueBox extends FlxSpriteGroup
 				animatedCutscene = false;
 				remove(icons);
 				icons = new HealthIcon('picnic', false);
+				changeposition();
+				remove(box);
+				remove(swagDialogue);
+				remove(dropText);
+				new FlxTimer().start(holdtime, function(tmr:FlxTimer)
+			{
+				box.animation.play('normalOpen');
+				add(box);	
+				add(icons);	
+				add(dropText);
+				add(swagDialogue);
+				changeSound('FoldedText',0.6);
+				canpress = true;
+			}); 
+			}
+			else
+			{
+				remove(icons);
+				icons = new HealthIcon('picnic', false);
+				changeposition();
+				add(icons);
+				changeSound('FoldedText',0.6);
+			}
+
+			case "tape":
+			if (animatedCutscene == true)
+			{
+				animatedCutscene = false;
+				remove(icons);
+				icons = new HealthIcon('Tape', false);
 				changeposition();
 				remove(box);
 				remove(swagDialogue);

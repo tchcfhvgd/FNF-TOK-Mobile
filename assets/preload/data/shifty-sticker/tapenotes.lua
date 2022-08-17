@@ -50,8 +50,7 @@ function onCreate()
 
 	--makeAnimatedLuaSprite('bubble', 'chapters/chapter4/seatower/speechbubble', 300, 300)
 	makeAnimatedLuaSprite('bubble', 'chapters/chapter4/seatower/speechbubble', 380, 400)
-	addAnimationByPrefix('bubble', 'go', 'speech', 24, false)
-	scaleObject('bubble', 0.6, 0.6)
+	addAnimationByPrefix('bubble', 'go', 'speech idle', 12, false)
 	setProperty('bubble.alpha', 0)
 	addLuaSprite('bubble')
 end
@@ -59,7 +58,6 @@ end
 function onCreatePost()
 if isStoryMode then
 makeLuaSprite('directions', 'chapters/chapter4/seatower/directions', -75, 175)
-scaleObject('directions', 0.8, 0.8)
 setObjectCamera('directions', 'hud')
 addLuaSprite('directions', true)
 setProperty('directions.alpha', 0);
@@ -120,7 +118,7 @@ if curStep == 625 then
 end
 
 if curStep == 650 then
-removeLuaSprite('bubble')
+doTweenAlpha('bubblegone', 'bubble', 0, 0.3)
 end
 
 end

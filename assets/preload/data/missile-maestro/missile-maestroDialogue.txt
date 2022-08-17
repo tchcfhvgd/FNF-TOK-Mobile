@@ -7,7 +7,7 @@
 :fade:missile1:
 :bg:missile2:
 :narrator:default:At the foot of Overlook Mountain, the duo spotted a cableway that had just returned.
-:narrator:default:That means Mario couldn't have been far behind!
+:narrator:default:That might have meant Mario was close!
 :fade:missile2:
 :bg:missile3:
 :narrator:default:He followed the path to the cableway without much trouble.
@@ -24,3 +24,4 @@
 :colors:default:Ohh that red hairy dwarf... he thought I was gone for good!
 :colors:default:Well I've got some time to deal with you two before I leave this world!
 :colors:default:You look like a perfect canvas!
+:colors:default:Hold still, it's time to turn you into a masterpiece!

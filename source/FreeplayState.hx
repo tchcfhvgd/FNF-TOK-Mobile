@@ -98,22 +98,22 @@ class FreeplayState extends MusicBeatState
 			}
 		}
 
-		if (FlxG.save.data.toadbbqunlocked == true)
+		//if (FlxG.save.data.toadbbqunlocked == true)
 			addSong('Toads BBQ and Food Eatery', 1,'toad', FlxColor.fromRGB(255, 87, 66));
 
-		if (FlxG.save.data.autumnmountainunlocked == true)
+		//if (FlxG.save.data.autumnmountainunlocked == true)
 			addSong('Autumn Mountain', 2,'autumn', FlxColor.fromRGB(0, 117, 251));
 
-		if (FlxG.save.data.bluestreamerunlocked == true)
+		//if (FlxG.save.data.bluestreamerunlocked == true)
 			addSong('Blue Streamer Battle', 1,'autumn', FlxColor.fromRGB(0, 117, 251));
 
-		if (FlxG.save.data.shogunstudiosunlocked == true)
+		//if (FlxG.save.data.shogunstudiosunlocked == true)
 			addSong('Shogun Studios', 1,'shyguy', FlxColor.fromRGB(255, 220, 40));
 
-		if (FlxG.save.data.maxpowerunlocked == true)
+		//if (FlxG.save.data.maxpowerunlocked == true)
 			addSong('Max Power', 1,'dj', FlxColor.fromRGB(255, 220, 40));
 
-		if (FlxG.save.data.yape == true)
+		//if (FlxG.save.data.yape == true)
 			addSong('The Almighty Yape', 1,'Yape', FlxColor.fromRGB(255, 87, 66));
 
 		//if (FlxG.save.data.beatchapter4 == true)
