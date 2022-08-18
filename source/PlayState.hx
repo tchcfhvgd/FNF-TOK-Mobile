@@ -1709,7 +1709,7 @@ class PlayState extends MusicBeatState
 						});
 					});
 
-				case 'picnic-road' | 'red-streamer-battle' | 'missile-maestro' | 'autumn-mountain-battle' | 'eddy-river' | 'elastic-entertainer' | 'yellow-streamer-battle' | 'thrills-at-night' | 'disco-devil' | 'the-great-sea':
+				case 'picnic-road' | 'red-streamer-battle' | 'missile-maestro' | 'autumn-mountain-battle' | 'eddy-river' | 'elastic-entertainer' | 'yellow-streamer-battle' | 'thrills-at-night' | 'disco-devil' | 'the-great-sea', 'vellumental-battle', 'shifty-sticker':
 					schoolIntro(doof);
 
 				default:

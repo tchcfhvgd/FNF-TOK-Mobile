@@ -891,7 +891,7 @@ class DialogueBox extends FlxSpriteGroup
 							FlxTween.tween(sorrylol, {alpha: 1}, 10, {ease: FlxEase.circOut});
 						});
 
-						new FlxTimer().start(6, function(tmr:FlxTimer)
+						new FlxTimer().start(10, function(tmr:FlxTimer)
 						{
 							FlxTween.tween(sorrylol, {alpha: 0}, 4, {ease: FlxEase.circOut});
 						});
@@ -1171,6 +1171,21 @@ class DialogueBox extends FlxSpriteGroup
 						c13 = true;
 					}
 
+			case "removecutscenethirteen":
+				skipDialogue = false;
+				boat13.visible = false;
+				sea13.visible = false;
+				sky13.visible = false;
+				circle_island13.visible = false;
+				clover_island13.visible = false;
+				heart_island13.visible = false;
+				pica_island13.visible = false;
+				rocks_113.visible = false;
+				rocks_213.visible = false;
+				skull_island13.visible = false;
+				cloudsback13.visible = false;
+				c13 = false;
+
 			case "cutscenethirtyone":
 				holdtime = 3;
 				animatedCutscene = true;
@@ -1374,7 +1389,7 @@ class DialogueBox extends FlxSpriteGroup
 			else
 			{
 				remove(icons);
-				icons = new HealthIcon('picnic', false);
+				icons = new HealthIcon('Tape', false);
 				changeposition();
 				add(icons);
 				changeSound('FoldedText',0.6);
