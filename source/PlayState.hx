@@ -961,7 +961,7 @@ class PlayState extends MusicBeatState
 				case 'discodevilalt':
 
 
-				
+
 				var discofloor:BGSprite = new BGSprite('chapters/chapter3/images/background/disco/DiscoStage', -400, -150);
 					discofloor.antialiasing = true;
 					add(discofloor);
@@ -4411,7 +4411,11 @@ class PlayState extends MusicBeatState
             PlayState.songMisses = 0;
 			PlayState.endingintro = false;
 			PlayState.textcontinue = false;
-			LoadingState.loadAndSwitchState(new StoryMenuState());
+
+			if (Paths.formatToSongPath(PlayState.SONG.song) == 'shifty-sticker')
+				LoadingState.loadAndSwitchState(new CreditsRoll());
+			else
+				LoadingState.loadAndSwitchState(new StoryMenuState());
 		}
 
 	function victorysetup():Void
@@ -4691,7 +4695,7 @@ class PlayState extends MusicBeatState
 				coin7.x = 600;
 				coin8.x = 700;
 	
-				coinlevel = -650;
+				coinlevel = -450;
 
 				case 'seatower':
 				coin.x = 1000;

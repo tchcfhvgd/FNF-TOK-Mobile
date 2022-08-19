@@ -102,7 +102,7 @@ class FreeplayState extends MusicBeatState
 			addSong('Toads BBQ and Food Eatery', 1,'toad', FlxColor.fromRGB(255, 87, 66));
 
 		//if (FlxG.save.data.autumnmountainunlocked == true)
-			addSong('Autumn Mountain', 2,'autumn', FlxColor.fromRGB(0, 117, 251));
+			addSong('Purple Streamer Battle', 2,'captain', FlxColor.fromRGB(0, 117, 251));
 
 		//if (FlxG.save.data.bluestreamerunlocked == true)
 			addSong('Blue Streamer Battle', 1,'autumn', FlxColor.fromRGB(0, 117, 251));

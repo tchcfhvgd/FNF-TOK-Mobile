@@ -891,7 +891,7 @@ class DialogueBox extends FlxSpriteGroup
 							FlxTween.tween(sorrylol, {alpha: 1}, 10, {ease: FlxEase.circOut});
 						});
 
-						new FlxTimer().start(10, function(tmr:FlxTimer)
+						new FlxTimer().start(8, function(tmr:FlxTimer)
 						{
 							FlxTween.tween(sorrylol, {alpha: 0}, 4, {ease: FlxEase.circOut});
 						});
