@@ -951,21 +951,17 @@ class PlayState extends MusicBeatState
 					add(ground);
 
 				case 'disco':
-				var middlestage:BGSprite = new BGSprite('chapters/chapter3/images/background/disco/DiscoSecondBack', -400, -150, 0.9, 0.9);
-					middlestage.antialiasing = true;
-					middlestage.updateHitbox();
-					add(middlestage);
+
+
 
 				var discofloor:BGSprite = new BGSprite('chapters/chapter3/images/background/disco/DiscoStage', -400, -150);
 					discofloor.antialiasing = true;
 					add(discofloor);
 
 				case 'discodevilalt':
-				var middlestage:BGSprite = new BGSprite('chapters/chapter3/images/background/disco/DiscoSecondBack', -400, -150, 0.9, 0.9);
-					middlestage.antialiasing = true;
-					middlestage.updateHitbox();
-					add(middlestage);
-		
+
+
+				
 				var discofloor:BGSprite = new BGSprite('chapters/chapter3/images/background/disco/DiscoStage', -400, -150);
 					discofloor.antialiasing = true;
 					add(discofloor);
