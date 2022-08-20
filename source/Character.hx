@@ -100,30 +100,30 @@ class Character extends FlxSprite
 				{
 					case 0:
 						trace(Paths.formatToSongPath(PlayState.SONG.song));
-						if (Paths.formatToSongPath(PlayState.SONG.song) != 'the-great-sea')
-						curCharacter = 'bf';
+						if (Paths.formatToSongPath(PlayState.SONG.song) == 'the-great-sea' || Paths.formatToSongPath(PlayState.SONG.song) == 'purple-streamer-battle')
+						curCharacter = 'bf-flipped';
 						else
-						curCharacter = 'bf-flipped';	
+						curCharacter = 'bf';	
 					case 1:
-						if (Paths.formatToSongPath(PlayState.SONG.song) != 'the-great-sea')
-						curCharacter = 'bf-mario';
-						else
+						if (Paths.formatToSongPath(PlayState.SONG.song) == 'the-great-sea' || Paths.formatToSongPath(PlayState.SONG.song) == 'purple-streamer-battle')
 						curCharacter = 'bf-mario-flipped';
+						else
+						curCharacter = 'bf-mario';
 					case 2:
-						if (Paths.formatToSongPath(PlayState.SONG.song) != 'the-great-sea')
-						curCharacter = 'bf-shogun';
-						else
+						if (Paths.formatToSongPath(PlayState.SONG.song) == 'the-great-sea' || Paths.formatToSongPath(PlayState.SONG.song) == 'purple-streamer-battle')
 						curCharacter = 'bf-shogun-flipped';
+						else
+						curCharacter = 'bf-shogun';
 					case 3:
-						if (Paths.formatToSongPath(PlayState.SONG.song) != 'the-great-sea')
-						curCharacter = 'bf-disco';
-						else
+						if (Paths.formatToSongPath(PlayState.SONG.song) == 'the-great-sea' || Paths.formatToSongPath(PlayState.SONG.song) == 'purple-streamer-battle')
 						curCharacter = 'bf-disco-flipped';
-					case 4:
-						if (Paths.formatToSongPath(PlayState.SONG.song) != 'the-great-sea')
-						curCharacter = 'bf-mafia';
 						else
+						curCharacter = 'bf-disco';
+					case 4:
+						if (Paths.formatToSongPath(PlayState.SONG.song) == 'the-great-sea' || Paths.formatToSongPath(PlayState.SONG.song) == 'purple-streamer-battle')
 						curCharacter = 'bf-mafia-flipped';
+						else
+						curCharacter = 'bf-mafia';
 				}
 
 			case 'bf-hole':

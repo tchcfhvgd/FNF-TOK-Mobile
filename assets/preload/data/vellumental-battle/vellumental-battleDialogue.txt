@@ -1,4 +1,6 @@
 :cutscenethirteen:
+:music:4-5:
+:music:fadeIn:
 :narrator:default:After a quick jingle, they hopped on the boat and attached the submarine to the back.
 :narrator:default:Following the purple streamer, it lead to a large sea tower, the entrance locked behind a door.
 :narrator:default:The captain told them three spherical keys would be required to open the door to the tower.
@@ -22,6 +24,8 @@
 :captain:default:You might want to check using the sub, I'm not seeing any land up here.
 :fade:vullemental3:
 :bg:vullemental4:
+:music:4-6:
+:music:fadeIn:
 :olivia:default:Oh goodness the captain was right! There IS something down here!
 :tode:default:These stones must be worth a fortune if they're locked up that tightly...
 :fade:vullemental4:
@@ -38,6 +42,8 @@
 :olivia:default:Don't worry, there's nothing to be afraid of, I'm sure you got this!
 :fade:vullemental6:
 :bg:vullemental7:
+:music:4-7:
+:music:fadeIn:
 :sound:sandrun:
 :narrator:default:They walked through the ice cavern, their steps echoing through the empty chamber.
 :bg:tear:
@@ -50,6 +56,8 @@
 :bg:vullemental9:
 :bg:tear:
 :bg:flash:
+:music:4-8:
+:music:fadeIn:
 :sound:altaropen:
 :narrator:default:A large crash sounds as the monster lands right behind them.
 :bf:default:Bah!

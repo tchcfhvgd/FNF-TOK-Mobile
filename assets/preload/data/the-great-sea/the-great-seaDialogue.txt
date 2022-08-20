@@ -1,3 +1,5 @@
+:music:4-1:
+:music:fadeIn:
 :bg:exploring1:
 :narrator:default:After heading back out, the desert felt a lot brighter. The purple sand had turned to yellow!
 :bf:default:Bep...
@@ -27,9 +29,11 @@
 :narrator:default:The circle suddenly began to glow...
 :bg:flash:
 :sound:pheonix:
-:sound:flames:
 :bg:exploring4:
-:narrator:default:Olivia folded herself into the fire vellumental and melted the ice with ease.
+:narrator:default:Olivia folded herself into the fire vellumental. 
+:sound:flames:
+:narrator:default:...and melted the ice with ease.
+:music:stop:
 :sound:fallover:
 :bg:tear:
 :bg:exploring5:
@@ -38,6 +42,8 @@
 :tode:default:I... I feel...
 :bg:flash:
 :bg:exploring6:
+:music:4-2:
+:music:fadeIn:
 :tode:default:SPLENDID! Ya-har!
 :tode:default:You have freed me I see! Are ya happy to gaze upon yer captain once again after...
 :tode:default:Uhm... how long it's been?
@@ -72,6 +78,8 @@
 :prof:default:Thank you so much.
 :fade:exploring8:
 :bg:exploring9:
+:music:4-3:
+:music:fadeIn:
 :narrator:default:The group entered a pipe, connecting worlds together. It also happened to be the museum that contained T. Ode's ship.
 :olivia:default:Okay Captain... how do you expect to take this exhibit's main attraction in broad daylight?
 :tode:default:Aye, we go in! Guns a blazing, make them beg for their life on their knees, holding a sword to their throat until they give ye the desired artifact.
@@ -89,6 +97,8 @@
 :nerdtoad:default:Okay fine... just be careful with it.
 :fade:exploring10:
 :bg:exploring11:
+:music:4-4:
+:music:fadeIn:
 :tode:default:Yarrr! We did it crew, now we can head for the docks!
 :narrator:default:A sea captain toad stood outside his ship.
 :bf:default:Baa!

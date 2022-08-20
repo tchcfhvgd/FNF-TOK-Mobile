@@ -1,4 +1,6 @@
 :bg:tape1:
+:music:4-9:
+:music:fadeIn:
 :narrator:default:With the polar bear defeated, Boyfriend felt out of breath.
 :olivia:default:Goodness me! Boyfriend, Girlfriend, are you both okay!? We heard a huge noise right after Mario beat the trials-
 :narrator:default:Mario catches a mysterious book the bear had left behind after being defeated.

@@ -361,6 +361,7 @@ class CoinsScreen extends MusicBeatSubstate
         {
             if (okpressnowlol == true)
             {
+                okpressnowlol = false;
             PlayState.ratingPercent = 0.00;
             PlayState.songMisses = 0;
             FlxTween.tween(blackBox, {alpha: 0}, 1, {ease: FlxEase.expoInOut});

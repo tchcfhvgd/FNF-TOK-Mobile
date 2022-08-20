@@ -954,7 +954,7 @@ class PlayState extends MusicBeatState
 
 
 
-				var discofloor:BGSprite = new BGSprite('chapters/chapter3/images/background/disco/DiscoStage', -400, -150);
+				var discofloor:BGSprite = new BGSprite('chapters/chapter3/images/background/disco/DiscoStage', -400, 700);
 					discofloor.antialiasing = true;
 					add(discofloor);
 
@@ -962,7 +962,7 @@ class PlayState extends MusicBeatState
 
 
 
-				var discofloor:BGSprite = new BGSprite('chapters/chapter3/images/background/disco/DiscoStage', -400, -150);
+				var discofloor:BGSprite = new BGSprite('chapters/chapter3/images/background/disco/DiscoStage', -400, 700);
 					discofloor.antialiasing = true;
 					add(discofloor);
 
@@ -4695,7 +4695,7 @@ class PlayState extends MusicBeatState
 				coin7.x = 600;
 				coin8.x = 700;
 	
-				coinlevel = -450;
+				coinlevel = -550;
 
 				case 'seatower':
 				coin.x = 1000;

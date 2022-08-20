@@ -2,6 +2,8 @@
 :bg:tear:
 :bg:flash:
 :sound:explosion:
+:music:4-end:
+:music:fadeIn:
 :narrator:default:After that, the shifty sticker exploded as per usual.
 :bg:tear:
 :olivia:default:MMHNNGGGGG!!
