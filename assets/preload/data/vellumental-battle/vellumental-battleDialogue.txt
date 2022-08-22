@@ -10,7 +10,7 @@
 :bg:vullemental2:
 :olivia:default:Yeah! It's the house the Origami Craftsman first folded Olly and I!
 :olivia:default:Oh and there's Luigi too.
-:luigi:default:Sup.
+:luigi:default:Sup...........
 :olivia:default:You guys stay out here, we'll be right back.
 :fade:vullemental2:
 :bg:vullemental3:

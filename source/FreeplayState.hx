@@ -37,6 +37,7 @@ class FreeplayState extends MusicBeatState
 	var scoreText:FlxText;
 	var diffText:FlxText;
 	var skinText:FlxText;
+	var spaceText:FlxText;
 	var lerpScore:Int = 0;
 	var lerpRating:Float = 0;
 	var intendedScore:Int = 0;
@@ -98,26 +99,26 @@ class FreeplayState extends MusicBeatState
 			}
 		}
 
-		//if (FlxG.save.data.toadbbqunlocked == true)
+		if (FlxG.save.data.toadbbqunlocked == true)
 			addSong('Toads BBQ and Food Eatery', 1,'toad', FlxColor.fromRGB(255, 87, 66));
 
-		//if (FlxG.save.data.autumnmountainunlocked == true)
-			addSong('Purple Streamer Battle', 2,'Captain', FlxColor.fromRGB(0, 117, 251));
-
-		//if (FlxG.save.data.bluestreamerunlocked == true)
+		if (FlxG.save.data.bluestreamerunlocked == true)
 			addSong('Blue Streamer Battle', 1,'autumn', FlxColor.fromRGB(0, 117, 251));
 
-		//if (FlxG.save.data.shogunstudiosunlocked == true)
+		if (FlxG.save.data.shogunstudiosunlocked == true)
 			addSong('Shogun Studios', 1,'shyguy', FlxColor.fromRGB(255, 220, 40));
 
-		//if (FlxG.save.data.maxpowerunlocked == true)
+		if (FlxG.save.data.maxpowerunlocked == true)
 			addSong('Max Power', 1,'dj', FlxColor.fromRGB(255, 220, 40));
 
-		//if (FlxG.save.data.yape == true)
+		if (FlxG.save.data.yape == true)
 			addSong('The Almighty Yape', 1,'Yape', FlxColor.fromRGB(255, 87, 66));
 
+		if (FlxG.save.data.autumnmountainunlocked == true)
+			addSong('Purple Streamer Battle', 2,'Captain', FlxColor.fromRGB(0, 117, 251));
+
 		//if (FlxG.save.data.beatchapter4 == true)
-			addSong('Monotoad', 1,'monotoad', FlxColor.fromRGB(0, 0, 0));
+			//addSong('Monotoad', 1,'monotoad', FlxColor.fromRGB(0, 0, 0));
 
 		WeekData.loadTheFirstEnabledMod();
 
@@ -192,9 +193,10 @@ class FreeplayState extends MusicBeatState
 
 		skinText = new FlxText(scoreText.x - 80, diffText.y + 46, 0, "", 32);
 		skinText.font = scoreText.font;
+		scoreText.setFormat(Paths.font("vcr.ttf"), 32, FlxColor.WHITE, RIGHT);
 		add(skinText);
 
-		var spaceText = new FlxText(skinText.x, skinText.y + 26, 0, "(Press Space!)", 24);
+		spaceText = new FlxText(skinText.x, skinText.y + 26, 0, "(Press Space!)", 24);
 		spaceText.font = scoreText.font;
 		add(spaceText);
 
@@ -686,6 +688,8 @@ class FreeplayState extends MusicBeatState
 
 	private function positionHighscore() {
 		scoreText.x = FlxG.width - scoreText.width - 6;
+		skinText.x = scoreText.x;
+		spaceText.x = scoreText.x;
 
 		scoreBG.scale.x = FlxG.width - scoreText.x + 6;
 		scoreBG.x = FlxG.width - (scoreBG.scale.x / 2);

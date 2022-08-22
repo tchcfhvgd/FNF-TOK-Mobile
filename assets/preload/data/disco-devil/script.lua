@@ -1,7 +1,7 @@
 function onCreate()
 makeAnimatedLuaSprite('heroesdannce', 'chapters/chapter3/images/background/disco/changingstuff', -400, -160)
-setScrollFactor('heroesdannce', 0.9, 0.9)
 addAnimationByPrefix('heroesdannce', 'normal', 'boomheroesbop', 24, false)
+setScrollFactor('heroesdannce', 0.9, 0.9)
 objectPlayAnimation('heroesdannce', 'normal', true)
 
 

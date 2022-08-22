@@ -5,7 +5,7 @@
 
 	"boyfriend": [1300, 350],
 	"girlfriend": [800, 350],
-	"opponent": [800, 450],
+	"opponent": [800, 660],
 	"hide_girlfriend": false,
 
 	"camera_boyfriend": [-250, -40],

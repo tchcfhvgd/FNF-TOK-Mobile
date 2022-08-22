@@ -346,7 +346,7 @@ class MainMenuState extends MusicBeatState
 			case 'shop':
 				MusicBeatState.switchState(new ShopState());
 			case 'credits':
-				MusicBeatState.switchState(new CreditsState());
+				MusicBeatState.switchState(new CreditsRoll());
 			case 'settings':
 				LoadingState.loadAndSwitchState(new options.OptionsState());
 		}

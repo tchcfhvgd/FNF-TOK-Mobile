@@ -5,6 +5,7 @@ addAnimationByPrefix('topstage', 'closed', 'doorclosed', 24, false)
 objectPlayAnimation('topstage', 'closed', true)
 setObjectOrder('topstage', 0)
 addLuaSprite('topstage', false)
+setProperty('skipCountdown', true)
 
 makeAnimatedLuaSprite('heroesdannce', 'chapters/chapter3/images/background/disco/changingstuffmaxpower', -400, -150)
 setScrollFactor('heroesdannce', 0.9, 0.9)
@@ -26,7 +27,7 @@ setProperty('discoLight.alpha', 0.6);
 addLuaSprite('discoLight', true)
 
 addLuaSprite('heroesdannce', false)
-setObjectOrder('heroesdannce', 2)
+setObjectOrder('heroesdannce', 1)
 
 end
 
@@ -37,4 +38,8 @@ end
 
 function onUpdate()
 setProperty('discoLight.angle', getProperty('discoLight.angle') - 0.1)
+end
+
+function onStartCountdown()
+
 end

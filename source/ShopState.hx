@@ -61,6 +61,11 @@ class ShopState extends MusicBeatState
 		if (FlxG.save.data.beatchapter3 == null)
 			FlxG.save.data.beatchapter3 = false;
 
+		if (FlxG.save.data.beatchapter4 == null)
+			FlxG.save.data.beatchapter4 = false;
+
+		trace(FlxG.save.data.beatchapter4);
+
 		if (FlxG.save.data.toadbbqunlocked == null)
 			FlxG.save.data.toadbbqunlocked = false;
 
@@ -99,14 +104,21 @@ class ShopState extends MusicBeatState
 			skinShit = ['poutfit', 'soutfit', 'goutfit', 'poutfit2'];	
 		}*/
 
-	if (FlxG.save.data.beatchapter3 == true)
+	if (FlxG.save.data.beatchapter4 == true)
 		{
-			optionShit = ['toadbbq', 'autumn', 'bluestreamer', 'shogun', 'max'];
+			optionShit = ['toadbbq', 'bluestreamer', 'shogun', 'max', 'autumn'];
 			skinShit = ['poutfit', 'soutfit', 'goutfit', 'poutfit2'];	
+
+			trace(optionShit);
+		}
+	else if (FlxG.save.data.beatchapter3 == true)
+		{
+			optionShit = ['toadbbq', 'bluestreamer', 'shogun', 'max'];
+			skinShit = ['poutfit', 'soutfit', 'goutfit'];	
 		}
 	else if (FlxG.save.data.beatchapter2 == true)
 		{
-			optionShit = ['toadbbq', 'autumn', 'bluestreamer', 'shogun'];
+			optionShit = ['toadbbq', 'bluestreamer', 'shogun'];
 			skinShit = ['poutfit', 'soutfit'];
 		}
 	else if (FlxG.save.data.beatchapter1 == true)
@@ -178,7 +190,7 @@ class ShopState extends MusicBeatState
 			menuItem.setGraphicSize(Std.int(menuItem.width * 0.46));
 			menuItem.ID = i;
 
-			if (FlxG.save.data.toadbbqunlocked == true && menuItem.ID == 0 || FlxG.save.data.autumnmountainunlocked == true && menuItem.ID == 1 || FlxG.save.data.bluestreamerunlocked == true && menuItem.ID == 2 || FlxG.save.data.shogunstudiosunlocked == true && menuItem.ID == 3 || FlxG.save.data.maxpowerunlocked == true && menuItem.ID == 4)
+			if (FlxG.save.data.toadbbqunlocked == true && menuItem.ID == 0 || FlxG.save.data.bluestreamerunlocked == true && menuItem.ID == 1 || FlxG.save.data.shogunstudiosunlocked == true && menuItem.ID == 2 || FlxG.save.data.maxpowerunlocked == true && menuItem.ID == 3 || FlxG.save.data.autumnmountainunlocked == true && menuItem.ID == 4)
 			menuItem.animation.play('outofstock');
 
 			menuItems.add(menuItem);
@@ -252,8 +264,6 @@ class ShopState extends MusicBeatState
 
 		if (FlxG.sound.music != null && FlxG.save.data.shop == false)
 			FlxG.sound.music.stop();
-		else if (FlxG.sound.music == null && FlxG.save.data.shop == true)
-			FlxG.sound.playMusic(Paths.music('freakyMenu'));
 	}
 
 	function checkpress():Void
@@ -310,7 +320,7 @@ class ShopState extends MusicBeatState
 			if (spr.ID == curSelected)
 				{
 				spr.animation.play('idle');
-				if (FlxG.save.data.toadbbqunlocked == true && curSelected == 0 || FlxG.save.data.autumnmountainunlocked == true && curSelected == 1 || FlxG.save.data.bluestreamerunlocked == true && curSelected == 2 || FlxG.save.data.shogunstudiosunlocked == true && curSelected == 3 || FlxG.save.data.maxpowerunlocked == true && curSelected == 4)
+				if (FlxG.save.data.toadbbqunlocked == true && curSelected == 0 || FlxG.save.data.bluestreamerunlocked == true && curSelected == 1 || FlxG.save.data.shogunstudiosunlocked == true && curSelected == 2 || FlxG.save.data.maxpowerunlocked == true && curSelected == 3 || FlxG.save.data.autumnmountainunlocked == true && curSelected == 4)
 				{
 				spr.animation.play('outofstock');
 				spr.alpha = 1;

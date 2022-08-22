@@ -815,6 +815,19 @@ class DialogueBox extends FlxSpriteGroup
 					FlxTween.tween(jojo102, {alpha: 0}, 2, {ease: FlxEase.circOut});
 					FlxTween.tween(jojo16, {alpha: 0}, 2, {ease: FlxEase.circOut});
 					FlxTween.tween(jojo10, {alpha: 0}, 2, {ease: FlxEase.circOut});
+
+					case 'shifty-sticker':
+					FlxTween.tween(bg31pt1, {alpha: 0}, 2, {ease: FlxEase.circOut});
+					FlxTween.tween(risingtape31, {alpha: 0}, 2, {ease: FlxEase.circOut});
+					FlxTween.tween(fg31pt1, {alpha: 0}, 2, {ease: FlxEase.circOut});
+					FlxTween.tween(bg31pt2, {alpha: 0}, 2, {ease: FlxEase.circOut});
+					FlxTween.tween(lines31, {alpha: 0}, 2, {ease: FlxEase.circOut});
+					FlxTween.tween(jojo311, {alpha: 0}, 2, {ease: FlxEase.circOut});
+					FlxTween.tween(jojo312, {alpha: 0}, 2, {ease: FlxEase.circOut});
+					FlxTween.tween(jojo313, {alpha: 0}, 2, {ease: FlxEase.circOut});
+					FlxTween.tween(jojo314, {alpha: 0}, 2, {ease: FlxEase.circOut});
+					FlxTween.tween(risingtape31pt2, {alpha: 0}, 2, {ease: FlxEase.circOut});
+
 				}
 
 
@@ -872,6 +885,7 @@ class DialogueBox extends FlxSpriteGroup
 
 					if (Paths.formatToSongPath(PlayState.SONG.song) == 'shifty-sticker')
 					{
+
 						var sorrylol:FlxText;
 						sorrylol = new FlxText(0, 0, FlxG.width,
 							"We promise it won't take as long...",
@@ -888,20 +902,17 @@ class DialogueBox extends FlxSpriteGroup
 
 						new FlxTimer().start(4, function(tmr:FlxTimer)
 						{
-							FlxTween.tween(sorrylol, {alpha: 1}, 10, {ease: FlxEase.circOut});
+							FlxTween.tween(sorrylol, {alpha: 1}, 6, {ease: FlxEase.circOut});
 						});
 
-						new FlxTimer().start(8, function(tmr:FlxTimer)
+						new FlxTimer().start(6, function(tmr:FlxTimer)
 						{
 							FlxTween.tween(sorrylol, {alpha: 0}, 4, {ease: FlxEase.circOut});
 						});
 					}
 
 					new FlxTimer().start(10, function(tmr:FlxTimer)
-					{
-						if (Paths.formatToSongPath(PlayState.SONG.song) == 'shifty-sticker')
-
-						
+					{	
 						FlxTween.tween(tbctxt, {alpha: 0}, 4, {
 				onComplete: function(twn:FlxTween)
 				{
@@ -1172,7 +1183,7 @@ class DialogueBox extends FlxSpriteGroup
 					}
 
 			case "removecutscenethirteen":
-				skipDialogue = false;
+				skipDialogue = true;
 				boat13.visible = false;
 				sea13.visible = false;
 				sky13.visible = false;
@@ -1326,7 +1337,7 @@ class DialogueBox extends FlxSpriteGroup
 				icons = new HealthIcon('luigi', false);
 				changeposition();
 				add(icons);
-				changeSound('luigisup',0.6);
+				changeSound('luigisup',0.8);
 
 			case "captain":
 				remove(icons);
@@ -1456,7 +1467,7 @@ class DialogueBox extends FlxSpriteGroup
 				icons = new HealthIcon('olivia', false);
 				changeposition();
 				add(icons);
-				changeSound('oliviatext',0.6);
+				changeSound('oliviatext',0.8);
 
 			case "autumn":
 			remove(icons);
@@ -1567,6 +1578,41 @@ class DialogueBox extends FlxSpriteGroup
 		swagDialogue = new FlxTypeText(200, 500, Std.int(FlxG.width * 0.6), "", 32);
 		swagDialogue.font = 'FOT-PopJoy Std B';
 		swagDialogue.color = 0xFF000000;
+		swagDialogue.finishSounds = false;
+		//swagDialogue.sounds = [FlxG.sound.load(Paths.sound('pixelText'), 0.6)];
+		add(swagDialogue);
+
+		case "olivia":
+
+		icons.x = 130;
+		icons.y = 480;
+
+		dropText = new FlxText(282, 502, Std.int(FlxG.width * 0.6), "", 32);
+		dropText.font = 'FOT-PopJoy Std B';
+		dropText.color = 0xFFFFFFFF;
+		add(dropText);
+
+		swagDialogue = new FlxTypeText(280, 500, Std.int(FlxG.width * 0.6), "", 32);
+		swagDialogue.font = 'FOT-PopJoy Std B';
+		swagDialogue.color = 0xFF000000;
+		swagDialogue.finishSounds = true;
+		//swagDialogue.sounds = [FlxG.sound.load(Paths.sound('pixelText'), 0.6)];
+		add(swagDialogue);
+
+		case "luigi":
+
+		icons.x = 130;
+		icons.y = 480;
+
+		dropText = new FlxText(282, 502, Std.int(FlxG.width * 0.6), "", 32);
+		dropText.font = 'FOT-PopJoy Std B';
+		dropText.color = 0xFFFFFFFF;
+		add(dropText);
+
+		swagDialogue = new FlxTypeText(280, 500, Std.int(FlxG.width * 0.6), "", 32);
+		swagDialogue.font = 'FOT-PopJoy Std B';
+		swagDialogue.color = 0xFF000000;
+		swagDialogue.finishSounds = true;
 		//swagDialogue.sounds = [FlxG.sound.load(Paths.sound('pixelText'), 0.6)];
 		add(swagDialogue);
 
@@ -1583,6 +1629,7 @@ class DialogueBox extends FlxSpriteGroup
 		swagDialogue = new FlxTypeText(280, 500, Std.int(FlxG.width * 0.6), "", 32);
 		swagDialogue.font = 'FOT-PopJoy Std B';
 		swagDialogue.color = 0xFF000000;
+		swagDialogue.finishSounds = false;
 		//swagDialogue.sounds = [FlxG.sound.load(Paths.sound('pixelText'), 0.6)];
 		add(swagDialogue);
 	}

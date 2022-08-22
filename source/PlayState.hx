@@ -2710,6 +2710,10 @@ class PlayState extends MusicBeatState
 	var startedCountdown:Bool = false;
 	var canPause:Bool = true;
 	var limoSpeed:Float = 0;
+	var IHATEMAXPOWER:Bool = true;
+	var IHATEMAXPOWER2:Bool = true;
+	var IHATEMAXPOWER3:Bool = true;
+	var IHATEMAXPOWER4:Bool = true;
 
 	public static var endingintro = false;
 
@@ -3389,7 +3393,109 @@ class PlayState extends MusicBeatState
 
 				if (curStep == 655 && startdrawing == false)
 					drawingmechanic();
+
+				if (endingSong)
+					startdrawing = true;				
 			}
+
+		if (curSong == 'MAX Power')
+			{
+				if (curStep == 0 && IHATEMAXPOWER)
+					{
+						IHATEMAXPOWER = false;
+						FlxG.sound.play(Paths.sound('intro3' + introSoundsSuffix), 0.6);
+					}
+
+				if (curStep == 4 && IHATEMAXPOWER2)
+					{
+						IHATEMAXPOWER2 = false;
+						var introAssets:Map<String, Array<String>> = new Map<String, Array<String>>();
+				introAssets.set('default', ['ready', 'set', 'go']);
+
+				var introAlts:Array<String> = introAssets.get('default');
+				var antialias:Bool = ClientPrefs.globalAntialiasing;
+
+						countdownReady = new FlxSprite().loadGraphic(Paths.image(introAlts[0]));
+						countdownReady.scrollFactor.set();
+						countdownReady.updateHitbox();
+
+
+						countdownReady.screenCenter();
+						countdownReady.antialiasing = antialias;
+						add(countdownReady);
+						FlxTween.tween(countdownReady, {/*y: countdownReady.y + 100,*/ alpha: 0}, Conductor.crochet / 1000, {
+							ease: FlxEase.cubeInOut,
+							onComplete: function(twn:FlxTween)
+							{
+								remove(countdownReady);
+								countdownReady.destroy();
+							}
+						});
+						FlxG.sound.play(Paths.sound('intro2' + introSoundsSuffix), 0.6);
+					}
+
+				if (curStep == 8 && IHATEMAXPOWER3)
+					{
+						IHATEMAXPOWER3 = false;
+						var introAssets:Map<String, Array<String>> = new Map<String, Array<String>>();
+				introAssets.set('default', ['ready', 'set', 'go']);
+
+				var introAlts:Array<String> = introAssets.get('default');
+				var antialias:Bool = ClientPrefs.globalAntialiasing;
+
+						countdownSet = new FlxSprite().loadGraphic(Paths.image(introAlts[1]));
+						countdownSet.scrollFactor.set();
+
+						if (PlayState.isPixelStage)
+							countdownSet.setGraphicSize(Std.int(countdownSet.width * daPixelZoom));
+
+						countdownSet.screenCenter();
+						countdownSet.antialiasing = antialias;
+						add(countdownSet);
+						FlxTween.tween(countdownSet, {/*y: countdownSet.y + 100,*/ alpha: 0}, Conductor.crochet / 1000, {
+							ease: FlxEase.cubeInOut,
+							onComplete: function(twn:FlxTween)
+							{
+								remove(countdownSet);
+								countdownSet.destroy();
+							}
+						});
+						FlxG.sound.play(Paths.sound('intro1' + introSoundsSuffix), 0.6);
+					}
+
+				if (curStep == 12 && IHATEMAXPOWER4)
+					{
+						IHATEMAXPOWER4 = false;
+						var introAssets:Map<String, Array<String>> = new Map<String, Array<String>>();
+				introAssets.set('default', ['ready', 'set', 'go']);
+
+				var introAlts:Array<String> = introAssets.get('default');
+				var antialias:Bool = ClientPrefs.globalAntialiasing;
+
+						countdownGo = new FlxSprite().loadGraphic(Paths.image(introAlts[2]));
+						countdownGo.scrollFactor.set();
+
+						if (PlayState.isPixelStage)
+							countdownGo.setGraphicSize(Std.int(countdownGo.width * daPixelZoom));
+
+						countdownGo.updateHitbox();
+
+						countdownGo.screenCenter();
+						countdownGo.antialiasing = antialias;
+						add(countdownGo);
+						FlxTween.tween(countdownGo, {/*y: countdownGo.y + 100,*/ alpha: 0}, Conductor.crochet / 1000, {
+							ease: FlxEase.cubeInOut,
+							onComplete: function(twn:FlxTween)
+							{
+								remove(countdownGo);
+								countdownGo.destroy();
+							}
+						});
+						FlxG.sound.play(Paths.sound('introGo' + introSoundsSuffix), 0.6);
+					}
+				}
+
+	
 
 		if (curSong == 'Elastic Entertainer')
 			{
@@ -3750,6 +3856,9 @@ class PlayState extends MusicBeatState
 		cancelMusicFadeTween();
 		MusicBeatState.switchState(new ChartingState());
 		chartingMode = true;
+		PlayState.ratingPercent = 0.00;
+        PlayState.songMisses = 0;
+		PlayState.sicks = 0;
 
 		#if desktop
 		DiscordClient.changePresence("Chart Editor", null, null, true);
@@ -4409,6 +4518,7 @@ class PlayState extends MusicBeatState
 		{
 			PlayState.ratingPercent = 0.00;
             PlayState.songMisses = 0;
+			PlayState.sicks = 0;
 			PlayState.endingintro = false;
 			PlayState.textcontinue = false;
 
@@ -4439,7 +4549,10 @@ class PlayState extends MusicBeatState
 					
 	
 					case 'studio':
+						if (dad.curCharacter == 'rubber')
 					FlxG.sound.play(Paths.sound('elasticvictory'), 1, false);
+						else
+					FlxG.sound.play(Paths.sound('autumnvictory'), 1, false);	
 	
 					case 'river':
 					FlxG.sound.play(Paths.sound('autumnvictory'), 1, false);
@@ -4460,7 +4573,7 @@ class PlayState extends MusicBeatState
 					FlxG.sound.play(Paths.sound('shadyvictory'), 1, false);	
 
 					case 'icecavern':
-					FlxG.sound.play(Paths.sound('shadyvictory'), 1, false);	
+					FlxG.sound.play(Paths.sound('cavernwin'), 1, false);	
 	
 					case 'seatower':
 					FlxG.sound.play(Paths.sound('shadyvictory'), 1, false);	

@@ -29,8 +29,8 @@ class CreditsRoll extends MusicBeatState
 		DiscordClient.changePresence("Watching The Credits", null);
 		#end
 		
-		origamiLogo = new FlxSprite(-1100, 0).loadGraphic(Paths.image('TheOrigamiKingLogo'));
-		//OrigamiLogo.screenCenter(X);
+		origamiLogo = new FlxSprite(-1100, 1000).loadGraphic(Paths.image('TheOrigamiKingLogo'));
+		origamiLogo.screenCenter(X);
 		add(origamiLogo);
 
 		
@@ -61,7 +61,7 @@ class CreditsRoll extends MusicBeatState
 	function begincredits():Void
 	{
 		FlxG.sound.playMusic(Paths.music('freakyMenu'));
-		FlxTween.tween(origamiLogo, {y: -900}, 1.5, {
+		FlxTween.tween(origamiLogo, {y: 0}, 1.5, {
 			ease: FlxEase.quadInOut,
 			onComplete: function(twn:FlxTween)
 			{
@@ -70,11 +70,11 @@ class CreditsRoll extends MusicBeatState
 				new FlxTimer().start(8, function(tmr:FlxTimer)
 			{
 				lolspin = false;
-				OrigamiLogo.angle = 0;
-				FlxTween.tween(OrigamiLogo, {y: -1700}, 4, {
+				origamiLogo.angle = 0;
+				FlxTween.tween(origamiLogo, {y: -600}, 4, {
 					onComplete: function(twn:FlxTween)
 					{
-						FlxTween.tween(credtxt, {y: -2500}, 45, {
+						FlxTween.tween(credtxt, {y: -3300}, 45, {
 					onComplete: function(twn:FlxTween)
 					{
 						FlxG.switchState(new MainMenuState());

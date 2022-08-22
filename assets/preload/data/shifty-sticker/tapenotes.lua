@@ -9,14 +9,15 @@ function onCreate()
 
 	end
 
+
+	
+
 	makeAnimatedLuaSprite('tleft', 'tape', 0, 0)
 	addAnimationByPrefix('tleft', 'peel', 'tape', 24, false)
 	setProperty('tleft.alpha', 0)
 	scaleObject('tleft', 0.6, 0.6)
 	setObjectCamera('tleft', 'other')
 	addLuaSprite('tleft')
-	setProperty('tleft.x', 700)
-	setProperty('tleft.y', 35)
 
 
 	makeAnimatedLuaSprite('tdown', 'tape', 0, 0)
@@ -25,8 +26,6 @@ function onCreate()
 	addLuaSprite('tdown')
 	scaleObject('tdown', 0.6, 0.6)
 	setObjectCamera('tdown', 'other')
-	setProperty('tdown.x', 810)
-	setProperty('tdown.y', 35)
 
 
 	makeAnimatedLuaSprite('tup', 'tape', 0, 0)
@@ -35,8 +34,6 @@ function onCreate()
 	addLuaSprite('tup')
 	scaleObject('tup', 0.6, 0.6)
 	setObjectCamera('tup', 'other')
-	setProperty('tup.x', 920)
-	setProperty('tup.y', 35)
 
 
 	makeAnimatedLuaSprite('tright', 'tape', 0, 0)
@@ -45,8 +42,30 @@ function onCreate()
 	addLuaSprite('tright')
 	scaleObject('tright', 0.6, 0.6)
 	setObjectCamera('tright', 'other')
-	setProperty('tright.x', 1030)
-	setProperty('tright.y', 35)
+
+setProperty('tright.x', 1030)
+setProperty('tup.x', 920)
+setProperty('tdown.x', 810)
+setProperty('tleft.x', 700)
+
+if downscroll == false then
+
+setProperty('tright.y', 35)
+setProperty('tup.y', 35)
+setProperty('tdown.y', 35)
+setProperty('tleft.y', 35)
+
+end
+
+
+if downscroll == true then
+
+setProperty('tright.y', 545)
+setProperty('tup.y', 545)
+setProperty('tdown.y', 545)
+setProperty('tleft.y', 545)
+
+end
 
 	--makeAnimatedLuaSprite('bubble', 'chapters/chapter4/seatower/speechbubble', 300, 300)
 	makeAnimatedLuaSprite('bubble', 'chapters/chapter4/seatower/speechbubble', 380, 400)

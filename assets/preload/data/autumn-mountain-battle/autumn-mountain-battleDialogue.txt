@@ -10,6 +10,6 @@
 :bf:default:Sigh... Beeep~...
 :autumn:default:I’m surprised you've gotten this far. Our numbers grow every second, flat one! 
 :autumn:default:I see you carrying your friend… are you trying to save her?
-:autumn:default:Pah!... She belongs to king olly now there is no bringing her back
+:autumn:default:Pah!... She belongs to King Olly now! There is no bringing her back.
 :bf:default:...
 :autumn:default:Your quest ends here!

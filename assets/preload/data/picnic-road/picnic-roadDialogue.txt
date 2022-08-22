@@ -3,12 +3,12 @@
 :music:fadeIn:
 :narrator:default:It's the day of the Origami Festival.
 :narrator:default:As per usual with events in Toad Town, Boyfriend and his girlfriend were invited. 
-:narrator:default:However, this day was different. When they arrived, Girlfriend looked lifeless. Something must have happened on the way to cause it…
-:narrator:default:In search of answers, Boyfriend holds the husk of Girlfriend by her arm, hoping that someone can help.
+:narrator:default:However, this day was different. When they arrived, Girlfriend looked strange. Something must have happened on the way to cause it…
+:narrator:default:In search of answers, Boyfriend holds Girlfriend by her arm, hoping that someone can help.
 :fade:picnic1:
 :bg:picnic2:
 :narrator:default:Entering Toad Town however was equally as weird. It was far too quiet for a festival, something was definitely wrong.
-:narrator:default:Boyfriend missed the voices of the toads, as he made his way onto the unfamiliar path of Picnic Road.
+:narrator:default:Boyfriend made his way onto the unfamiliar path of Picnic Road.
 :fade:picnic2:
 :bg:picnic3:
 :music:1-2:
