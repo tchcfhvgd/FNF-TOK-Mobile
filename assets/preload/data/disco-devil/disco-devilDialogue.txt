@@ -4,6 +4,8 @@
 :bf:default:~Yea!
 :dj:default:Now THAT was a great performance!
 :olivia:default:You really showed them who's boss!
+:music:stop:
+:devil:blackened:YEAH!
 :cutscenesixteen:
 :sound:floorbreak:
 :music:1-4:

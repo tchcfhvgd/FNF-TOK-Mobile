@@ -81,6 +81,23 @@ class CreditsState extends MusicBeatState
 		#end
 
 		var pisspoop:Array<Array<String>> = [ //Name - Icon name - Description - Link - BG Color
+			['FNF TOK Team'],
+			['NinKey',		'NinKey',		'Director/Lead Artist/Animator',							'https://twitter.com/NinKey69',	'FD5F9E'],
+			['ArtPanz',		'Mol',		'Artist/Animator',							'https://twitter.com/ArtPanz',	'6D4FD8'],
+			['Snak',		'Snak',		'Musician/Storywriter',							'https://twitter.com/TravelerSnak',	'FC9952'],
+			['ant0nal0g',		'Ant0anal0g',		'Programmer',							'https://twitter.com/ant0nal0g',	'7CABD7'],
+			['Doodlz',		'Doodlz',		'Artist',							'https://twitter.com/xdoodlz',	'62302C'],
+			['DiscWraith',		'DiscWraith',		'Charter',							'https://twitter.com/DiscWraith',	'E10CDC'],
+			['AguaCrunch',		'aguacrunch',		'Musician',							'https://twitter.com/AguaCrunch',	'559AFF'],
+			['Aizakku',		'Aizakku',		'Portugese Translator',							'https://twitter.com/ItsAizakku',	'DFF1FA'],
+			['Soulegal',		'Soul',		'Portugese Translator',							'https://twitter.com/nickstwt',	'D90A09'],
+			['FireMarioFan',		'FireMarioFan',		'Composer of [Coming Soon! ;)]',							'https://twitter.com/Fire_Mario_Fan',	'F6F8F9'],
+			['Juno Songs',		'Juno',		'Voice Acting',							'https://twitter.com/JunoSongsYT',	'7010DB'],
+			['Man on the Internet',		'ManontheInternet',		'Yape',							'https://twitter.com/MoNetProduction',	'F4C332'],
+			['HostKal',		'Hostkal',		'Background Help',							'',	'0B1354'],
+			['HenrySL',		'HenrySL',		'Chromatics Help',							'',	'E4EFF7'],
+			['Flarewire',		'Flarewire',		'Chromatics Help',							'',	'FF6C7E'],
+			['Margetalt',		'marge',		'Monotoad Cover',							'',	'#6D6D6D'],
 			['Psych Engine Team'],
 			['Shadow Mario',		'shadowmario',		'Main Programmer of Psych Engine',							'https://twitter.com/Shadow_Mario_',	'444444'],
 			['RiverOaken',			'riveroaken',		'Main Artist/Animator of Psych Engine',						'https://twitter.com/RiverOaken',		'C30085'],

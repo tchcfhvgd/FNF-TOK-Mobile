@@ -3,7 +3,7 @@
 :music:fadeIn:
 :narrator:default:After a quick jingle, they hopped on the boat and attached the submarine to the back.
 :narrator:default:Following the purple streamer, it lead to a large sea tower, the entrance locked behind a door.
-:narrator:default:The captain told them three spherical keys would be required to open the door to the tower.
+:narrator:default:The lock required three spherical keys to open the door.
 :narrator:default:The party sailed past nearby islands, searching for where they could be...
 :olivia:default:Wait, stop right here! I recognize this one.
 :removecutscenethirteen:
@@ -31,7 +31,7 @@
 :fade:vullemental4:
 :bg:vullemental5:
 :olivia:default:Wow... this is pretty~
-:tode:default:Sure is, I think I read about this years ago.
+:tode:default:Hmm, a hidden jewel, lost to time, slumbering beneath the waves… quite the reputation if ye ask me!
 :olivia:default:Red... blue... green... Ah! Just like the holes in the door!
 :tode:default:Aye, those buildings seem to be the ancient trials! It's said that only the bravest, wisest, and strongest heroes can pass them.
 :fade:vullemental5:

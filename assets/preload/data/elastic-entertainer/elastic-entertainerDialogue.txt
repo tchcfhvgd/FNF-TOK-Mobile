@@ -2,7 +2,7 @@
 :music:fadeIn:
 :bg:elastic1:
 :gondol:default:Good job mate! Haven't had anyone with lungs like you for quite a while.
-:bf:default: (happy) Beep~
+:bf:default:Beep~
 :gondol:default:Alright we're approaching where I left Mario!
 :gondol:default:He left to go after the next stre-
 :music:stop:

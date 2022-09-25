@@ -14,6 +14,8 @@ import flixel.util.FlxTimer;
 import lime.app.Application;
 import editors.MasterEditorMenu;
 import flixel.input.keyboard.FlxKey;
+import GameJolt.GameJoltAPI;
+import GameJolt.GameJoltLogin;
 
 #if windows
 import Discord.DiscordClient;
@@ -69,7 +71,7 @@ class MainMenuState extends MusicBeatState
 
 		if (FlxG.save.data.coins == null)
 			FlxG.save.data.coins = 0;
-
+		
 		persistentUpdate = persistentDraw = true;
 
 		Image = new FlxSprite(-13.5, -10.8);
@@ -294,7 +296,7 @@ class MainMenuState extends MusicBeatState
 
 			if (controls.BACK)
 			{
-				FlxG.switchState(new TitleState());
+				FlxG.switchState(new GameJoltLogin());
 			}
 
 			if (controls.ACCEPT && canselect == true)
@@ -346,7 +348,7 @@ class MainMenuState extends MusicBeatState
 			case 'shop':
 				MusicBeatState.switchState(new ShopState());
 			case 'credits':
-				MusicBeatState.switchState(new CreditsRoll());
+				MusicBeatState.switchState(new CreditsState());
 			case 'settings':
 				LoadingState.loadAndSwitchState(new options.OptionsState());
 		}

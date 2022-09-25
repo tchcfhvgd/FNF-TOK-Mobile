@@ -13,17 +13,6 @@
 		},
 		{
 			"offsets": [
-				-35,
-				24
-			],
-			"loop": false,
-			"fps": 24,
-			"anim": "singLEFT",
-			"indices": [],
-			"name": "BF NOTE LEFT0"
-		},
-		{
-			"offsets": [
 				-20,
 				-32
 			],
@@ -46,28 +35,6 @@
 		},
 		{
 			"offsets": [
-				24,
-				11
-			],
-			"loop": false,
-			"fps": 24,
-			"anim": "singRIGHT",
-			"indices": [],
-			"name": "BF NOTE RIGHT0"
-		},
-		{
-			"offsets": [
-				-27,
-				22
-			],
-			"loop": false,
-			"fps": 24,
-			"anim": "singLEFTmiss",
-			"indices": [],
-			"name": "BF NOTE LEFT MISS"
-		},
-		{
-			"offsets": [
 				-25,
 				-36
 			],
@@ -87,17 +54,6 @@
 			"anim": "singUPmiss",
 			"indices": [],
 			"name": "BF NOTE UP MISS"
-		},
-		{
-			"offsets": [
-				31,
-				8
-			],
-			"loop": false,
-			"fps": 24,
-			"anim": "singRIGHTmiss",
-			"indices": [],
-			"name": "BF NOTE RIGHT MISS"
 		},
 		{
 			"offsets": [
@@ -208,9 +164,53 @@
 			"fps": 24,
 			"name": "",
 			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				24,
+				11
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "BF NOTE RIGHT0",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-35,
+				24
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "BF NOTE LEFT0",
+			"indices": []
+		},
+		{
+			"offsets": [
+				31,
+				8
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singLEFTmiss",
+			"loop": false,
+			"name": "BF NOTE RIGHT MISS"
+		},
+		{
+			"offsets": [
+				-27,
+				22
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singRIGHTmiss",
+			"loop": false,
+			"name": "BF NOTE LEFT MISS"
 		}
 	],
-	"no_antialiasing": false,
+	"no_antialiasing": true,
 	"image": "characters/boyfreanim4",
 	"position": [
 		0,

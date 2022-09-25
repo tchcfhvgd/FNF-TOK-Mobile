@@ -1,58 +1,57 @@
 {
 	"animations": [
 		{
-			"loop": false,
 			"offsets": [
 				51,
 				17
 			],
-			"anim": "singLEFT",
+			"loop": false,
 			"fps": 11,
-			"name": "SING left",
-			"indices": []
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "SING left"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				55,
 				17
 			],
-			"anim": "singDOWN",
+			"loop": false,
 			"fps": 11,
-			"name": "SING down",
-			"indices": []
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "SING down"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				53,
 				17
 			],
-			"anim": "singUP",
+			"loop": false,
 			"fps": 11,
-			"name": "SING up",
-			"indices": []
+			"anim": "singUP",
+			"indices": [],
+			"name": "SING up"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				49,
 				16
 			],
-			"anim": "singRIGHT",
+			"loop": false,
 			"fps": 11,
-			"name": "SING right",
-			"indices": []
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "SING right"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				-2,
 				0
 			],
-			"anim": "idle",
+			"loop": false,
 			"fps": 11,
-			"name": "SING idle",
+			"anim": "idle",
 			"indices": [
 				1,
 				2,
@@ -61,7 +60,8 @@
 				5,
 				6,
 				7
-			]
+			],
+			"name": "SING idle"
 		}
 	],
 	"no_antialiasing": false,
@@ -82,5 +82,5 @@
 		560
 	],
 	"sing_duration": 6.1,
-	"scale": 0.5
+	"scale": 0.6
 }

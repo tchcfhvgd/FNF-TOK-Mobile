@@ -67,11 +67,19 @@ setProperty('tleft.y', 545)
 
 end
 
-	--makeAnimatedLuaSprite('bubble', 'chapters/chapter4/seatower/speechbubble', 300, 300)
-	makeAnimatedLuaSprite('bubble', 'chapters/chapter4/seatower/speechbubble', 380, 400)
-	addAnimationByPrefix('bubble', 'go', 'speech idle', 12, false)
+	makeAnimatedLuaSprite('bubble', 'chapters/chapter4/seatower/speechbubble', -20, 220)
+	addAnimationByPrefix('bubble', 'go', 'speechbubble idle', 12, false)
 	setProperty('bubble.alpha', 0)
+	scaleObject('bubble', 0.5, 0.5)
+	setObjectCamera('bubble', 'hud')
 	addLuaSprite('bubble')
+
+	makeAnimatedLuaSprite('pieces', 'chapters/chapter4/seatower/piece', 0, 0)
+	addAnimationByPrefix('pieces', 'go', 'piece idle', 12, false)
+	setProperty('pieces.alpha', 0)
+	scaleObject('pieces', 0.6, 0.6)
+	setObjectCamera('pieces', 'hud')
+	addLuaSprite('pieces')
 end
 
 function onCreatePost()
@@ -130,7 +138,13 @@ end
 
 function onUpdate()
 
-if curStep == 625 then
+if curStep == 615 then
+	setProperty('pieces.alpha', 1)
+	objectPlayAnimation('pieces', 'go')
+end
+
+if curStep == 625 then	
+	setProperty('pieces.alpha', 0)
 	setProperty('bubble.alpha', 1)
 	objectPlayAnimation('bubble', 'go')
 

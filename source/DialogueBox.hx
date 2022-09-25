@@ -316,7 +316,7 @@ class DialogueBox extends FlxSpriteGroup
 		add(bg31pt1);
 		bg31pt1.visible = false;
 
-		risingtape31 = new FlxSprite(0, 400).loadGraphic(Paths.image('cutscenes/cutscene31parts/31_part1/tape_31_1'));
+		risingtape31 = new FlxSprite(230, 450).loadGraphic(Paths.image('cutscenes/cutscene31parts/31_part1/tape_31_1'));
 		add(risingtape31);
 		risingtape31.visible = false;
 
@@ -328,7 +328,7 @@ class DialogueBox extends FlxSpriteGroup
 		add(bg31pt2);
 		bg31pt2.visible = false;
 
-		risingtape31pt2 = new FlxSprite(0, 1000).loadGraphic(Paths.image('cutscenes/cutscene31parts/31_part2/tape_31_2'));
+		risingtape31pt2 = new FlxSprite(0, -200).loadGraphic(Paths.image('cutscenes/cutscene31parts/31_part2/tape_31_2'));
 		risingtape31pt2.setGraphicSize(Std.int(risingtape31pt2.width / 1.5));
 		add(risingtape31pt2);
 		risingtape31pt2.visible = false;
@@ -634,6 +634,10 @@ class DialogueBox extends FlxSpriteGroup
 				jojo313.y = FlxG.random.int(39, 41);
 				jojo314.x = FlxG.random.int(989, 991);
 				jojo314.y = FlxG.random.int(-1, 1);
+				risingtape31pt2.x = FlxG.random.int(-1, 1);
+				risingtape31pt2.y = FlxG.random.int(-201, -199);
+				lines31.x = FlxG.random.int(-1, 1);
+				lines31.y = FlxG.random.int(-1, 1);
 				new FlxTimer().start(0.05, function(tmr:FlxTimer)
 					{
 						jojoanimate = true;
@@ -845,8 +849,12 @@ class DialogueBox extends FlxSpriteGroup
 					if (PlayState.textcontinue == true)
 					{
 						PlayState.textcontinue = false;
-
+						
+						if (Paths.formatToSongPath(PlayState.SONG.song) != 'shifty-sticker')
 						FlxG.sound.play(Paths.sound('tbc'));
+						else
+						FlxG.sound.play(Paths.sound('4-tbc'));
+
 						switch(Paths.formatToSongPath(PlayState.SONG.song))
 						{
 							case 'missile-maestro':
@@ -905,7 +913,7 @@ class DialogueBox extends FlxSpriteGroup
 							FlxTween.tween(sorrylol, {alpha: 1}, 6, {ease: FlxEase.circOut});
 						});
 
-						new FlxTimer().start(6, function(tmr:FlxTimer)
+						new FlxTimer().start(9, function(tmr:FlxTimer)
 						{
 							FlxTween.tween(sorrylol, {alpha: 0}, 4, {ease: FlxEase.circOut});
 						});
@@ -1061,6 +1069,11 @@ class DialogueBox extends FlxSpriteGroup
 						FlxG.sound.music.volume = 0;
 					case "fadeIn":
 						FlxG.sound.music.fadeIn(1, 0, 0.8);
+					case "tapefadeIn":
+						new FlxTimer().start(2.5, function(tmr:FlxTimer)
+							{
+								FlxG.sound.music.fadeIn(1, 0, 0.8);	
+							});
 					default:
 						FlxG.sound.playMusic(Sound.fromFile("assets/shared/images/cutscenes/dialogue/music/" + curAnim + ".ogg"), Std.parseFloat(dialogueList[0]));
 						FlxG.sound.music.volume = 0;
@@ -1209,36 +1222,45 @@ class DialogueBox extends FlxSpriteGroup
 						risingtape31.visible = true;
 						fg31pt1.visible = true;
 
-						FlxTween.tween(risingtape31, {y: 150}, 1.8, {
+						FlxTween.tween(risingtape31, {y: 120}, 1.8, {
 						onComplete: function(twn:FlxTween)
 					{
-						var white:FlxSprite = new FlxSprite(0, 0).makeGraphic(FlxG.width * 3, FlxG.height * 3, FlxColor.WHITE);
-					white.scrollFactor.set();
-					add(white);	
 
-					bg31pt1.visible = false;
-					risingtape31.visible = false;
-					fg31pt1.visible = false;
-					bg31pt2.visible = true;
-					lines31.visible = true;
-					jojo311.visible = true;
-					jojo312.visible = true;
-					jojo313.visible = true;
-					jojo314.visible = true;
-					risingtape31pt2.visible = true;
-
-					FlxTween.tween(white, {alpha: 0}, 0.5, {
-					onComplete: function(twn:FlxTween)
-					{
-						FlxTween.tween(risingtape31pt2, {y: -180}, 0.7);
-						jojoanimate = true;
-					}
-					});
-
-
+						FlxTween.tween(risingtape31, {y: 130}, 0.1, {
+							onComplete: function(twn:FlxTween)
+						{
+							FlxTween.tween(risingtape31, {y: 120}, 0.1, {
+								onComplete: function(twn:FlxTween)
+							{
+								new FlxTimer().start(0.5, function(tmr:FlxTimer)
+									{
+										var white:FlxSprite = new FlxSprite(0, 0).makeGraphic(FlxG.width * 3, FlxG.height * 3, FlxColor.WHITE);
+										white.scrollFactor.set();
+										add(white);	
+		
+										bg31pt1.visible = false;
+										risingtape31.visible = false;
+										fg31pt1.visible = false;
+										bg31pt2.visible = true;
+										lines31.visible = true;
+										jojo311.visible = true;
+										jojo312.visible = true;
+										jojo313.visible = true;
+										jojo314.visible = true;
+										risingtape31pt2.visible = true;
+							FlxTween.tween(white, {alpha: 0}, 0.5, {
+							onComplete: function(twn:FlxTween)
+							{
+								jojoanimate = true;
+							}
+							});
+									}); 
+							}
+								});
+						}
+							});
 					}
 						});
-
 					}
 				
 
@@ -1303,7 +1325,7 @@ class DialogueBox extends FlxSpriteGroup
 				icons = new HealthIcon('bf', false);
 				changeposition();
 				add(icons);
-				changeSound('bftext',0.6);
+				changeSound('bftext',0.5);
 
 			case "gf":
 				remove(icons);

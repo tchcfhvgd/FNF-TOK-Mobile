@@ -6,8 +6,8 @@
 :gondol:default:Yeah you! That was amazing! You really showed those folded dorks who's boss.
 :fade:eddy1:
 :bg:eddy2:
-:bf:default:Bap beep skdep boop.
-:gondol:default:Oh, you’re looking for Mario? I  just carried him down to the Scorching Sandpaper Desert. 
+:bf:default:Boop beep.
+:gondol:default:Oh, you’re looking for Mario? I just carried him down to the Scorching Sandpaper Desert. 
 :bf:default:beep bo?
 :gondol:default:Sure thing mate! Hop on in and I'll give you and your folded friend a ride.
 :gondol:default:If you trust this one that is...

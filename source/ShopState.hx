@@ -13,6 +13,8 @@ import flixel.input.keyboard.FlxKey;
 
 import flixel.system.FlxSound;
 
+import GameJolt.GameJoltAPI;
+
 #if windows
 import Discord.DiscordClient;
 #end
@@ -283,6 +285,8 @@ class ShopState extends MusicBeatState
 			PlayState.isStoryMode = false;
 			PlayState.storyDifficulty = 2;
 
+			GameJoltAPI.getTrophy(150047);
+
 			LoadingState.loadAndSwitchState(new PlayState());
 
 			FlxG.sound.music.volume = 0;
@@ -384,6 +388,12 @@ class ShopState extends MusicBeatState
 
 		function bought():Void
 			{
+				if (FlxG.save.data.poutfitunlocked == true && FlxG.save.data.poutfit2unlocked == true && FlxG.save.data.soutfitunlocked == true && FlxG.save.data.goutfitunlocked == true)
+					GameJoltAPI.getTrophy(173486);
+
+				if (FlxG.save.data.toadbbqunlocked == true && FlxG.save.data.autumnmountainunlocked == true && FlxG.save.data.shogunstudiosunlocked == true && FlxG.save.data.maxpowerunlocked == true && FlxG.save.data.bluestreamerunlocked == true)
+					GameJoltAPI.getTrophy(173487);
+
 				purchased.visible = true;
 				purchased.animation.play('yay');
 				FlxG.sound.play(Paths.sound('purchased'));
@@ -425,10 +435,10 @@ class ShopState extends MusicBeatState
 			case 'shogun':
 				if (FlxG.save.data.shogunstudiosunlocked == false)
 			{
-				if (FlxG.save.data.coins >= 500)
+				if (FlxG.save.data.coins >= 200)
 				{
 					FlxG.save.data.shogunstudiosunlocked = true;
-					FlxG.save.data.coins -= 500;
+					FlxG.save.data.coins -= 200;
 					bought();
 				}
 				else
@@ -437,10 +447,10 @@ class ShopState extends MusicBeatState
 			case 'max':
 				if (FlxG.save.data.maxpowerunlocked == false)
 			{
-				if (FlxG.save.data.coins >= 600)
+				if (FlxG.save.data.coins >= 500)
 				{
 					FlxG.save.data.maxpowerunlocked = true;
-					FlxG.save.data.coins -= 600;
+					FlxG.save.data.coins -= 500;
 					bought();
 				}
 				else
@@ -450,10 +460,10 @@ class ShopState extends MusicBeatState
 			case 'bluestreamer':
 				if (FlxG.save.data.bluestreamerunlocked == false)
 					{
-						if (FlxG.save.data.coins >= 400)
+						if (FlxG.save.data.coins >= 300)
 						{
 							FlxG.save.data.bluestreamerunlocked = true;
-							FlxG.save.data.coins -= 400;
+							FlxG.save.data.coins -= 300;
 							bought();
 						}
 						else
@@ -473,10 +483,10 @@ class ShopState extends MusicBeatState
 				case 'poutfit':
 					if (FlxG.save.data.poutfitunlocked == false)
 				{
-					if (FlxG.save.data.coins >= 150)
+					if (FlxG.save.data.coins >= 50)
 					{
 						FlxG.save.data.poutfitunlocked = true;
-						FlxG.save.data.coins -= 150;
+						FlxG.save.data.coins -= 50;
 						bought();
 					}
 					else
@@ -485,10 +495,10 @@ class ShopState extends MusicBeatState
 				case 'soutfit':
 					if (FlxG.save.data.soutfitunlocked == false)
 				{
-					if (FlxG.save.data.coins >= 150)
+					if (FlxG.save.data.coins >= 50)
 					{
 						FlxG.save.data.soutfitunlocked = true;
-						FlxG.save.data.coins -= 150;
+						FlxG.save.data.coins -= 50;
 						bought();
 					}
 					else
@@ -497,10 +507,10 @@ class ShopState extends MusicBeatState
 				case 'goutfit':
 					if (FlxG.save.data.goutfitunlocked == false)
 				{
-					if (FlxG.save.data.coins >= 150)
+					if (FlxG.save.data.coins >= 75)
 					{
 						FlxG.save.data.goutfitunlocked = true;
-						FlxG.save.data.coins -= 150;
+						FlxG.save.data.coins -= 75;
 						bought();
 					}
 					else
@@ -509,10 +519,10 @@ class ShopState extends MusicBeatState
 				case 'poutfit2':
 					if (FlxG.save.data.poutfit2unlocked == false)
 				{
-					if (FlxG.save.data.coins >= 150)
+					if (FlxG.save.data.coins >= 75)
 					{
 						FlxG.save.data.poutfit2unlocked = true;
-						FlxG.save.data.coins -= 150;
+						FlxG.save.data.coins -= 75;
 						bought();
 					}
 					else

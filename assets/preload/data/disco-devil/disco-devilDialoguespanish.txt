@@ -2,15 +2,17 @@
 :music:fadeIn:
 :bg:discodevil1:
 :bf:default:~¡Yea!
-:dj:default:Eso sí que ha sido una pasada.
-:olivia:default:¡Eres increíble cantando Bf!
+:dj:default:¡No está nada mal tío!
+:olivia:default:¡Le has enseñado quién manda!
+:devil:blackened:¡FIESTA!
 :cutscenesixteen:
 :sound:floorbreak:
 :music:1-4:
 :music:fadeIn:
-:devil:default:¡Ahora sí que parece una discoteca! ¡No lo haces nada mal con la música, chico!
+:narrator:default:Una grapadora del tamaño de un coche saltó bruscamente a la pista de baile.
+:devil:default:¡Ahora sí que sí! ¡Tienes el ritmo en las venas niño!
 :bf:default:BEe-
-:devil:default:Pero me temo que nuestras similitudes terminan ahí, vas detrás de la serpentina ¿verdad?
+:devil:default:Aunque… ¿Vas detrás de la serpentina verdad? No puedo dejar que avances más.
 :bf:default:Bap >:(
-:devil:default:¡Es una pena, pero parece que también sucumbirás el mismo destino que esos toads!
+:devil:default:Eres muy bueno con el micrófono, pero ¿Qué tal se te da la pista de baile?
 :devil:default:¡Hora del show!

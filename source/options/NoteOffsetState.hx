@@ -91,11 +91,12 @@ class NoteOffsetState extends MusicBeatState
 		gf.x += gf.positionArray[0];
 		gf.y += gf.positionArray[1];
 		gf.scrollFactor.set(0.95, 0.95);
-		boyfriend = new Character(770, 100, 'bf', true);
+		boyfriend = new Character(770, 100, 'bf-graphics', true);
 		boyfriend.x += boyfriend.positionArray[0];
 		boyfriend.y += boyfriend.positionArray[1];
 		add(gf);
 		add(boyfriend);
+
 
 		// Combo stuff
 

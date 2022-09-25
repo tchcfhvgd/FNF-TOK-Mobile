@@ -1,34 +1,39 @@
 :music:2-2:
 :music:fadeIn:
 :bg:yellow1:
-:gondol:default:¡Muy bien, han llegado a su destino!
-:bf:default:Beep Bo!
-:gondol:default:¡Hasta la próxima! No os metáis en más líos por hoy.
+:narrator:default:El toad les deja en una parada en frente de una cueva.
+:gondol:default:Han llegado a su destino.
+:bf:default:¡Beep Bo!
+:gondol:default:¡Hasta luego! No os metáis en más líos.
 :fade:yellow1:
 :bg:yellow2:
 :music:3-1:
 :music:fadeIn:
-:narrator:default:Al acercarse a la entrada de la Mina que lleva al desierto...
-:narrator:default:...Un sentimiento de pérdida de pronto golpea a boyfriend por la espalda, el cual se gira para observar lo que parecen…
-:narrator:default:...Los restos de una explosión.
+:narrator:default:A la entrada de la cueva, Bf se tropieza con unos cráteres en el suelo.
+:narrator:default:Se da la vuelta para preguntarse qué puede haber pasado en el suelo.
+:narrator:default:Pero rápidamente agarra el brazo de Girlfriend y prosigue adelante.
 :music:3-2:
 :music:fadeIn:
 :fade:yellow2:
 :bg:yellow3:
-:narrator:default:Tras hacerse con un Botamóvil, rápidamente se dirigieron hacia el final de la serpentina amarilla.
-:narrator:default:Parecía que su extremo se encontraba dentro de una especie de Templo antiguo.
+:narrator:default:Dentro de las minas consiguen hacerse con un botamóvil para cruzar el sorprendentemente oscuro desierto.
+:narrator:default:En el lugar del sol había un agujero que había causado que el ambiente estuviera frío y oscuro.
+:narrator:default:En el cielo también parecía haber una serpentina amarilla gigante.
+:narrator:default:Estaba intacta y su final parecía dar con una especie de templo antiguo.
 :fade:yellow3:
 :bg:yellow4:
-:narrator:default:Sin embargo, antes de llegar allí, otro ser de origami se encontraba en el camino, lo que no suele ser una buena señal.
-:olivia:default:¿Hm?
+:narrator:default:Pero antes de llegar, se pararon pues otro ser de origami bloqueaba el camino. Bf saltó del vehículo para lidiar con la posible amenaza.
+:olivia:default:¿Oh?
 :fade:yellow4:
 :bg:yellow5:
-:olivia:default:Oh, hola pequeño, ¿Qué te trae por aquí? 
-:bf:default:Beep...
-:olivia:default:No no, yo no soy uno de esos seres doblados de mi hermano. Llevo bastante tiempo acompañando a Mario para pararles los pies de hecho.
-:bf:default:¿¡Bap Breep?! 
-:olivia:default:Si, eso he dicho, Mario. Está ocupado con esos cararrugadas de mi hermano, así que estoy esperando a que él y el profesor vuelvan.
-:olivia:default:¿Hm, y eso en tu mano? ¡Oh! ¿También te gusta cantar? 
+:olivia:default:¡Hola viajero! Mi nombre es Olivia.
+:bf:default:¿Bah…?
+:olivia:default:Ah no no no… No soy un enemigo de origami, llevo siguiendo a Mario durante un tiempo y hemos lidiado con muchos de esos.
+:bf:default:¿¡Bah bi-oh!? 
+:olivia:default:¡Sí! Pero… Ahora mismo está con una batalla por ahí. Estoy esperando hasta que él y el profesor regresen.
+:narrator:default:Olivia suspira.
+:olivia:default:¿Hm, qué tienes en tu mano?
+:olivia:default:¿Un micrófono? ¿Acaso también te gusta cantar?
 :bf:default:Beep Boo.
-:olivia:default:Pues es el momento perfecto, aún nos queda un rato hasta que vuelvan, ¿Quieres hacer una ronda rápida?
-:bf:default:Bop!
+:olivia:default:¡Oh que ilusión! No me suelo encontrar nunca con gente interesada en ello… ¿Te interesa cantar una canción corta mientras esperamos? 
+:bf:default:Bop.

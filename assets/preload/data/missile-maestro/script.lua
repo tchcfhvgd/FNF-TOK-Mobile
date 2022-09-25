@@ -4,12 +4,12 @@ local pencilsmovement = true
 function onUpdate()
 if pencilsup == true and pencilsmovement == true and getProperty('startdrawing') == false then
 pencilsmovement = false
-doTweenY('floatup', 'dad', 200, 2, quadInOut)
+doTweenY('floatup', 'dad', 450, 2, quadInOut)
 end
 
 if pencilsup == false and pencilsmovement == true and getProperty('startdrawing') == false then
 pencilsmovement = false
-doTweenY('downfloat', 'dad', -100, 2, quadInOut)
+doTweenY('downfloat', 'dad', 150, 2, quadInOut)
 end
 
 

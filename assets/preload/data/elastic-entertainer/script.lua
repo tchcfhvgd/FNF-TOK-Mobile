@@ -3,8 +3,9 @@ setProperty('boyfriend.alpha', 0);
 setProperty('gf.alpha', 0);
 setProperty('dad.alpha', 0);
 makeLuaSprite('blackbg', 'chapters/chapter2/images/background/std/blackbg', -400, -500)
+scaleObject('blackbg', 1.5, 1.5)
 addLuaSprite('blackbg', false)
-makeLuaSprite('spotlight', 'chapters/chapter2/images/background/std/light', -500, -500)
+makeLuaSprite('spotlight', 'chapters/chapter2/images/background/std/light', 0, -500)
 setProperty('spotlight.alpha', 0);
 addLuaSprite('spotlight', true)
 end

@@ -2,8 +2,8 @@
 :music:1-1:
 :music:fadeIn:
 :narrator:default:It's the day of the Origami Festival.
-:narrator:default:As per usual with events in Toad Town, Boyfriend and his girlfriend were invited. 
-:narrator:default:However, this day was different. When they arrived, Girlfriend looked strange. Something must have happened on the way to cause it…
+:narrator:default:As per usual with events in Toad Town, Boyfriend and his girlfriend were invited to the event.
+:narrator:default:However, this day was different. When they arrived, Girlfriend looked strange. Something must have happened on the way...
 :narrator:default:In search of answers, Boyfriend holds Girlfriend by her arm, hoping that someone can help.
 :fade:picnic1:
 :bg:picnic2:
@@ -14,11 +14,10 @@
 :music:1-2:
 :music:fadeIn:
 :toad:default:Boyfriend?!
-:bf:default:Beep?
-:narrator:default:A toad he recognized from the last festival!
-:toad:default:It really is you, hey! Remember when I absolutely destroyed you with my sick clarinet skills last time? 
+:bf:default:B-Bah?
+:toad:default:It really is you, hey! Remember when I absolutely destroyed you with my sick clarinet skills at the last festival? 
 :bf:default:Bo...?
 :toad:default:Oh. Well... maybe a song would jog your memory?
-:bf:default:Beep ba!
+:bf:default:Beep... Ba!
 :toad:default:C'mon... just one quick song?
 :bf:default:Bop...

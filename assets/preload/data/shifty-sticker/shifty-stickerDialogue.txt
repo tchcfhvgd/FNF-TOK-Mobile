@@ -1,10 +1,10 @@
 :bg:tape1:
-:music:4-9:
+:music:4-6:
 :music:fadeIn:
 :narrator:default:With the polar bear defeated, Boyfriend felt out of breath.
 :olivia:default:Goodness me! Boyfriend, Girlfriend, are you both okay!? We heard a huge noise right after Mario beat the trials-
 :narrator:default:Mario catches a mysterious book the bear had left behind after being defeated.
-:olivia:default:Oh, nice catch.
+:olivia:default:Nice catch.
 :olivia:default:Wait! It's the Ice Vellumental's Bibliofold!
 :olivia:default:You beat the last vellumental?! Awesome! 
 :olivia:default:This will help me fold into it, it may come in handy...
@@ -34,10 +34,12 @@
 :fade:tape5:
 :bg:tape6:
 :captain:default:There! I see it! Not much longer until we reach this sea tower!
-:olivia:default:Yeah! Finally, we can remove one more bond on this world!
+:olivia:default:Yeah! Finally, we can remove one more bond!
 :captain:default:There's no time to lose!
 :fade:tape6:
 :bg:tape7:
+:music:4-wave:
+:music:fadeIn:
 :captain:default:Alright, Here we are. Good luck up there, because I sure ain't coming with you.
 :captain:default:They don't call me a SEA Captain for nothing.
 :olivia:default:Goodbye for now, Captain! And thanks for everything!
@@ -47,10 +49,13 @@
 :olivia:default:Let's go!
 :fade:tape7:
 :bg:tape8:
+:music:stop:
+:music:4-wind:
+:music:fadeIn:
 :narrator:default:The tower extended up high. The top was hidden within the clouds. Inside, a path lead to an elevator on the exterior of the tower.
 :olivia:default:Oh my! Those poor toads! They're somehow stuck to the walls of the tower!
 :olivia:default:What kind of sticky creature is guarding this one...?
-:bf:default:Baa...
+:bf:default:Bai bep boop.
 :olivia:default:Yeah, you're right! We take down the being who did this and they will be free in no time!
 :bf:default:Bep...
 :fade:tape8:
@@ -60,7 +65,10 @@
 :sound:altaropen:
 :bg:tear:
 :olivia:default:Hold on, what's that noise?
+:fade:tape9:
 :cutscenethirtyone:
+:music:1-4:
+:music:tapefadeIn:
 :tape:default:Not so fast ya rats!
 :tape:default:Mario, Olivia, and uh... Boyfriend, ey? I heard about you three from the other legion of stationaries!
 :tape:default:You got some nerve, thinking you can just come up here and destroy my streamer?

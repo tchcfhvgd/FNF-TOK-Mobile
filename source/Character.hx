@@ -95,6 +95,9 @@ class Character extends FlxSprite
 		
 		switch (curCharacter)
 		{
+			case 'bf-graphics':
+				curCharacter = 'bf';	
+				
 			case 'bf':
 				switch (FreeplayState.bfType)
 				{

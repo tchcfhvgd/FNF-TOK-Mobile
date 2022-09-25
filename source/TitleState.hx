@@ -2,6 +2,8 @@ package;
 
 #if desktop
 import Discord.DiscordClient;
+import GameJolt.GameJoltAPI;
+import GameJolt.GameJoltLogin;
 import sys.thread.Thread;
 #end
 import flixel.FlxG;
@@ -106,6 +108,9 @@ class TitleState extends MusicBeatState
 			}
 		}
 		#end*/
+
+		GameJoltAPI.connect();
+		GameJoltAPI.authDaUser(FlxG.save.data.gjUser, FlxG.save.data.gjToken);
 		
 		#if CHECK_FOR_UPDATES
 		if(!closedState) {
@@ -474,11 +479,7 @@ class TitleState extends MusicBeatState
 
 				new FlxTimer().start(1, function(tmr:FlxTimer)
 				{
-					if (mustUpdate) {
-						MusicBeatState.switchState(new MainMenuState());
-					} else {
-						MusicBeatState.switchState(new MainMenuState());
-					}
+					MusicBeatState.switchState(new GameJoltLogin());
 					closedState = true;
 				});
 				// FlxG.sound.play(Paths.music('titleShoot'), 0.7);

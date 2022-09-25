@@ -73,25 +73,16 @@ class CoinsScreen extends MusicBeatSubstate
         accuracyscore = PlayState.ratingPercent * 100 / 2;
         accuracyscore = Math.round(accuracyscore * Math.pow(10, 0));
 
-        if (FlxG.save.data.botplay)
-        accuracyscore = 0;
-
         sickscore = PlayState.sicks / 6;
         sickscore = Math.round(sickscore * Math.pow(10, 0));
-
-        if (FlxG.save.data.botplay)
-        sickscore = 0;
 
         missescore = PlayState.songMisses / 2;
         missescore = Math.round(missescore * Math.pow(10, 0));
 
-        if (FlxG.save.data.botplay)
-        missescore = 0;
-
         coinamount = sickscore + accuracyscore - missescore;     
         coinamount = Math.round(coinamount * Math.pow(10, 0));
         
-        if (FlxG.save.data.botplay)
+        if (ClientPrefs.getGameplaySetting('botplay', false))
         coinamount = 0;
 
         if (coinamount <= 0)

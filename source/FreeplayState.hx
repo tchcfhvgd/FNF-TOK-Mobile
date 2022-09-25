@@ -56,9 +56,6 @@ class FreeplayState extends MusicBeatState
 	var colorTween:FlxTween;
 
 	//PFP
-	var warningBG:FlxSprite;
-	var warnText:FlxText;
-	var firstpress:Bool = false;
 
 	override function create()
 	{
@@ -117,8 +114,8 @@ class FreeplayState extends MusicBeatState
 		if (FlxG.save.data.autumnmountainunlocked == true)
 			addSong('Purple Streamer Battle', 2,'Captain', FlxColor.fromRGB(0, 117, 251));
 
-		//if (FlxG.save.data.beatchapter4 == true)
-			//addSong('Monotoad', 1,'monotoad', FlxColor.fromRGB(0, 0, 0));
+		if (FlxG.save.data.beatchapter4 == true)
+			addSong('Monotoad', 1,'monotoad', FlxColor.fromRGB(0, 0, 0));
 
 		WeekData.loadTheFirstEnabledMod();
 
@@ -238,23 +235,6 @@ class FreeplayState extends MusicBeatState
 		var textBG:FlxSprite = new FlxSprite(0, FlxG.height - 26).makeGraphic(FlxG.width, 26, 0xFF000000);
 		textBG.alpha = 0.6;
 		add(textBG);
-
-		warningBG = new FlxSprite(0, 0).makeGraphic(FlxG.width - 100, FlxG.height - 100, 0xFF000000);
-		warningBG.screenCenter();
-		warningBG.alpha = 0;
-		add(warningBG);
-
-		warnText = new FlxText(0, 0, FlxG.width,
-			"WARNING!\n
-			'This song contains loud noises that may be sensitive to some players.\n\n
-			If you are sensitive to loud noises, please press ESCAPE.\n
-			If you would like to continue, please press ENTER.",
-			32);
-		warnText.setFormat("VCR OSD Mono", 32, FlxColor.WHITE, CENTER);
-		warnText.screenCenter();
-		warnText.alpha = 0;
-		add(warnText);
-
 
 		#if PRELOAD_ALL
 		var leText:String = "Press L to listen to the Song / Press CTRL to open the Gameplay Changers Menu / Press RESET to Reset your Score and Accuracy.";
@@ -418,18 +398,10 @@ class FreeplayState extends MusicBeatState
 			}
 		}
 
-		else if (accepted && !FlxG.keys.justPressed.SPACE && canskincontinue && firstpress == false)
+		else if (accepted && !FlxG.keys.justPressed.SPACE && canskincontinue)
 		{
 			var songLowercase:String = Paths.formatToSongPath(songs[curSelected].songName);
 			var poop:String = Highscore.formatSong(songLowercase, curDifficulty);
-			if (songLowercase == 'monotoad')
-				{
-					FlxTween.tween(warningBG, {alpha: 0.6}, 0.5);
-					FlxTween.tween(warnText, {alpha: 1}, 0.5);
-					firstpress = true;
-				}
-			else
-				{
 					persistentUpdate = false;
 				PlayState.SONG = Song.loadFromJson(poop, songLowercase);
 				PlayState.isStoryMode = false;
@@ -449,7 +421,6 @@ class FreeplayState extends MusicBeatState
 				FlxG.sound.music.volume = 0;
 				
 				destroyFreeplayVocals();
-				}
 			/*#if MODS_ALLOWED
 			if(!sys.FileSystem.exists(Paths.modsJson(songLowercase + '/' + poop)) && !sys.FileSystem.exists(Paths.json(songLowercase + '/' + poop))) {
 			#else
@@ -462,7 +433,7 @@ class FreeplayState extends MusicBeatState
 			trace(poop);
 
 		}
-		else if (FlxG.keys.justPressed.ENTER && firstpress == true)
+		else if (FlxG.keys.justPressed.ENTER)
 			{
 				var songLowercase2:String = Paths.formatToSongPath(songs[curSelected].songName);
 				var poop2:String = Highscore.formatSong(songLowercase2, curDifficulty);
@@ -486,8 +457,8 @@ class FreeplayState extends MusicBeatState
 				
 				destroyFreeplayVocals();
 			}
-		else if (FlxG.keys.justPressed.ESCAPE && firstpress == true)
-			MusicBeatState.switchState(new FreeplayState());
+		else if (FlxG.keys.justPressed.ESCAPE)
+			MusicBeatState.switchState(new MainMenuState());
 		else if(controls.RESET)
 		{
 			persistentUpdate = false;

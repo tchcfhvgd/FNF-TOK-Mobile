@@ -6,7 +6,7 @@
 :fade:thrillsatnight1:
 :bg:thrillsatnight2:
 :sound:sandrun:
-:olivia:default:Yeah, just as I expected, she's stapled. Meaning she's stuck like this... possibly forever.
+:olivia:default:Yeah, just as I expected, she's stapled. Mario can't fix that. Meaning she's stuck like this... possibly forever.
 :bf:default:B-B-B-Beeeep!?
 :bg:thrillsatnight3:
 :sound:fallover:
@@ -67,7 +67,7 @@
 :bf:default:Beep Boop bada boo.
 :dj:default:I'm sorry dude... I-I don't understand you...
 :narrator:default: Mario and Professor Toad find a bunch of strange toads that begin to react to the distant music.
-:prof:default:Are you sure about this Mario...?
+:prof:default:Are you sure about this Mario...? These toads creep me out...
 :bg:thrillsatnight9:
 :sound:fallover:
 :bg:tear:

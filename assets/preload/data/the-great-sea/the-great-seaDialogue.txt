@@ -15,15 +15,17 @@
 :olivia:default:It's just a staircase. That's nothing compared to an ancient temple filled with faceless toads.
 :olivia:default:C'mon, let's go!
 :sound:sandrun:
+:music:4-extra1:
+:music:fadeIn:
 :fade:exploring2:
 :bg:exploring3:
 :narrator:default:At the bottom of the staircase was a frozen room. And in the center, a toad encased in ice.
 :prof:default:Oh no! Poor guy must have spent way too long in this room with all this ancient cooling technology...
 :olivia:default:Oh dear, let me try to help him. Luckily, there's a fire vellumental circle right here.
 :bf:default:Beep?
-:olivia:default:Yeah! Vellumentals are elementals that can harness the power of their respective elements!
+:olivia:default:Yeah! Vellumentals are elementals that can harness the power of earth, water, fire and ice respectively!
 :olivia:default:They've been corrupted and folded into origami by my brother, Olly, though.
-:olivia:default:Luckily, I can still fold into one! Watch!
+:olivia:default:Luckily, I can still fold into some! Watch!
 :bg:tear:
 :sound:altaropen:
 :narrator:default:The circle suddenly began to glow...
@@ -61,7 +63,7 @@
 :tode:default:Aye lad that's enough! It doesn't matter what the ol' Shroomses did! Wha I want is what's truly mine.
 :olivia:default:...You mean the submarine you stole?
 :tode:default:Yhar lass! Once a pirate's treasure is always a pirate's treasure.
-:prof:default:It currently sits in the Musée Champignon... but could you please help my friends and I on our adventure?
+:prof:default:It's currently being displayed in the Musée Champignon... but could you please help my friends and I on our adventure?
 :tode:default:Hmm... aye! A pirate's always ready for adventure! As long as I get to keep me ship in the end I'll help ya out.
 :tode:default:Now give me a rundown lassie.
 :olivia:default:Will do!
@@ -69,6 +71,8 @@
 :narrator:default:Boyfriend and Mario glance at each other. They nod and continue onwards with T. Ode and Olivia.
 :fade:exploring7:
 :bg:exploring8:
+:music:4-1:
+:music:fadeIn:
 :narrator:default:While outside, the professor called out to Boyfriend as Olivia filled in T. Ode.
 :prof:default:Hey- wait, kid.
 :bf:default:Bo?
@@ -80,7 +84,7 @@
 :bg:exploring9:
 :music:4-3:
 :music:fadeIn:
-:narrator:default:The group entered a pipe, connecting worlds together. It also happened to be the museum that contained T. Ode's ship.
+:narrator:default:The group entered a pipe, connecting worlds together. It also happened to be the museum that contained T. Ode's submarine.
 :olivia:default:Okay Captain... how do you expect to take this exhibit's main attraction in broad daylight?
 :tode:default:Aye, we go in! Guns a blazing, make them beg for their life on their knees, holding a sword to their throat until they give ye the desired artifact.
 :bf:default:Beep!
@@ -93,7 +97,7 @@
 :bf:default:Ba!
 :nerdtoad:default:You want to take the submarine? But it's our most prized display!
 :tode:default:And what a display she be.
-:olivia:default:Listen, we need the captain's boat back. He won't help us without it.
+:olivia:default:Listen, we need the Captain's boat back. He won't help Mario save Princess Peach without it.
 :nerdtoad:default:Okay fine... just be careful with it.
 :fade:exploring10:
 :bg:exploring11:
