@@ -1,7 +1,7 @@
 :bg:missile1:
 :music:1-2:
 :music:fadeIn:
-:narrator:default:After Boyfriend defeated the enemies they turned into conis.
+:narrator:default:After Boyfriend defeated the enemies they turned into coins.
 :narrator:default:Boyfriend continued with haste.
 :fade:missile1:
 :bg:missile2:

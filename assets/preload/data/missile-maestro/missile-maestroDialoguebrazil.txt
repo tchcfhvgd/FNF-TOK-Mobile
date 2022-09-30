@@ -1,23 +1,26 @@
 :bg:missile1:
 :music:1-2:
 :music:fadeIn:
-:narrator:default:Após um encontro fácil com os capangas, eles desapareceram e se tornaram em moedas.
-:narrator:default:E então, os dois continuaram a sua jornada para Montanha da Vista Alta.
+:narrator:default:Após Boyfriend ter derrotado seus inimigos eles transformaram-se em moedas.
+:narrator:default:Boyfriend continuou com pressa.
 :fade:missile1:
 :bg:missile2:
-:narrator:default:Ao pé da montanha, eles avistam o teleférico que Toad estava falando sobre.
-:narrator:default:Aparentava ter acabado de voltar, o que significa que “Mario” não poderia estar muito longe.
+:narrator:default:Aos pés da Montanha Vista Alta, o par avistou um teleférico que havia acabado de retornar. Significando que “Mario” não deve estar tão longe.
 :fade:missile2:
 :bg:missile3:
-:narrator:default:Após finalmente chegarem ao topo da montanha, eles avistam a estação; junto com uma cabana esperando por sua chegada.
+:narrator:default:Eles seguiram o caminho ao teleférico sem muitos problemas.
 :bg:hide:
 :cutsceneten:
 :music:1-4:
 :music:fadeIn:
-:colors:default:PARE!
-:bf:default:BEEEEEP!!
-:colors:default:Mas que peninha! O teleférico está fora de serviço...
-:colors:default:Você não vai a lugar algum antes de eu ter a minha vingança!
-:colors:default:Aquele anãozinho vermelho... Ele achou que eu seria derrotado tão fácilmente assim...
-:colors:default:Bem, eu tenho um tempinho para lidar com vocês dois antes de eu deixar esse mundo!
-:colors:default:SE PREPARE!
+:colors:blackened:PARE!! 
+:bf:default:Waaah!!
+:narrator:default:Um pacote fantasma de lápis coloridos se torna visível diante do par.
+:colors:default:Que peninha! Esse teleférico está quebrado…
+:colors:default:Eu não consigo acreditar que o Mario achou que poderia simplesmente entrar aqui e desembrulhar aquela fita vermelha!
+:colors:default:Usando meus próprios mísseis contra mim! Um absurdo completo!
+:colors:default:Ahh aquele anãozinho peludo vermelho... ele achou mesmo que eu tinha sido derrotado!
+:colors:default:Já sei! Eu preciso liberar minha raiva através da arte!
+:colors:default:E você me parece uma tela excelente…
+:bf:default:B-bwah?!
+:colors:default:Fique paradinho, chegou a hora de transformá-lo em uma obra de arte!

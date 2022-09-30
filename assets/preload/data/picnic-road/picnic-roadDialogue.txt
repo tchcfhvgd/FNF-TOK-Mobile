@@ -2,7 +2,7 @@
 :music:1-1:
 :music:fadeIn:
 :narrator:default:It's the day of the Origami Festival.
-:narrator:default:As per usual with events in Toad Town, Boyfriend and his girlfriend were invited to the event.
+:narrator:default:As per usual with events in Toad Town, Boyfriend and his girlfriend were invited.
 :narrator:default:However, this day was different. When they arrived, Girlfriend looked strange. Something must have happened on the way...
 :narrator:default:In search of answers, Boyfriend holds Girlfriend by her arm, hoping that someone can help.
 :fade:picnic1:

@@ -3,13 +3,13 @@
 :sound:explosion:
 :bg:tear:
 :bg:discodevil3:
-:narrator:default:Com o demônio derrotado o rosto de todos voaram pra onde eles pertencem
-:yellowtoad:default:Yaay eu posso falar de novo!
-:yellowtoad:default:Yipee!
-:yellowtoad:default:Haha, muito obrigado!
-:dj:default:Bom trabalho moleque, eu não sabia que você era bom assim.
+:narrator:default:Com o grande perfurador derrotado, os rostos de todos voaram para onde pertenciam.
+:yellowtoad:default:Nossa, eu consigo falar de novo!
+:yellowtoad:default:Meu rosto!
+:yellowtoad:default:Obrigado!
+:dj:default:Boa garoto, eu não sabia que você era bom assim.
 :olivia:default:Aquilo foi incrível! Bom trabalho azulzinho!
-:prof:default:Aquilo foi fenomenal, garoto! Agora vamos pegar aquela fita e sair daqui!
-:olivia:default:Vamos lá!
+:prof:default:Isso foi fenomenal, moleque! Agora vamos pegar aquela fita e cair fora daqui!
+:olivia:default: Vamos lá!
 :bf:default:Beep!
-:gf:default:.........
+:gf:default:...

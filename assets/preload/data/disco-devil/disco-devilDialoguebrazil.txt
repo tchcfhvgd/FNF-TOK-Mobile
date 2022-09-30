@@ -2,15 +2,17 @@
 :music:fadeIn:
 :bg:discodevil1:
 :bf:default:~Yea!
-:dj:default:Agora AQUILO foi uma incrível performance!
-:olivia:default:Você mostrou mesmo pra eles quem manda!
+:dj:default:Agora isso SIM foi uma incrível performance!
+:olivia:default:Você mostrou pra eles mesmo quem é que manda!
+:devil:blackened:ISSO AÍ!
 :cutscenesixteen:
 :sound:floorbreak:
 :music:1-4:
 :music:fadeIn:
-:devil:default:Agora é DISSO que eu tô falando! Você tem um bom gosto de música, garoto!
+:narrator:default:Um furador gigante do tamanho de uma van chega na pista de dança.
+:devil:default:É DISSO aí que eu tô falando! Você tem um bom gosto pra música, garoto!
 :bf:default:BEe-
-:devil:default:Mas eu só não consigo parar de achar que você tá atrás da fita.
+:devil:default:Mas eu não consigo parar de achar que você tá atrás da fita.
 :bf:default:Bap >:(
 :devil:default:Você é ótimo no microfone, mas qual bom você é na pista de dança?
-:devil:default:É hora de requebrar!
+:devil:default:É hora de REQUEBRAR!
