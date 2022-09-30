@@ -6,7 +6,7 @@
 :fade:thrillsatnight1:
 :bg:thrillsatnight2:
 :sound:sandrun:
-:olivia:default:Yeah, just as I expected, she's stapled. Mario can't fix that. Meaning she's stuck like this... possibly forever.
+:olivia:default:Yeah, just as I expected, she's stapled. Mario can't fix her, as far as we know, she might be stuck like this forever.
 :bf:default:B-B-B-Beeeep!?
 :bg:thrillsatnight3:
 :sound:fallover:
@@ -18,7 +18,7 @@
 :bg:thrillsatnight4:
 :bg:flash:
 :sound:hug:
-:olivia:default:It's ok, there's still a chance we can fix her!
+:olivia:default:It’s ok, I'm sure there's a way to safely change her back.
 :olivia:default:Uhm... you can join us on our quest to take down my brother! He's the one who's responsible for all of this.
 :bf:default:...
 :bf:default:Beep?
@@ -28,9 +28,10 @@
 :prof:default:Anyways, we'll have to get to that temple. Let's go! I'm dying to see what's inside.
 :fade:thrillsatnight4:
 :bg:thrillsatnight5:
-:prof:default:Onward!
-:olivia:default:Let's go get that streamer!
-:bf:default:Beep!
+:narrator:default:Now a party of 5 they walk to the temple as the dark sky of the desert looms over them.
+:olivia:default:I still wonder what happened to the sun, aren't deserts like… Sunny and stuff?
+:prof:default:Yeah that's usually the case we'll have to come back to the massive hole in the sky afterwards.
+:narrator:default:They enter the temple like there's not a second to lose.
 :music:3-4:
 :music:fadeIn:
 :fade:thrillsatnight5:
@@ -39,7 +40,7 @@
 :prof:default:Oh my, this is fascinating... Just look at how it's constructed, it must be thousands of years old...
 :prof:default:And these murals must be of the ancients, where's my journal? I've gotta write this down.
 :olivia:default:On a more related note, I wonder what my brother has guarding the yellow streamer.
-:prof:default:Oh right... I guess saving the world may be more important.
+:prof:default:Oh yeah... I guess saving the world may be more important.
 :fade:thrillsatnight6:
 :bg:thrillsatnight7:
 :music:3-5:
@@ -80,5 +81,5 @@
 :olivia:default:Eek! What are they doing?
 :dj:default:I think that one is challenging him to... sing?
 :olivia:default:Why would they want him to do that?
-:prof:default:No idea, but we need to keep them here long enough to lure out whoever is guarding that streamer.
-:olivia:default:Just... be careful.
+:prof:default:That's not important now, we need to keep them here long enough to lure out whoever is guarding that streamer.
+:olivia:default:Yeah, just be careful.

@@ -3,14 +3,14 @@
 :music:fadeIn:
 :narrator:default:After a quick jingle, they hopped on the boat and attached the submarine to the back.
 :narrator:default:Following the purple streamer, it lead to a large sea tower, the entrance locked behind a door.
-:narrator:default:The lock required three spherical keys to open the door.
+:narrator:default:The lock required three spherical keys to open the door to the tower.
 :narrator:default:The party sailed past nearby islands, searching for where they could be...
 :olivia:default:Wait, stop right here! I recognize this one.
 :removecutscenethirteen:
 :bg:vullemental2:
 :olivia:default:Yeah! It's the house the Origami Craftsman first folded Olly and I!
-:olivia:default:Oh and there's Luigi too.
-:luigi:default:Sup...........
+:olivia:default:Hey Luigi.
+:luigi:default:Sup
 :olivia:default:You guys stay out here, we'll be right back.
 :fade:vullemental2:
 :bg:vullemental3:
@@ -36,9 +36,8 @@
 :tode:default:Aye, those buildings seem to be the ancient trials! It's said that only the bravest, wisest, and strongest heroes can pass them.
 :fade:vullemental5:
 :bg:vullemental6:
-:olivia:default:Then Mario will take on the trials! 
-:olivia:default:Boyfriend, why don't you take your friend and explore the Icy Mountains. We don't want to leave any stone untouched!
-:bf:default:bruh...
+:olivia:default:Then Mario will take on the trials! Boyfriend, why don't you take your friend and explore the Icy Mountains. We don't want to leave any stone untouched!
+:bf:default:Uhh...
 :olivia:default:Don't worry, there's nothing to be afraid of, I'm sure you got this!
 :fade:vullemental6:
 :bg:vullemental7:
@@ -51,7 +50,7 @@
 :narrator:default:Mixed in with the steps however, was the occasional ungodly roar. Boyfriend knew he wasn't alone...
 :fade:vullemental7:
 :bg:vullemental8:
-:bf:default:bep...
+:bf:default:Bep...
 :narrator:default:The noises grew louder. It appeared to be aware of their presence. Boyfriend shivers, unable to tell if it's the cold or fear.
 :bg:vullemental9:
 :bg:tear:

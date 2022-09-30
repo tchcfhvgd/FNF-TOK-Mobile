@@ -3,8 +3,7 @@
 :bg:elastic1:
 :gondol:default:Good job mate! Haven't had anyone with lungs like you for quite a while.
 :bf:default:Beep~
-:gondol:default:Alright we're approaching where I left Mario!
-:gondol:default:He left to go after the next stre-
+:gondol:default:Alright we're approaching where I left Mario! He left to go after the next stre-
 :music:stop:
 :rubber:blackened:MARIO!?
 :sound:rubberypunch:
@@ -31,7 +30,7 @@
 :bg:elastic5:
 :narrator:default:Seeing Boyfriend's mic awoke something in the deranged entertainer...
 :rubber:default:Ooh... Another performer I see, you like a little song and dance?
-:bf:default:(Mad beep)
+:bf:default:Bep...
 :rubber:default:Want to know what works perfectly with that?
 :bg:hide:
 :sound:breaker:

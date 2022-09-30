@@ -8,5 +8,5 @@
 :fade:missile4:
 :narrator:default:The colorful spectre vanished out of existence with a bright glow..
 :bg:missile5:
-:narrator:default:Boyfriend sits down on the empty cableway as he ponders. He feels desperate without Girlfriend.
-:narrator:default:Yet, they continue to Autumn Mountain.
+:narrator:default:Boyfriend sits down on the empty cableway as he ponders and feels desperate without his back-to-self girlfriend.
+:narrator:default:Yet, he has a small hope in someone called "Mario", so they continue on their way to Autumn Mountain.

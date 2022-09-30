@@ -9,7 +9,6 @@
 :sound:floorbreak:
 :music:1-4:
 :music:fadeIn:
-:narrator:default:Una grapadora del tamaño de un coche saltó bruscamente a la pista de baile.
 :devil:default:¡Ahora sí que sí! ¡Tienes el ritmo en las venas niño!
 :bf:default:BEe-
 :devil:default:Aunque… ¿Vas detrás de la serpentina verdad? No puedo dejar que avances más.

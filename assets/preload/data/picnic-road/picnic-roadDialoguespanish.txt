@@ -2,7 +2,7 @@
 :music:1-1:
 :music:fadeIn:
 :narrator:default:Es el día del Festival del Origami, al que Boyfriend y Girlfriend fueron invitados.
-:narrator:default:Sin embargo, cuando llegaron algo parecía diferente. Girlfriend parece exenta de vida y doblada. Algo debe haber pasado en el camino...
+:narrator:default:Sin embargo, cuando llegaron algo parecía diferente. Girlfriend parece exenta de vida y doblada. 
 :narrator:default:Boyfriend sostiene a lo que queda de Girlfriend por el brazo, guiándola por Villa Toad esperando encontrarse con alguien que la pueda ayudar.
 :fade:picnic1:
 :bg:picnic2:

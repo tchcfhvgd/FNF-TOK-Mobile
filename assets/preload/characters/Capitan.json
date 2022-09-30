@@ -1,48 +1,37 @@
 {
 	"animations": [
 		{
+			"loop": false,
 			"offsets": [
 				-2,
 				0
 			],
-			"loop": false,
-			"fps": 11,
 			"anim": "idle",
-			"indices": [],
-			"name": "SING idle"
+			"fps": 11,
+			"name": "SING idle",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				7,
 				-1
 			],
-			"loop": false,
-			"fps": 11,
 			"anim": "singDOWN",
-			"indices": [],
-			"name": "SING down"
+			"fps": 11,
+			"name": "SING down",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				-12,
 				-6
 			],
-			"loop": false,
-			"fps": 11,
 			"anim": "singUP",
-			"indices": [],
-			"name": "SING up"
-		},
-		{
-			"offsets": [
-				0,
-				0
-			],
-			"indices": [],
 			"fps": 11,
-			"anim": "singRIGHT",
-			"loop": false,
-			"name": "SING left"
+			"name": "SING up",
+			"indices": []
 		},
 		{
 			"offsets": [
@@ -52,6 +41,17 @@
 			"indices": [],
 			"fps": 11,
 			"anim": "singLEFT",
+			"loop": false,
+			"name": "SING left"
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"indices": [],
+			"fps": 11,
+			"anim": "singRIGHT",
 			"loop": false,
 			"name": "SING right"
 		}

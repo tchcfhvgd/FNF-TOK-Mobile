@@ -6,6 +6,7 @@
 :narrator:default:Mario agarra al vuelo un libro que había salido volando del cuerpo del oso tras ser derrotado.
 :olivia:default:Buena.
 :olivia:default:WUn momento… ¡Es el Códice del papelemental de hielo!
+:olivia:default:You beat the last vellumental?! Awesome! 
 :olivia:default:¿Boyfriend, has podido derrotar al papelemental de hielo? ¡Increíble! Con este libro puedo aprender a doblarme en la forma del oso. Nos será util.
 :olivia:default:Volvamos al Super Marino, ya tenemos las llaves de la Torre Oceánica.
 :fade:tape1:
@@ -58,6 +59,8 @@
 :bg:tear:
 :olivia:default:Un momento… ¿Qué es ese ruido?
 :cutscenethirtyone:
+:music:1-4:
+:music:tapefadeIn:
 :tape:default:¡No tan rápido!
 :tape:default:Mario y… uh… ¿Boyfriend, verdad? Los demás me han hablado de vosotros.
 :tape:default:Sin duda tenéis agallas, pero os habéis pasado de la raya pensando que podéis destruir mi serpentina. 

@@ -9,7 +9,6 @@
 :sound:floorbreak:
 :music:1-4:
 :music:fadeIn:
-:narrator:default:Um furador gigante do tamanho de uma van chega na pista de dança.
 :devil:default:É DISSO aí que eu tô falando! Você tem um bom gosto pra música, garoto!
 :bf:default:BEe-
 :devil:default:Mas eu não consigo parar de achar que você tá atrás da fita.

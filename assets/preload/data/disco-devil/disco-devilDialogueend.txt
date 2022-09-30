@@ -3,8 +3,8 @@
 :sound:explosion:
 :bg:tear:
 :bg:discodevil3:
-:narrator:default:With the massive hole punch defeated, everyone's faces flew back to where they belonged.
-:yellowtoad:default:Yaay I can speak again!
+:narrator:default:With the massive hole punch defeated everyone's faces flew back to where they belonged.
+:yellowtoad:default:Woah I can speak again!
 :yellowtoad:default:My face!
 :yellowtoad:default:Thank you!
 :dj:default:Good job kid, I didn't know you had it in ya.

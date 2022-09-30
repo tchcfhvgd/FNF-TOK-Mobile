@@ -58,6 +58,8 @@
 :bg:tear:
 :olivia:default:Espera, o que foi esse barulho?
 :cutscenethirtyone:
+:music:1-4:
+:music:tapefadeIn:
 :tape:default:Não tão rápido, ratos sujismundos!
 :tape:default:Mario e uh… Boyfriend, certo? Ouvi falar de vocês dois da outra legião de estacionários! 
 :tape:default:Vocês dois tem coragem, achando que podem simplesmente vir aqui e destruir minha fita? 

@@ -5,8 +5,7 @@
 :narrator:default:Boyfriend continued with haste.
 :fade:missile1:
 :bg:missile2:
-:narrator:default:At the foot of Overlook Mountain, the duo spotted a cableway that had just returned.
-:narrator:default:That means that "Mario" couldn't be too far ahead.
+:narrator:default:At the foot of Overlook Mountain, the duo spotted a cableway that had just returned, meaning that "Mario" couldn't be too far ahead.
 :fade:missile2:
 :bg:missile3:
 :narrator:default:They followed the path to the cableway without much trouble.
@@ -14,13 +13,14 @@
 :cutsceneten:
 :music:1-4:
 :music:fadeIn:
-:colors:default:HALT!!
-:bf:default:BEEEEEP!!
-:narrator:default:A ghostly pack of colored pencils made itself visible to the pair.
+:colors:blackened:HALT!!
+:bf:default:Waaah!!
+:narrator:default:A ghostly pack of colored pencils made itself visible in front of the pair.
 :colors:default:What a pity! This cableway is out of order...
 :colors:default:I can't believe that Mario thought he could just waltz right in here and unravel that red streamer!
-:colors:default:Using my own missiles against me! Absolutely proposterous!
+:colors:default:Using my own missiles against me! Absolutely preposterous!
 :colors:default:Ohh that red hairy dwarf... he thought I was gone for good!
-:colors:default:I know! I need to let out my rage through art!
+:colors:default:I know! I need to let my rage out through art!
 :colors:default:And you look like a perfect canvas!
+:bf:default:B-bwah?!
 :colors:default:Hold still, it's time to turn you into a masterpiece!

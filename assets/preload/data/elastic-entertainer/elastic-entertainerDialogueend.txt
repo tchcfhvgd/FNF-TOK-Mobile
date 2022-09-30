@@ -7,8 +7,8 @@
 :music:stop:
 :bg:elastic8:
 :bg:tear:
-:narrator:default:And out of pure unfiltered rage... the actor's rubber bands began tearing apart!
-:rubber:default:GAH! I guess this was my final curtain call...
+:narrator:It seemed that their emotions had gotten out of control, causing the rubber bands to start ripping apart.
+:rubber:default:GRAHH! The curtain closes on me...
 :rubber:default:Well... Farewell, you insufferable rat!
 :sound:explosion:
 :bg:elastic9:
@@ -18,7 +18,8 @@
 :bg:elastic10:
 :music:2-2:
 :music:fadeIn:
-:gondol:default:Wow, what a performance! Anyways, aren't we heading to the sandpaper desert? Or do you wanna hang out here in shogun studios for a while?
+:gondol:default:Wow, what a performance! I’ll be careful next time we sing together…
+:gondol:default:Anyways, aren't we heading to the sandpaper desert? Or do you wanna hang out here in the Shogun Studios theme park for a while?
 :bf:default:Bep...
 :gondol:default:Oh right, Mario... heh.
 :gondol:default:Well hop back in!
