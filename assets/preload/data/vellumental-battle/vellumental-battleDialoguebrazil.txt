@@ -8,9 +8,9 @@
 :olivia:default:Espera. Parem aqui! Eu reconheço essa aqui.
 :removecutscenethirteen:
 :bg:vullemental2:
-:olivia:default:Yeah! It's the house the Origami Craftsman first folded Olly and I!
+:olivia:default:Sim! Essa é a casa aonde meu pai, o artesão de origami, dobrou ao Olly e a mim!
 :olivia:default:Oi Luigi.
-:luigi:default:E aí.
+:luigi:default:E aí.................
 :olivia:default:Vocês fiquem aqui fora. Voltaremos já.
 :fade:vullemental2:
 :bg:vullemental3:

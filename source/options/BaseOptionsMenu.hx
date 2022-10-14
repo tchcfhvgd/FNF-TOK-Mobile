@@ -145,6 +145,15 @@ class BaseOptionsMenu extends MusicBeatSubstate
 		}
 
 		if (controls.BACK) {
+			if (ClientPrefs.idioma == 'English')
+				FlxG.save.data.idioma = 'english';
+			else if (ClientPrefs.idioma == 'espanol')
+				FlxG.save.data.idioma = 'espanol';
+			else if (ClientPrefs.idioma == 'Portugues')
+				FlxG.save.data.idioma = 'portugues';
+			else
+				FlxG.save.data.idioma = 'english';
+			
 			close();
 			FlxG.sound.play(Paths.sound('cancelMenu'));
 		}

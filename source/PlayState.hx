@@ -254,10 +254,10 @@ class PlayState extends MusicBeatState
 	var spinnyhammer:FlxSprite;
 
 	var boatY:Int;
-	var mountainwallposition:Int;
+	var mountainwallposition:Float;
 	var treesnotdone = false;
 	var treesgo = false;
-	var treeposition:Int = 0;
+	var treeposition:Float = 0;
 	var uppath:Bool;
 	var spaceriver:Bool = false;
 	var riverobject:Bool = false;
@@ -266,7 +266,7 @@ class PlayState extends MusicBeatState
 	var objectrock:Bool = false;
 	var objectlog:Bool = false;
 	var objectpath:Bool = true;
-	var objectposition:Int = 0;
+	var objectposition:Float = 0;
 	var okband:Bool = true;
 	var wrapstart:Bool = false;
 	var onetimestretch:Bool = true;
@@ -1375,9 +1375,9 @@ class PlayState extends MusicBeatState
 			dialogueJson = DialogueBoxPsych.parseDialogue(file);
 		}
 
-		if (ClientPrefs.idioma == 'English')
+		if (FlxG.save.data.idioma == 'english' || FlxG.save.data.idioma == null)
 			{
-				var file:String = Paths.txt(songName + '/' + songName + 'Dialogue'); //Checks for vanilla/Senpai dialogue
+				var file:String = Paths.txt(songName + '/' + songName + 'Dialogue'); 
 		if (OpenFlAssets.exists(file)) {
 			dialogue = CoolUtil.coolTextFile(file);
 			hasendingdialog = false;
@@ -1390,9 +1390,9 @@ class PlayState extends MusicBeatState
 			trace(file);
 		}
 			}
-		else if (ClientPrefs.idioma == 'Espanol')
+		else if (FlxG.save.data.idioma == 'espanol')
 			{
-				var file:String = Paths.txt(songName + '/' + songName + 'Dialoguespanish'); //Checks for vanilla/Senpai dialogue
+				var file:String = Paths.txt(songName + '/' + songName + 'Dialoguespanish');
 		if (OpenFlAssets.exists(file)) {
 			dialogue = CoolUtil.coolTextFile(file);
 			hasendingdialog = false;
@@ -1405,9 +1405,9 @@ class PlayState extends MusicBeatState
 			trace(file);
 		}
 			}
-			else if (ClientPrefs.idioma == 'Portugues')
+			else if (FlxG.save.data.idioma == 'portugues')
 				{
-					var file:String = Paths.txt(songName + '/' + songName + 'Dialoguebrazil'); //Checks for vanilla/Senpai dialogue
+					var file:String = Paths.txt(songName + '/' + songName + 'Dialoguebrazil'); 
 		if (OpenFlAssets.exists(file)) {
 			dialogue = CoolUtil.coolTextFile(file);
 			hasendingdialog = false;
@@ -3219,9 +3219,9 @@ class PlayState extends MusicBeatState
 			{
 				if (mountainwallposition < 6017)
 				{
-					mountainwallclone.x += 4;
-					mountainwall.x += 4;
-					mountainwallposition += 2;
+					mountainwallclone.x += 4 / (FlxG.updateFramerate / 60);
+					mountainwall.x += 4 / (FlxG.updateFramerate / 60);
+					mountainwallposition += 2 / (FlxG.updateFramerate / 60);
 				}
 				else
 				{
@@ -3246,9 +3246,9 @@ class PlayState extends MusicBeatState
 			
 						if (treesgo == true)
 						{
-							trees.x += 16;
-							trees2.x += 16;
-							treeposition += 2;
+							trees.x += 16 / (FlxG.updateFramerate / 60);
+							trees2.x += 16 / (FlxG.updateFramerate / 60);
+							treeposition += 2 / (FlxG.updateFramerate / 60);
 						}
 			
 						if (treeposition == 760)
@@ -3388,8 +3388,8 @@ class PlayState extends MusicBeatState
 						{
 							if (objectrock == true)
 							{
-								rock.x += 4;
-								objectposition += 2;
+								rock.x += 4 / (FlxG.updateFramerate / 60);
+								objectposition += 2 / (FlxG.updateFramerate / 60);
 								if (objectposition > 840 && objectposition < 1650)
 						{	
 							if (objectmoving == true && objectpath == true && uppath == true || objectmoving == true && objectpath == false && uppath == false )
@@ -3402,8 +3402,8 @@ class PlayState extends MusicBeatState
 			
 							if (objectlog == true)
 							{
-								log.x += 4;
-								objectposition += 2;
+								log.x += 4 / (FlxG.updateFramerate / 60);
+								objectposition += 2 / (FlxG.updateFramerate / 60);
 								if (objectposition > 910 && objectposition < 1650)
 						{	
 							if (objectmoving == true && objectpath == true && uppath == true || objectmoving == true && objectpath == false && uppath == false )
@@ -3663,7 +3663,6 @@ class PlayState extends MusicBeatState
 								eecaption.borderColor = FlxColor.BLACK;
 								eecaption.text = "The star of the show isn't Boyfriend you uncultured hacks!";
 								FlxTween.tween(eecaption, {alpha: 1}, 0.5);
-								FlxTween.tween(captionicon, {alpha: 0}, 0.5);	
 								//FlxTween.tween(captionicon, {alpha: 1}, 0.5);
 							}
 

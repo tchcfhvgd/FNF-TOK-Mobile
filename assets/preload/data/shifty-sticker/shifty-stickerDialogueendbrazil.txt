@@ -2,7 +2,7 @@
 :bg:tear:
 :bg:flash:
 :sound:explosion:
-:music:4-end:
+:music:4-wind:
 :music:fadeIn:
 :narrator:default:Após aquilo, o autocolante madreiro explodiu como de costume, tremendo o chão ao seu redor.
 :bg:tear:

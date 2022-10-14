@@ -10,7 +10,7 @@
 :bg:vullemental2:
 :olivia:default:Es la isla en la que mi padre, el maestro del origami dobló a mi hermano Olly, y después Olly me dobló a mi.
 :olivia:default:Hey Luigi.
-:luigi:default:Buenas.
+:luigi:default:Buenas.................
 :olivia:default:Quedaos fuera un momento, ahora vuelvo.
 :fade:vullemental2:
 :bg:vullemental3:

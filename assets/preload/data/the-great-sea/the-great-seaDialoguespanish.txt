@@ -60,16 +60,14 @@
 :tode:default:Aunque voy a necesitar que alguien me ponga al día grumetes.
 :olivia:default:Sin problema.
 :prof:default:Hmm… Supongo que aquí se separan nuestros caminos, soy un toad de templos y reliquias, el mar no es lo mío.
-:olivia:default:Olivia: Oh, es una pena profesor, pero te deseamos mucha suerte en tus exploraciones.
+:olivia:default:Oh, es una pena profesor, pero te deseamos mucha suerte en tus exploraciones.
 :Bf:¡Bah Beep!
-:narrator:default:
 :fade:exploring7:
 :bg:exploring8:
 :narrator:default:En el exterior, el profesor llamó a Bf mientras Olivia informa al capitán sobre la situación.
 :prof:default:Psst, hey joven.
 :bf:default:¿Bo?
 :prof:default:Uhmm… Una vez que terminéis vuestra travesía marítima, ¿crees que podrías pedirle al capitán T. Hoad que vuelva aquí? Tengo que decirle algo… 
-:prof:default:I want to tell him something...
 :bf:default:¡Bah!
 :prof:default:Muchísimas gracias
 :fade:exploring8:
@@ -78,7 +76,7 @@
 :music:fadeIn:
 :narrator:default:El grupo entró en la tubería que conectaba el desierto con el Museo de Villa Toad, donde se situaba el Super Marino.
 :olivia:default:Hemos llegado. Capitán, ¿cómo esperas llevarte la atracción principal del museo en pleno día?
-:tode:default::T Ode:Sencillo grumete, agarramos al usurpador de mi Marino, les hacemos rogar sobre sus rodillas sosteniendo una espada sobre su cabeza hasta que nos lo devuelvan.
+:tode:default:Sencillo grumete, agarramos al usurpador de mi Marino, les hacemos rogar sobre sus rodillas sosteniendo una espada sobre su cabeza hasta que nos lo devuelvan.
 :bf:default:¿¡Beep!?
 :tode:default:Así se resuelven las disputas de donde yo vengo.
 :olivia:default:¡No podemos hacer eso!

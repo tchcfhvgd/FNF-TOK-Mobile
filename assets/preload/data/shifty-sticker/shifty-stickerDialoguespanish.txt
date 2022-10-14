@@ -37,6 +37,8 @@
 :olivia:default:¡Viva, al fin podremos quitar otra serpentina del castillo!
 :fade:tape6:
 :bg:tape7:
+:music:4-wave:
+:music:fadeIn:
 :captain:default:Hemos llegado, buena suerte a partir de aquí, pero yo no subiré con vosotros.
 :captain:default:No me llaman CAPITÁN DEL BARCO por nada.
 :olivia:default:¡Adiós por ahora capitán! ¡Y gracias por todo!
@@ -46,6 +48,8 @@
 :olivia:default:¡Pues vamos!
 :fade:tape7:
 :bg:tape8:
+:music:4-wind:
+:music:fadeIn:
 :narrator:default:La torre se elevaba cientos de metros hacia el cielo, tanto que los pisos superiores estaban ocultos por nubes. El camino les llevó a un ascensor exterior que llevaba a la cima.
 :olivia:default:¡Cielos, esos pobres toads! ¡Están pegados a la pared!
 :olivia:default:¿Qué clase de criatura pegajosa estará vigilando esta serpentina?

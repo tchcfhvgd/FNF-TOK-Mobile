@@ -37,6 +37,8 @@
 :olivia:default:Yeah! Finally, we can remove one more bond to the castle!
 :fade:tape6:
 :bg:tape7:
+:music:4-wave:
+:music:fadeIn:
 :captain:default:Alright, Here we are. Good luck up there, because I sure ain't coming with you.
 :captain:default:They don't call me a SEA Captain for nothing.
 :olivia:default:Goodbye for now, Captain! And thanks for everything!
@@ -46,6 +48,8 @@
 :olivia:default:Let's go!
 :fade:tape7:
 :bg:tape8:
+:music:4-wind:
+:music:fadeIn:
 :narrator:default:The tower extended up high. The top was hidden within the clouds. Inside, a path lead to an elevator on the exterior of the tower.
 :olivia:default:Oh my! Those poor toads! They're somehow stuck to the walls of the tower!
 :olivia:default:What kind of sticky creature is guarding this one...?

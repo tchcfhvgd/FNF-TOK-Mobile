@@ -74,8 +74,8 @@
 :music:4-3:
 :music:fadeIn:
 :narrator:default:O grupo entrou em um cano, conectando mundos juntos. E também aconteceu de ser o museu que continha o submarino de T. Ode.
-:olivia:default:Okay Capitão... como você acha que vai to levar a atração principal dessa exposição em plena luz do sol?
-:tode:default:Escute, nós entramos, entramos lá aos tiros e fazemos eles implorar por suas vidas em seus joelhos apontando uma espada em suas cabeças até te darem o artefato desejado.
+:olivia:default:Okay Capitão... como você acha que vai levar a atração principal dessa exposição em plena luz do sol?
+:tode:default:Escute, nós chegamos, entramos lá aos tiros e fazemos eles implorar por suas vidas em seus joelhos apontando uma espada em suas cabeças até te darem o artefato desejado.
 :bf:default:Beep?!
 :tode:default:Daonde eu venho nós faziamos assim.
 :olivia:default:Não podemos fazer isso!

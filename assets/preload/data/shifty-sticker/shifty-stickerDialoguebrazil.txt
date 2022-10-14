@@ -36,6 +36,8 @@
 :olivia:default:Sim! Finalmente poderemos remover outro laço desse mundo!
 :fade:tape6:
 :bg:tape7:
+:music:4-wave:
+:music:fadeIn:
 :captain:default:Tudo bem, aqui estamos nós. Boa sorte lá em cima, por que eu com certeza não vou junto.
 :captain:default:Não me chamam de capitão dos MARES por nada.
 :olivia:default:Adeus por enquanto, Capitão! Obrigada por tudo.
@@ -45,6 +47,8 @@
 :olivia:default:Vamos nessa!
 :fade:tape7:
 :bg:tape8:
+:music:4-wind:
+:music:fadeIn:
 :narrator:default:A torre se estendia bastante. O topo estava escondido pelas nuvens. Lá dentro, um caminho levava a um elevador no exterior da torre.
 :olivia:default:Oh céus! Pobres toads! Estão de alguma forma presos nas paredes da torre!
 :olivia:default:Que tipo de criatura pegajosa está protegendo essa?
