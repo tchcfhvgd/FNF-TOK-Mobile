@@ -54,7 +54,7 @@ And yes, I run Mac. A fate worse than death.
 
 import flixel.tile.FlxTile;
 import haxe.ds.ReadOnlyArray;
-import tentools.api.FlxGameJolt as GJApi;
+import flixel.addons.api.FlxGameJolt as GJApi;
 
 import openfl.display.BitmapData;
 import flixel.ui.FlxButton;
