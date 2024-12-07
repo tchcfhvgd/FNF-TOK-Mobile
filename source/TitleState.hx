@@ -2,10 +2,10 @@ package;
 
 #if desktop
 import Discord.DiscordClient;
+#end
 import GameJolt.GameJoltAPI;
 import GameJolt.GameJoltLogin;
 import sys.thread.Thread;
-#end
 import flixel.FlxG;
 import flixel.FlxSprite;
 import flixel.FlxState;
