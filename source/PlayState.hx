@@ -62,11 +62,9 @@ import DialogueBoxPsych;
 #if sys
 import sys.FileSystem;
 #end
-
-#if hxvlc
+ 
 import hxvlc.flixel.*;
 import hxvlc.util.*;
-#end
 
 using StringTools;
 
