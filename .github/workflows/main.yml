@@ -52,6 +52,9 @@ jobs:
           haxelib install flixel-ui
           haxelib install flixel-addons 3.2.1
           haxelib install tjson
+          haxelib install systools
+          haxelib install tentools
+          haxelib git FNF-mobile-basetools https://github.com/tchcfhvgd/FNF-mobile-basetools
           haxelib install hxvlc 1.7.1
           haxelib install hxjsonast
           haxelib install hscript
